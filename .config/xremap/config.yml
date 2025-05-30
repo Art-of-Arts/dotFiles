@@ -1,0 +1,24 @@
+# 'https://github.com/xremap/xremap#Configuration' 
+shared:
+  terminals:
+    - kitty
+    - gnome-terminal
+    - konsole
+
+
+modmap:
+  - name: global remap
+    remap:
+      # capslock/ctrl_l <-> esc
+      capslock: esc
+      esc: capslock
+
+#keymap:
+#  - name: Firefox & vesktop
+#    remap:
+#      # <> for backwards and forwards on a page
+#      leftalt-shift-p:alt_l-left
+#      leftalt-shift-n:alt_l-right
+#    application:
+#      only: [firefox,vesktop]
+

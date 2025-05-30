@@ -1,0 +1,5 @@
+2025-05-19 19:37:37.411 [info] Configuration changed
+2025-05-19 19:37:37.464 [info] Executing :q
+2025-05-19 19:37:37.490 [info] /var/lib/flatpak/exports/share/applications/mimeinfo.cache closed
+2025-05-19 19:37:37.491 [warning] getLineLength() called with out-of-bounds line 0
+2025-05-19 19:37:37.491 [warning] getLineLength() called with out-of-bounds line 0

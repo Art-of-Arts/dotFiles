@@ -1,0 +1,6 @@
+modmap:
+  - name: global
+    remap:
+      # capslock <-> esc
+      capslock: esc
+      esc: capslock

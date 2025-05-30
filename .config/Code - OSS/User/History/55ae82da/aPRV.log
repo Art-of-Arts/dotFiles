@@ -1,0 +1,504 @@
+[24Apr2025 17:46:22.914] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--username, Art_of_Arts, --version, 1.20.1, --gameDir, /home/arts/.local/share/PrismLauncher/instances/All of Create/minecraft, --assetsDir, /home/arts/.local/share/PrismLauncher/assets, --assetIndex, 5, --uuid, 8f16c623a765463393ca3e30eaa597c5, --accessToken, ❄❄❄❄❄❄❄❄, --userType, msa, --versionType, release, --launchTarget, forgeclient, --fml.forgeVersion, 47.3.10, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --width, 854, --height, 480]
+[24Apr2025 17:46:22.922] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.14 by Arch Linux; OS Linux arch amd64 version 6.12.23-1-lts
+[24Apr2025 17:46:24.240] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
+[24Apr2025 17:46:24.380] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
+[24Apr2025 17:46:24.453] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
+[24Apr2025 17:46:24.480] [main/INFO] [mixin-transmog/]: Mixin Transmogrifier is definitely up to no good...
+[24Apr2025 17:46:24.537] [main/INFO] [mixin-transmog/]: crimes against java were committed
+[24Apr2025 17:46:24.541] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: Mesa Intel(R) UHD Graphics (CML GT2) GL version 4.6 (Core Profile) Mesa 25.0.3-arch1.1, Intel
+[24Apr2025 17:46:24.578] [main/INFO] [mixin-transmog/]: Original mixin transformation service successfully crobbed by mixin-transmogrifier!
+[24Apr2025 17:46:24.612] [main/INFO] [CrashAssistantJarInJarHelper/]: Launching CrashAssistantApp
+[24Apr2025 17:46:24.656] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/home/arts/.local/share/PrismLauncher/instances/All%20of%20Create/minecraft/mods/Connector-1.0.0-beta.46+1.20.1.jar%23386%23391!/ Service=ModLauncher Env=CLIENT
+[24Apr2025 17:46:25.333] [CrashAssistantApp process logger/INFO] [dev.kostromdan.mods.crash_assistant.loading_utils.ChildProcessLogger/]: [2025-04-24 17:46:25.293] [INFO] [CrashAssistantApp]: CrashAssistantApp running: JVM args: [-XX:+UseSerialGC, -XX:MaxHeapFreeRatio=30, -XX:MinHeapFreeRatio=10, -XX:MaxGCPauseMillis=10000, -Xms8m, -Xmx512m]
+[24Apr2025 17:46:25.334] [CrashAssistantApp process logger/INFO] [dev.kostromdan.mods.crash_assistant.loading_utils.ChildProcessLogger/]: [2025-04-24 17:46:25.295] [INFO] [CrashAssistantApp]: CrashAssistantApp running: program args: [-parentPID, 439270, -platform, NEOFORGE, -log4jApi, /home/arts/.local/share/PrismLauncher/libraries/org/apache/logging/log4j/log4j-api/2.19.0/log4j-api-2.19.0.jar, -log4jCore, /home/arts/.local/share/PrismLauncher/libraries/org/apache/logging/log4j/log4j-core/2.19.0/log4j-core-2.19.0.jar, -googleGson, /home/arts/.local/share/PrismLauncher/libraries/com/google/code/gson/gson/2.10/gson-2.10.jar, -commonIo, /home/arts/.local/share/PrismLauncher/libraries/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar]
+[24Apr2025 17:46:25.334] [CrashAssistantApp process logger/INFO] [dev.kostromdan.mods.crash_assistant.loading_utils.ChildProcessLogger/]: [2025-04-24 17:46:25.296] [INFO] [CrashAssistantApp]: Parent PID: 439270
+[24Apr2025 17:46:25.335] [CrashAssistantApp process logger/INFO] [dev.kostromdan.mods.crash_assistant.loading_utils.ChildProcessLogger/]: [2025-04-24 17:46:25.296] [INFO] [CrashAssistantApp]: Platform: NEOFORGE
+[24Apr2025 17:46:25.335] [CrashAssistantApp process logger/INFO] [dev.kostromdan.mods.crash_assistant.loading_utils.ChildProcessLogger/]: [2025-04-24 17:46:25.314] [INFO] [CrashAssistantApp]: CrashAssistantApp started successfully. Waiting for PID 439270 to stop.
+[24Apr2025 17:46:25.335] [CrashAssistantApp process logger/INFO] [dev.kostromdan.mods.crash_assistant.loading_utils.ChildProcessLogger/]: CrashAssistantApp started successfully. Stopping child process loggers.
+[24Apr2025 17:46:25.589] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/arts/.local/share/PrismLauncher/libraries/net/minecraftforge/fmlcore/1.20.1-47.3.10/fmlcore-1.20.1-47.3.10.jar is missing mods.toml file
+[24Apr2025 17:46:25.590] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/arts/.local/share/PrismLauncher/libraries/net/minecraftforge/javafmllanguage/1.20.1-47.3.10/javafmllanguage-1.20.1-47.3.10.jar is missing mods.toml file
+[24Apr2025 17:46:25.591] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/arts/.local/share/PrismLauncher/libraries/net/minecraftforge/lowcodelanguage/1.20.1-47.3.10/lowcodelanguage-1.20.1-47.3.10.jar is missing mods.toml file
+[24Apr2025 17:46:25.591] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file /home/arts/.local/share/PrismLauncher/libraries/net/minecraftforge/mclanguage/1.20.1-47.3.10/mclanguage-1.20.1-47.3.10.jar is missing mods.toml file
+[24Apr2025 17:46:26.630] [main/WARN] [net.minecraftforge.jarjar.selection.JarSelector/]: Attempted to select two dependency jars from JarJar which have the same identification: Mod File:  and Mod File: . Using Mod File: 
+[24Apr2025 17:46:26.632] [main/WARN] [net.minecraftforge.jarjar.selection.JarSelector/]: Attempted to select a dependency jar for JarJar which was passed in as source: architectury. Using Mod File: /home/arts/.local/share/PrismLauncher/instances/All of Create/minecraft/mods/architectury-9.2.14-forge.jar
+[24Apr2025 17:46:26.633] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: Found 99 dependencies adding them to mods collection
+[24Apr2025 17:46:28.191] [main/INFO] [org.sinytra.connector.locator.DependencyResolver/]: Dependency resolution found 3 candidates to load
+[24Apr2025 17:46:29.559] [main/INFO] [Configured Defaults/]: Applying default files...
+[24Apr2025 17:46:30.302] [main/INFO] [org.sinytra.connector.service.hacks.ModuleLayerMigrator/]: Successfully made module authlib transformable
+[24Apr2025 17:46:35.684] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[24Apr2025 17:46:36.828] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclient' with arguments [--version, 1.20.1, --gameDir, /home/arts/.local/share/PrismLauncher/instances/All of Create/minecraft, --assetsDir, /home/arts/.local/share/PrismLauncher/assets, --uuid, 8f16c623a765463393ca3e30eaa597c5, --username, Art_of_Arts, --assetIndex, 5, --accessToken, ❄❄❄❄❄❄❄❄, --userType, msa, --versionType, release, --width, 854, --height, 480]
+[24Apr2025 17:46:36.943] [main/INFO] [Xenon/]: Loaded configuration file for Xenon: 367 options available, 3 override(s) found
+[24Apr2025 17:46:36.947] [main/INFO] [Xenon-GraphicsAdapterProbe/]: Searching for graphics cards...
+[24Apr2025 17:46:36.998] [main/INFO] [Xenon-GraphicsAdapterProbe/]: Found graphics card: GraphicsAdapterInfo[vendor=INTEL, name=CometLake-U GT2 [UHD Graphics], version=unknown]
+[24Apr2025 17:46:37.015] [main/WARN] [Xenon-Workarounds/]: Embeddium has applied one or more workarounds to prevent crashes or other issues on your system: [NO_ERROR_CONTEXT_UNSUPPORTED]
+[24Apr2025 17:46:37.015] [main/WARN] [Xenon-Workarounds/]: This is not necessarily an issue, but it may result in certain features or optimizations being disabled. You can sometimes fix these issues by upgrading your graphics driver.
+[24Apr2025 17:46:37.036] [main/WARN] [mixin/]: Reference map 'createdeco-forge-refmap.json' for createdeco.mixins.json could not be read. If this is a development environment you can ignore this message
+[24Apr2025 17:46:37.169] [main/INFO] [ModernFix/]: Loaded configuration file for ModernFix 5.20.2+mc1.20.1: 87 options available, 1 override(s) found
+[24Apr2025 17:46:37.170] [main/WARN] [ModernFix/]: Option 'mixin.feature.warn_missing_perf_mods' overriden (by user configuration) to 'false'
+[24Apr2025 17:46:37.171] [main/INFO] [ModernFix/]: Applying Nashorn fix
+[24Apr2025 17:46:37.199] [main/INFO] [ModernFix/]: Applied Forge config corruption patch
+[24Apr2025 17:46:37.402] [main/WARN] [mixin/]: Reference map 'handcrafted-forge-1.20.1-forge-refmap.json' for handcrafted.mixins.json could not be read. If this is a development environment you can ignore this message
+[24Apr2025 17:46:37.615] [main/WARN] [mixin/]: Reference map 'create_questing.refmap.json' for create_questing.mixins.json could not be read. If this is a development environment you can ignore this message
+[24Apr2025 17:46:37.717] [main/WARN] [mixin/]: Reference map 'EpheroLib-refmap.json' for epherolib.mixins.json could not be read. If this is a development environment you can ignore this message
+[24Apr2025 17:46:37.737] [main/WARN] [mixin/]: Reference map 'tfmg.refmap.json' for design_decor.mixins.json could not be read. If this is a development environment you can ignore this message
+[24Apr2025 17:46:37.902] [main/WARN] [mixin/]: Reference map 'puzzlesaccessapi.common.refmap.json' for puzzlesaccessapi.common.mixins.json could not be read. If this is a development environment you can ignore this message
+[24Apr2025 17:46:38.067] [main/WARN] [mixin/]: Reference map 'steampowered.refmap.json' for steampowered.mixins.json could not be read. If this is a development environment you can ignore this message
+[24Apr2025 17:46:38.221] [main/INFO] [Puzzles Lib/]: Loading 311 mods:
+	- abnormals_delight 5.0.0
+	- additional_attributes 1.3.4
+	- additional_enchantments 1.2.1
+	- additional_recipe 1.3
+	- additional_recipes 1.0.0
+	- alexsdelight 1.5
+	- alexsmobs 1.22.9
+	- alternate_current 1.7.0
+	- amendments 1.20-1.2.16
+	- animatica 1.20.1-0.1.3
+	- apotheosis 7.4.7
+	- apotheosis_ascended 1.20.1-1.6.0
+	- apotheosis_modern_ragnarok 3.1.4+mc1.20.1+tacz1.1.4
+		\-- gunsmithlib 2.1.2+mc1.20.1+tacz1.1.4
+	- apothic_materials 1.0.0
+	- architectury 9.2.14
+	- atmospheric 6.1.0
+	- attributeslib 1.3.7
+	- autumnity 5.0.2
+	- balm 7.3.20
+		\-- kuma_api 20.1.8
+	- bcc 4.0.8
+	- bclib 3.0.14
+	- bellsandwhistles 0.4.3-1.20.x
+	- betterdungeons 1.20-Forge-4.0.4
+	- betterend 4.0.11
+	- betterendisland 1.20-Forge-2.0.6
+	- betterfortresses 1.20-Forge-2.0.6
+	- bettermineshafts 1.20-Forge-4.0.4
+	- betteroceanmonuments 1.20-Forge-3.0.4
+	- bettertridents 8.0.1
+	- bhmenu 2.4.2
+	- biomemusic 1.20.1-3.4
+	- biomeswevegone 1.5.8
+	- blueprint 7.1.2
+	- boatload 5.0.1
+	- bookshelf 20.2.13
+	- botarium 2.3.4
+	- buzzier_bees 6.0.1
+	- cataclysm 2.61
+	- caverns_and_chasms 2.0.0
+	- cfwinfo 1.2.0
+	- chat_heads 0.13.13
+	- chefsdelight 1.0.3-forge-1.20.1
+	- chimes 2.0.1
+	- citadel 2.6.1
+	- clientcrafting 1.20.1-1.8
+	- cloth_config 11.1.136
+	- clumps 12.0.0.4
+	- comforts 6.4.0+1.20.1
+	- connectivity 1.20.1-7.1
+	- connectorextras 1.11.2+1.20.1
+		|-- amecsapi 1.5.3+mc1.20-pre1
+		|-- connectorextras_architectury_bridge 1.11.2+1.20.1
+		|-- connectorextras_emi_bridge 1.11.2+1.20.1
+		|-- connectorextras_energy_bridge 1.11.2+1.20.1
+		|-- connectorextras_geckolib_fabric_compat 1.11.2+1.20.1
+		|-- connectorextras_jei_bridge 1.11.2+1.20.1
+		|-- connectorextras_kubejs_bridge 1.11.2+1.20.1
+		|-- connectorextras_modmenu_bridge 1.11.2+1.20.1
+			\-- modmenu 7.2.2
+		|-- connectorextras_pehkui_bridge 1.11.2+1.20.1
+		|-- connectorextras_rei_bridge 1.11.2+1.20.1
+		|-- connectorextras_terrablender_bridge 1.11.2+1.20.1
+		|-- forgeconfigapiport 8.0.0
+		\-- reach_entity_attributes 2.4.0
+	- connectormod 1.0.0-beta.46+1.20.1
+	- copycats 2.2.0+mc.1.20.1-forge
+	- corgilib 4.0.3.3
+	- coroutil 1.20.1-1.3.7
+	- corpse 1.20.1-1.0.20
+	- crash_assistant 1.2.18
+	- crashexploitfixer 1.1.0
+	- craterlib 2.1.3
+	- create 0.5.1.j
+		\-- flywheel 0.6.11-13
+	- create_aquatic_ambitions 1.20.1-0.0.1
+	- create_bic_bit 0.0.86
+	- create_bnz 1.0a.Release
+	- create_buffers__beams_overhauled 1.0.0
+	- create_central_kitchen 1.3.12
+		|-- create_dragon_lib 1.4.3
+		\-- mixinextras 0.2.0
+	- create_compressed 1.0.1
+	- create_confectionery 1.1.0
+	- create_connected 0.9.4-mc1.20.1
+	- create_crush_everything 1.0.2
+	- create_dd 0.1b.Release-Early-Dev
+	- create_deepfried 0.1.1
+	- create_enchantment_industry 1.2.9.d
+	- create_factory 0.4b-1.20.1
+	- create_kart 2.0.0
+	- create_logistics 1.0.0
+	- create_mechanical_chicken 1.20.1-1.1.2.j-55
+	- create_mob_spawners 1.6.0
+	- create_new_age 1.1.2
+	- create_optical 0.2.2
+	- create_pattern_schematics 1.1.19+forge-1.20.1
+	- create_questing 1.0.0
+	- create_sa 2.0.8
+	- create_sabers 1.3.0
+	- create_tank_defenses 0.80
+	- create_things_and_misc 1.0.0
+	- create_tweaked_controllers 1.20.1-1.2.4
+	- create_winery 1.2.0
+	- create_wt 1.0.7
+	- createaddition 1.20.1-1.2.5
+	- createbigcannons 5.8.2
+		\-- ritchiesprojectilelib 2.0.0-dev+mc.1.20.1-forge-build.182
+	- createcafe 1.2.4-1.20.1
+	- createcasing 1.20.1-1.6.2-fix1
+	- createdeco 2.0.2-1.20.1-forge
+	- createdieselgenerators 1.20.1-1.2i
+	- createfood 1.1.8-forge
+	- createframed 1.5.5
+	- creategoggles 0.5.6
+	- createmetallurgy 0.0.6-1.20.1
+	- createrailwaysnavigator 1.20.1-beta-0.7.2
+		\-- dragonlib 1.20.1-2.2.24
+	- createstuffadditionsfix 0.0.0.1
+	- createsweetsandtreets 1.0.0
+	- createutilities 0.3.0+1.20.1
+	- crystal_clear 2.1-Beta
+	- cupboard 1.20.1-2.7
+	- curios 5.12.1+1.20.1
+	- cutthrough 8.0.2
+	- delightful 3.7.1
+	- design_decor 0.4.0b
+	- despawn_tweaker 1.20.1-1.0.0
+	- drippyloadingscreen 3.0.11
+	- dsbg 1.0-1.20.1
+	- dynamicvillage 0.4
+	- easyanvils 8.0.2
+	- easymagic 8.0.1
+	- enchdesc 17.1.19
+	- entity_model_features 2.4.1
+	- entity_texture_features 6.2.9
+	- environmental 4.0.1
+	- epherolib 0.1.2
+	- estrogen 4.3.2+1.20.1-forge
+		|-- baubly 1.0.1
+		|-- critter_lib 0.1-beta.14
+		\-- jukeboxfix 1.0.1
+	- everycomp 1.20-2.7.15
+	- extendedgears 2.1.2-1.20.1-forge
+	- fabric_api 0.92.2+1.11.12+1.20.1
+		|-- fabric_api_base 0.4.31+ef105b4977
+		|-- fabric_api_lookup_api_v1 1.6.36+67f9824077
+		|-- fabric_biome_api_v1 13.0.13+dc36698e77
+		|-- fabric_block_api_v1 1.0.11+0e6cb7f777
+		|-- fabric_block_view_api_v2 1.0.1+0767707077
+		|-- fabric_blockrenderlayer_v1 1.1.41+1d0da21e77
+		|-- fabric_client_tags_api_v1 1.1.2+5d6761b877
+		|-- fabric_command_api_v1 1.2.34+f71b366f77
+		|-- fabric_command_api_v2 2.2.13+561530ec77
+		|-- fabric_content_registries_v0 4.0.11+a670df1e77
+		|-- fabric_convention_tags_v1 1.5.5+fa3d1c0177
+		|-- fabric_data_attachment_api_v1 1.0.0+30ef839e77
+		|-- fabric_data_generation_api_v1 12.3.4+369cb3a477
+		|-- fabric_dimensions_v1 2.1.54+8005d10d77
+		|-- fabric_entity_events_v1 1.6.0+4ca7515277
+		|-- fabric_events_interaction_v0 0.6.2+0d0bd5a777
+		|-- fabric_game_rule_api_v1 1.0.40+683d4da877
+		|-- fabric_item_api_v1 2.1.28+4d0bbcfa77
+		|-- fabric_item_group_api_v1 4.0.12+c9161c2d77
+		|-- fabric_key_binding_api_v1 1.0.37+561530ec77
+		|-- fabric_lifecycle_events_v1 2.2.22+afab492177
+		|-- fabric_loot_api_v2 1.2.1+eb28f93e77
+		|-- fabric_message_api_v1 5.1.9+52cc178c77
+		|-- fabric_mining_level_api_v1 2.1.50+561530ec77
+		|-- fabric_model_loading_api_v1 1.0.3+6274ab9d77
+		|-- fabric_models_v0 0.4.2+7c3892a477
+		|-- fabric_networking_api_v1 1.3.11+503a202477
+		|-- fabric_object_builder_api_v1 11.1.3+4bd998fa77
+		|-- fabric_particles_v1 1.1.2+78e1ecb877
+		|-- fabric_recipe_api_v1 1.0.21+514a076577
+		|-- fabric_registry_sync_v0 2.3.3+1c0ea72177
+		|-- fabric_renderer_api_v1 3.2.1+cf68abbe77
+		|-- fabric_renderer_indigo 1.5.2+b5b2da4177
+		|-- fabric_rendering_data_attachment_v1 0.3.37+a6081afc77
+		|-- fabric_rendering_fluids_v1 3.0.28+4ac5e37a77
+		|-- fabric_rendering_v1 3.0.8+66e9a48f77
+		|-- fabric_resource_conditions_api_v1 2.3.8+9e342fc177
+		|-- fabric_resource_loader_v0 0.11.10+bcd08ed377
+		|-- fabric_screen_api_v1 2.0.8+45a670a577
+		|-- fabric_screen_handler_api_v1 1.3.30+561530ec77
+		|-- fabric_sound_api_v1 1.0.13+4f23bd8477
+		|-- fabric_transfer_api_v1 3.3.5+631c9cd677
+		\-- fabric_transitive_access_wideners_v1 4.3.1+1880499877
+	- fancymenu 3.4.0
+	- farmers_structures 1.0.0
+	- farmersdelight 1.20.1-1.2.7
+	- farsight_view 1.20.1-3.7
+	- ferritecore 6.0.1
+	- forge 47.3.10
+	- framework 0.7.12
+	- ftblibrary 2001.2.9
+	- ftbquests 2001.4.12
+	- ftbteams 2001.3.1
+	- ftbxmodcompat 2.1.2
+	- fusion 1.2.5
+	- fzzy_config 0.6.6+1.20.1+forge
+	- gallery 1.0.3
+	- garnished 2.0.7
+	- geckolib 4.7.1.1
+	- gourmet 0.1.1b-1.20.1
+	- gpumemleakfix 1.20.1-1.8
+	- handcrafted 3.0.6
+	- highlighter 1.1.9
+	- iceberg 1.1.25
+	- idas 1.10.3+1.20.1
+	- immediatelyfast 1.5.0+1.20.4
+	- immersive_aircraft 1.1.8+1.20.1
+	- incubation 4.0.4
+	- integrated_api 1.5.1+1.20.1-forge
+	- integrated_stronghold 1.1.2+1.20.1-forge
+	- integrated_villages 1.1.5+1.20.1-forge
+	- interiors 0.5.6
+	- item_obliterator 2.3.0
+	- jade 11.12.3+forge
+	- jeed 1.20-2.2.5
+	- jei 15.20.0.106
+	- jeresources 1.4.0.247
+	- justenoughbreeding 1.5.0
+	- justenoughprofessions 3.0.1
+	- kitchen_grow 0.1-1.20.1
+	- konkrete 1.8.0
+	- kotlinforforge 4.11.0
+	- krypton 0.2.3
+	- leavesbegone 8.0.0
+	- lionfishapi 2.4-Fix
+	- lootintegrations 1.20.1-4.2
+	- lootintegrations_yungs 1
+	- luna 1.0.0
+	- melody 1.0.2
+	- minecraft 1.20.1
+	- modernfix 5.20.2+mc1.20.1
+	- moonlight 1.20-2.13.58
+	- moped 1.0.0
+	- mousetweaks 2.25.1
+	- naturescompass 1.20.1-1.11.2-forge
+	- nebs 2.0.3
+	- necronomicon 1.6.0
+	- neruina 2.1.2
+	- netherportalfix 13.0.1
+	- nightconfigfixes 8.0.0
+	- nochatreports 1.20.1-v2.2.2
+	- nocubescreateexp 1.0.4
+	- notenoughanimations 1.9.2
+	- oculus 1.8.0
+	- ohthetreesyoullgrow 1.20.1-1.3.7
+	- opacpvp 1.0.0
+	- openpartiesandclaims 0.24.0
+	- otherworldapoth 0.3.0
+	- overflowingbars 8.0.1
+	- paxi 1.20-Forge-4.0
+	- personality 4.1.0
+	- petrolpark 1.3.4
+	- petrolsparts 1.1.3
+	- pickupnotifier 8.0.0
+	- placebo 8.6.3
+	- polymorph 0.49.8+1.20.1
+		\-- spectrelib 0.13.17+1.20.1
+	- potacore 0.2.8-universal
+	- puzzleslib 8.1.29
+		\-- puzzlesaccessapi 20.1.1
+	- quark 4.0-461
+	- railways 1.6.7+forge-mc1.20.1
+	- recipeessentials 1.20.1-4.0
+	- resourcefullib 2.1.29
+	- resourcepackoverrides 8.0.3
+	- runiclib 4.1.5
+	- savage_and_ravage 6.0.0
+	- serverbrowser 1.0.0
+	- shouldersurfing 1.20.1-4.10.5
+	- simplerpc 3.3.3
+	- skinlayers3d 1.7.4
+	- sliceanddice 3.3.0
+	- smarterfarmers 1.20-2.1.0
+	- smoothchunk 1.20.1-4.1
+	- sophisticatedbackpacks 3.23.6.1211
+	- sophisticatedcore 1.2.23.902
+	- steampowered 1.20.1-3.0.2
+	- storagedelight 25.03.09-1.20-forge
+	- structureessentials 1.20.1-4.5
+	- supplementaries 1.20-3.1.13
+		\-- mixinsquared 0.1.1
+	- tacz 1.1.4-hotfix
+	- terrablender 3.0.1.10
+	- tfmg 0.9.3-1.20.1
+	- tiab 4.0.4-mc1.20.1
+	- tipsmod 12.1.8
+	- toastcontrol 8.0.3
+	- toms_storage 1.7.0
+	- totemfactory 1.0
+	- trading_floor 1.1.7+forge-1.20.1
+	- tradingpost 8.0.2
+	- trainperspectivefix 0.0NONE
+	- upgrade_aquatic 6.0.2
+	- vintageimprovements 1.20.1-0.2.0.3
+	- visualworkbench 8.0.0
+	- watut 1.20.1-1.2.3
+	- waystones 14.1.11
+	- wunderlib 1.1.5
+	- xaerominimap 25.2.0
+	- xaeroworldmap 1.39.4
+	- xenon 0.3.31
+		|-- embeddium 0.3.31
+		\-- rubidium 0.7.1
+	- xlpackets 1.18.2-2.1
+	- yungsapi 1.20-Forge-4.0.6
+	- yungscavebiomes 1.20.1-Forge-2.0.4
+	- zeta 1.0-28
+	- zume 1.1.4
+[24Apr2025 17:46:38.622] [main/WARN] [mixin/]: Reference map 'createframed.refmap.json' for createframed.mixins.json could not be read. If this is a development environment you can ignore this message
+[24Apr2025 17:46:38.794] [main/WARN] [mixin/]: Reference map 'xlpackets.refmap.json' for xlpackets.mixins.json could not be read. If this is a development environment you can ignore this message
+[24Apr2025 17:46:38.858] [main/WARN] [mixin/]: Reference map 'create_mechanical_chicken.refmap.json' for create_mechanical_chicken.mixins.json could not be read. If this is a development environment you can ignore this message
+[24Apr2025 17:46:38.952] [main/WARN] [mixin/]: Reference map 'incubation.refmap.json' for incubation.mixins.json could not be read. If this is a development environment you can ignore this message
+[24Apr2025 17:46:38.974] [main/WARN] [mixin/]: Reference map 'tfmg.refmap.json' for tfmg.mixins.json could not be read. If this is a development environment you can ignore this message
+[24Apr2025 17:46:39.057] [main/WARN] [mixin/]: Reference map 'abnormals_delight.refmap.json' for abnormals_delight.mixins.json could not be read. If this is a development environment you can ignore this message
+[24Apr2025 17:46:39.073] [main/WARN] [mixin/]: Reference map 'coroutil.refmap.json' for coroutil.mixins.json could not be read. If this is a development environment you can ignore this message
+[24Apr2025 17:46:39.134] [main/WARN] [mixin/]: Reference map 'Create_The_Kitchen_Must_Grow.refmap.json' for kitchen_grow.mixins.json could not be read. If this is a development environment you can ignore this message
+[24Apr2025 17:46:39.137] [main/WARN] [mixin/]: Reference map 'trainperspectivefix.refmap.json' for trainperspectivefix.forge.mixins.json could not be read. If this is a development environment you can ignore this message
+[24Apr2025 17:46:39.168] [main/WARN] [mixin/]: Reference map '' for adapter.init.mixins.json could not be read. If this is a development environment you can ignore this message
+[24Apr2025 17:46:40.130] [main/INFO] [net.minecraftforge.coremod.CoreMod.apotheosis/COREMODLOG]: Replaced 2 calls to Enchantment#getMaxLevel() in net/minecraft/world/inventory/AnvilMenu
+[24Apr2025 17:46:40.609] [main/INFO] [net.minecraftforge.coremod.CoreMod.apotheosis/COREMODLOG]: Patching FishingHook#catchingFish
+[24Apr2025 17:46:40.707] [main/INFO] [net.minecraftforge.coremod.CoreMod.placebo/COREMODLOG]: Patching IForgeItemStack#getEnchantmentLevel
+[24Apr2025 17:46:40.715] [main/INFO] [net.minecraftforge.coremod.CoreMod.placebo/COREMODLOG]: Patching IForgeItemStack#getEnchantmentLevel
+[24Apr2025 17:46:40.729] [main/INFO] [net.minecraftforge.coremod.CoreMod.placebo/COREMODLOG]: Patching IForgeItemStack#getEnchantmentLevel
+[24Apr2025 17:46:40.732] [main/INFO] [net.minecraftforge.coremod.CoreMod.placebo/COREMODLOG]: Patching IForgeItemStack#getEnchantmentLevel
+[24Apr2025 17:46:40.752] [main/WARN] [mixin/]: Error loading class: com/hollingsworth/arsnouveau/common/items/SpellCrossbow (java.lang.ClassNotFoundException: com.hollingsworth.arsnouveau.common.items.SpellCrossbow)
+[24Apr2025 17:46:41.080] [main/WARN] [mixin/]: Error loading class: mekanism/client/render/entity/RenderFlame (java.lang.ClassNotFoundException: mekanism.client.render.entity.RenderFlame)
+[24Apr2025 17:46:41.088] [main/WARN] [mixin/]: Error loading class: mekanism/client/render/armor/MekaSuitArmor (java.lang.ClassNotFoundException: mekanism.client.render.armor.MekaSuitArmor)
+[24Apr2025 17:46:41.209] [main/INFO] [net.minecraftforge.coremod.CoreMod.apotheosis/COREMODLOG]: Replaced 1 calls to Enchantment#getMaxLevel() in net/minecraft/world/entity/npc/VillagerTrades$EnchantBookForEmeralds
+[24Apr2025 17:46:41.209] [main/INFO] [net.minecraftforge.coremod.CoreMod.apotheosis/COREMODLOG]: Replaced 1 calls to Enchantment#isTreasureOnly() in net/minecraft/world/entity/npc/VillagerTrades$EnchantBookForEmeralds
+[24Apr2025 17:46:41.209] [main/INFO] [net.minecraftforge.coremod.CoreMod.apotheosis/COREMODLOG]: Replaced 1 calls to Enchantment#isTradeable() in net/minecraft/world/entity/npc/VillagerTrades$EnchantBookForEmeralds
+[24Apr2025 17:46:41.370] [main/WARN] [mixin/]: Error loading class: dev/latvian/mods/kubejs/recipe/RecipesEventJS (java.lang.ClassNotFoundException: dev.latvian.mods.kubejs.recipe.RecipesEventJS)
+[24Apr2025 17:46:41.371] [main/WARN] [mixin/]: @Mixin target dev.latvian.mods.kubejs.recipe.RecipesEventJS was not found sliceanddice.mixins.json:RecipeEventJSMixin from mod sliceanddice
+[24Apr2025 17:46:41.532] [main/WARN] [mixin/]: Error loading class: xfacthd/framedblocks/common/blockentity/doubled/FramedAdjustableDoubleBlockEntity (java.lang.ClassNotFoundException: xfacthd.framedblocks.common.blockentity.doubled.FramedAdjustableDoubleBlockEntity)
+[24Apr2025 17:46:41.532] [main/WARN] [mixin/]: @Mixin target xfacthd.framedblocks.common.blockentity.doubled.FramedAdjustableDoubleBlockEntity was not found createbigcannons.mixins.json:compat.FramedAdjustableDoubleBlockEntityAccessor from mod createbigcannons
+[24Apr2025 17:46:41.945] [main/WARN] [mixin/]: Error loading class: com/mrcrayfish/guns/client/handler/RecoilHandler (java.lang.ClassNotFoundException: com.mrcrayfish.guns.client.handler.RecoilHandler)
+[24Apr2025 17:46:41.956] [main/WARN] [mixin/]: Error loading class: com/cobblemon/mod/common/util/PlayerExtensionsKt (java.lang.ClassNotFoundException: com.cobblemon.mod.common.util.PlayerExtensionsKt)
+[24Apr2025 17:46:41.965] [main/WARN] [mixin/]: Error loading class: com/cobblemon/mod/common/client/render/pokemon/PokemonRenderer (java.lang.ClassNotFoundException: com.cobblemon.mod.common.client.render.pokemon.PokemonRenderer)
+[24Apr2025 17:46:41.979] [main/WARN] [mixin/]: Error loading class: yesman/epicfight/client/events/engine/RenderEngine (java.lang.ClassNotFoundException: yesman.epicfight.client.events.engine.RenderEngine)
+[24Apr2025 17:46:41.989] [main/WARN] [mixin/]: Error loading class: mcjty/theoneprobe/rendering/OverlayRenderer (java.lang.ClassNotFoundException: mcjty.theoneprobe.rendering.OverlayRenderer)
+[24Apr2025 17:46:41.997] [main/WARN] [mixin/]: Error loading class: net/tslat/tes/core/hud/TESHud (java.lang.ClassNotFoundException: net.tslat.tes.core.hud.TESHud)
+[24Apr2025 17:46:42.292] [main/INFO] [com.cupboard.Cupboard/]: Loaded config for: recipeessentials.json
+[24Apr2025 17:46:42.320] [main/INFO] [com.cupboard.Cupboard/]: Loaded config for: structureessentials.json
+[24Apr2025 17:46:42.380] [main/INFO] [net.minecraftforge.coremod.CoreMod.attributeslib/COREMODLOG]: Patching EffectRenderingInventoryScreen#renderEffects
+[24Apr2025 17:46:42.538] [main/INFO] [net.minecraftforge.coremod.CoreMod.apotheosis/COREMODLOG]: Replaced 2 calls to Enchantment#getMaxLevel() in net/minecraft/world/item/CreativeModeTabs
+[24Apr2025 17:46:42.821] [main/WARN] [mixin/]: Error loading class: me/jellysquid/mods/lithium/common/ai/pathing/PathNodeDefaults (java.lang.ClassNotFoundException: me.jellysquid.mods.lithium.common.ai.pathing.PathNodeDefaults)
+[24Apr2025 17:46:42.959] [main/WARN] [mixin/]: Error loading class: com/gametechbc/traveloptics/spells/nature/AerialCollapseSpell (java.lang.ClassNotFoundException: com.gametechbc.traveloptics.spells.nature.AerialCollapseSpell)
+[24Apr2025 17:46:42.959] [main/WARN] [mixin/]: @Mixin target com.gametechbc.traveloptics.spells.nature.AerialCollapseSpell was not found otherworldapoth.mixins.json:spell_nerfs.AerialCollapseMixin from mod otherworldapoth
+[24Apr2025 17:46:42.967] [main/WARN] [mixin/]: Error loading class: com/gametechbc/traveloptics/spells/fire/AnnihilationSpell (java.lang.ClassNotFoundException: com.gametechbc.traveloptics.spells.fire.AnnihilationSpell)
+[24Apr2025 17:46:42.967] [main/WARN] [mixin/]: @Mixin target com.gametechbc.traveloptics.spells.fire.AnnihilationSpell was not found otherworldapoth.mixins.json:spell_nerfs.AnnihilationMixin from mod otherworldapoth
+[24Apr2025 17:46:42.976] [main/WARN] [mixin/]: Error loading class: io/redspace/ironsspellbooks/effect/EchoingStrikesEffect (java.lang.ClassNotFoundException: io.redspace.ironsspellbooks.effect.EchoingStrikesEffect)
+[24Apr2025 17:46:42.976] [main/WARN] [mixin/]: @Mixin target io.redspace.ironsspellbooks.effect.EchoingStrikesEffect was not found otherworldapoth.mixins.json:spell_nerfs.EchoingStrikesEffectMixin from mod otherworldapoth
+[24Apr2025 17:46:42.984] [main/WARN] [mixin/]: Error loading class: dev/muon/medieval/leveling/client/LevelDisplayRenderer (java.lang.ClassNotFoundException: dev.muon.medieval.leveling.client.LevelDisplayRenderer)
+[24Apr2025 17:46:42.984] [main/WARN] [mixin/]: @Mixin target dev.muon.medieval.leveling.client.LevelDisplayRenderer was not found otherworldapoth.mixins.json:client.LevelDisplayRendererMixin from mod otherworldapoth
+[24Apr2025 17:46:43.045] [main/WARN] [mixin/]: Error loading class: org/figuramc/figura/lua/api/HostAPI (java.lang.ClassNotFoundException: org.figuramc.figura.lua.api.HostAPI)
+[24Apr2025 17:46:43.045] [main/WARN] [mixin/]: @Mixin target org.figuramc.figura.lua.api.HostAPI was not found estrogen-common.mixins.json:mixincompat.figura.HostAPIMixin from mod estrogen
+[24Apr2025 17:46:43.052] [main/WARN] [mixin/]: Error loading class: org/figuramc/figura/lua/api/entity/ViewerAPI (java.lang.ClassNotFoundException: org.figuramc.figura.lua.api.entity.ViewerAPI)
+[24Apr2025 17:46:43.053] [main/WARN] [mixin/]: @Mixin target org.figuramc.figura.lua.api.entity.ViewerAPI was not found estrogen-common.mixins.json:mixincompat.figura.ViewerAPIMixin from mod estrogen
+[24Apr2025 17:46:43.499] [main/INFO] [net.minecraftforge.coremod.CoreMod.apotheosis/COREMODLOG]: Replaced 1 calls to Enchantment#getMaxLevel() in net/minecraft/world/level/storage/loot/functions/EnchantRandomlyFunction
+[24Apr2025 17:46:43.499] [main/INFO] [net.minecraftforge.coremod.CoreMod.apotheosis/COREMODLOG]: Replaced 1 calls to Enchantment#isDiscoverable() in net/minecraft/world/level/storage/loot/functions/EnchantRandomlyFunction
+[24Apr2025 17:46:43.535] [main/WARN] [mixin/]: Error loading class: noobanidus/mods/lootr/config/ConfigManager (java.lang.ClassNotFoundException: noobanidus.mods.lootr.config.ConfigManager)
+[24Apr2025 17:46:43.535] [main/WARN] [mixin/]: @Mixin target noobanidus.mods.lootr.config.ConfigManager was not found quark_integrations.mixins.json:lootr.ConfigManagerMixin from mod quark
+[24Apr2025 17:46:43.740] [main/WARN] [mixin/]: Error loading class: dan200/computercraft/shared/integration/MoreRedIntegration (java.lang.ClassNotFoundException: dan200.computercraft.shared.integration.MoreRedIntegration)
+[24Apr2025 17:46:43.740] [main/WARN] [mixin/]: @Mixin target dan200.computercraft.shared.integration.MoreRedIntegration was not found create_central_kitchen.mixins.json:common.computercraft.MoreRedIntegrationMixin from mod create_central_kitchen
+[24Apr2025 17:46:43.788] [main/WARN] [mixin/]: Error loading class: com/sammy/minersdelight/content/block/copper_pot/CopperPotBlockEntity (java.lang.ClassNotFoundException: com.sammy.minersdelight.content.block.copper_pot.CopperPotBlockEntity)
+[24Apr2025 17:46:43.788] [main/WARN] [mixin/]: @Mixin target com.sammy.minersdelight.content.block.copper_pot.CopperPotBlockEntity was not found create_central_kitchen.mixins.json:common.minersdelight.CopperPotBlockEntityMixin from mod create_central_kitchen
+[24Apr2025 17:46:43.796] [main/WARN] [mixin/]: Error loading class: com/sammy/minersdelight/content/block/sticky_basket/StickyBasketBlockEntity (java.lang.ClassNotFoundException: com.sammy.minersdelight.content.block.sticky_basket.StickyBasketBlockEntity)
+[24Apr2025 17:46:43.797] [main/WARN] [mixin/]: @Mixin target com.sammy.minersdelight.content.block.sticky_basket.StickyBasketBlockEntity was not found create_central_kitchen.mixins.json:common.minersdelight.StickyBasketBlockEntityAccessor from mod create_central_kitchen
+[24Apr2025 17:46:43.805] [main/WARN] [mixin/]: Error loading class: com/sammy/minersdelight/content/block/sticky_basket/StickyBasketBlockEntity (java.lang.ClassNotFoundException: com.sammy.minersdelight.content.block.sticky_basket.StickyBasketBlockEntity)
+[24Apr2025 17:46:43.806] [main/WARN] [mixin/]: @Mixin target com.sammy.minersdelight.content.block.sticky_basket.StickyBasketBlockEntity was not found create_central_kitchen.mixins.json:common.minersdelight.StickyBasketBlockEntityMixin from mod create_central_kitchen
+[24Apr2025 17:46:43.814] [main/WARN] [mixin/]: Error loading class: net/orcinus/overweightfarming/blocks/CropFullBlock (java.lang.ClassNotFoundException: net.orcinus.overweightfarming.blocks.CropFullBlock)
+[24Apr2025 17:46:43.815] [main/WARN] [mixin/]: @Mixin target net.orcinus.overweightfarming.blocks.CropFullBlock was not found create_central_kitchen.mixins.json:common.overweightfarming.CropFullBlockMixin from mod create_central_kitchen
+[24Apr2025 17:46:43.895] [main/WARN] [Xenon/]: Force-disabling mixin 'features.render.world.sky.WorldRendererMixin' as rule 'mixin.features.render.world.sky' (added by mods [oculus]) disables it and children
+[24Apr2025 17:46:43.895] [main/WARN] [Xenon/]: Force-disabling mixin 'features.render.world.sky.ClientWorldMixin' as rule 'mixin.features.render.world.sky' (added by mods [oculus]) disables it and children
+[24Apr2025 17:46:43.895] [main/WARN] [Xenon/]: Force-disabling mixin 'features.render.world.sky.BackgroundRendererMixin' as rule 'mixin.features.render.world.sky' (added by mods [oculus]) disables it and children
+[24Apr2025 17:46:43.896] [main/WARN] [Xenon/]: Force-disabling mixin 'features.render.gui.font.GlyphRendererMixin' as rule 'mixin.features.render.gui.font' (added by mods [oculus]) disables it and children
+[24Apr2025 17:46:43.897] [main/WARN] [Xenon/]: Force-disabling mixin 'features.render.gui.font.FontSetMixin' as rule 'mixin.features.render.gui.font' (added by mods [oculus]) disables it and children
+[24Apr2025 17:46:43.897] [main/WARN] [Xenon/]: Force-disabling mixin 'features.render.entity.shadows.EntityRenderDispatcherMixin' as rule 'mixin.features.render.entity' (added by mods [oculus]) disables it and children
+[24Apr2025 17:46:43.897] [main/WARN] [Xenon/]: Force-disabling mixin 'features.render.entity.remove_streams.ModelPartMixin' as rule 'mixin.features.render.entity' (added by mods [oculus]) disables it and children
+[24Apr2025 17:46:43.897] [main/WARN] [Xenon/]: Force-disabling mixin 'features.render.entity.remove_streams.HierarchicalModelMixin' as rule 'mixin.features.render.entity' (added by mods [oculus]) disables it and children
+[24Apr2025 17:46:43.898] [main/WARN] [Xenon/]: Force-disabling mixin 'features.render.entity.fast_render.ModelPartMixin' as rule 'mixin.features.render.entity' (added by mods [oculus]) disables it and children
+[24Apr2025 17:46:43.898] [main/WARN] [Xenon/]: Force-disabling mixin 'features.render.entity.fast_render.CuboidMixin' as rule 'mixin.features.render.entity' (added by mods [oculus]) disables it and children
+[24Apr2025 17:46:43.898] [main/WARN] [Xenon/]: Force-disabling mixin 'features.render.entity.cull.EntityRendererMixin' as rule 'mixin.features.render.entity' (added by mods [oculus]) disables it and children
+[24Apr2025 17:46:44.378] [main/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.4.1).
+[24Apr2025 17:46:44.786] [main/INFO] [mixin/]: Mixing client.MixinMinecraft from mixins/common/nochatreports.mixins.json into net.minecraft.client.Minecraft
+[24Apr2025 17:46:48.367] [pool-4-thread-1/INFO] [net.minecraft.server.Bootstrap/]: ModernFix reached bootstrap stage (27.81 s after launch)
+[24Apr2025 17:46:48.528] [pool-4-thread-1/INFO] [mixin/]: Mixing common.MixinFriendlyByteBuf from mixins/common/nochatreports.mixins.json into net.minecraft.network.FriendlyByteBuf
+[24Apr2025 17:46:48.529] [pool-4-thread-1/INFO] [mixin/]: Renaming synthetic method lambda$onWriteJsonWithCodec$1(Ljava/lang/Object;Ljava/lang/String;)Lio/netty/handler/codec/EncoderException; to mdfb25db$nochatreports$lambda$onWriteJsonWithCodec$1$0 in mixins/common/nochatreports.mixins.json:common.MixinFriendlyByteBuf from mod nochatreports
+[24Apr2025 17:46:48.529] [pool-4-thread-1/INFO] [mixin/]: Renaming synthetic method lambda$onReadJsonWithCodec$0(Ljava/lang/String;)Lio/netty/handler/codec/DecoderException; to mdfb25db$nochatreports$lambda$onReadJsonWithCodec$0$1 in mixins/common/nochatreports.mixins.json:common.MixinFriendlyByteBuf from mod nochatreports
+[24Apr2025 17:46:48.605] [pool-4-thread-1/WARN] [mixin/]: @Final field delegatesByName:Ljava/util/Map; in modernfix-forge.mixins.json:perf.forge_registry_alloc.ForgeRegistryMixin from mod modernfix should be final
+[24Apr2025 17:46:48.605] [pool-4-thread-1/WARN] [mixin/]: @Final field delegatesByValue:Ljava/util/Map; in modernfix-forge.mixins.json:perf.forge_registry_alloc.ForgeRegistryMixin from mod modernfix should be final
+[24Apr2025 17:46:49.844] [pool-4-thread-1/INFO] [net.minecraftforge.coremod.CoreMod.apotheosis/COREMODLOG]: Replaced 2 calls to Enchantment#getMaxLevel() in net/minecraft/world/item/CreativeModeTabs
+[24Apr2025 17:46:50.035] [pool-4-thread-1/INFO] [com.cupboard.Cupboard/]: Loaded config for: biomemusic.json
+[24Apr2025 17:46:50.212] [pool-4-thread-1/INFO] [net.minecraftforge.coremod.CoreMod.apotheosis/COREMODLOG]: Replaced 1 calls to Enchantment#getMaxLevel() in org/violetmoon/quark/content/experimental/module/GameNerfsModule
+[24Apr2025 17:46:50.758] [pool-4-thread-1/INFO] [net.minecraft.server.Bootstrap/]: Vanilla bootstrap took 2388 milliseconds
+[24Apr2025 17:46:50.965] [pool-4-thread-1/WARN] [mixin/]: Error loading class: dev/muon/medieval/leveling/LevelingUtils (java.lang.ClassNotFoundException: dev.muon.medieval.leveling.LevelingUtils)
+[24Apr2025 17:46:50.966] [pool-4-thread-1/WARN] [mixin/]: Not transforming member reference INVOKESTATIC for dev/muon/medieval/leveling/LevelingUtils.getPlayerLevel(Lnet/minecraft/world/entity/player/Player;)I as owner class was not found
+[24Apr2025 17:46:51.276] [pool-4-thread-1/INFO] [net.minecraftforge.coremod.CoreMod.apotheosis/COREMODLOG]: Replaced 5 calls to Enchantment#getMaxLevel() in org/violetmoon/quark/content/tools/module/AncientTomesModule
+[24Apr2025 17:46:51.306] [pool-4-thread-1/WARN] [mixin/]: @Redirect conflict. Skipping recipeessentials.mixins.json:nbt.ItemStackMixin from mod recipeessentials->@Redirect::onTagCompare(Ljava/lang/Object;Ljava/lang/Object;)Z with priority 200, already redirected by geckolib.mixins.json:common.ItemStackMixin from mod geckolib->@Redirect::geckolib$skipGeckolibIdOnCompare(Ljava/lang/Object;Ljava/lang/Object;)Z with priority 1000
+[24Apr2025 17:46:51.314] [pool-4-thread-1/INFO] [net.minecraftforge.coremod.CoreMod.placebo/COREMODLOG]: Patching IForgeItemStack#getEnchantmentLevel
+[24Apr2025 17:46:51.314] [pool-4-thread-1/INFO] [net.minecraftforge.coremod.CoreMod.placebo/COREMODLOG]: Patching IForgeItemStack#getEnchantmentLevel
+[24Apr2025 17:46:51.410] [pool-4-thread-1/WARN] [mixin/]: Error loading class: dev/muon/medieval/leveling/LevelingUtils (java.lang.ClassNotFoundException: dev.muon.medieval.leveling.LevelingUtils)
+[24Apr2025 17:46:51.411] [pool-4-thread-1/WARN] [mixin/]: Not transforming member reference INVOKESTATIC for dev/muon/medieval/leveling/LevelingUtils.getEntityLevel(Lnet/minecraft/world/entity/LivingEntity;)I as owner class was not found
+[24Apr2025 17:46:51.582] [pool-4-thread-1/INFO] [net.minecraftforge.coremod.CoreMod.apotheosis/COREMODLOG]: Replaced 2 calls to Enchantment#getMaxLevel() in net/minecraft/world/inventory/AnvilMenu
+[24Apr2025 17:46:52.127] [pool-4-thread-1/WARN] [mixin/]: Method overwrite conflict for m_6832_ in bettertridents.common.mixins.json:TridentItemMixin from mod bettertridents, previously written by com.teamabnormals.upgrade_aquatic.core.mixin.TridentItemMixin. Skipping method.
+[24Apr2025 17:46:52.936] [pool-4-thread-1/INFO] [mixin/]: savage_and_ravage.mixins.json:RaiderAccessor from mod savage_and_ravage->@Accessor[FIELD_GETTER]::getIsCelebrating()Lnet/minecraft/network/syncher/EntityDataAccessor; should be static as its target is
+[24Apr2025 17:46:53.527] [pool-4-thread-1/WARN] [mixin/]: Method overwrite conflict for scheduleRandomTick in corgilib-common.mixins.json:chunk.MixinChunkAccess from mod corgilib, previously written by dev.corgitaco.ohthetreesyoullgrow.mixin.chunk.MixinChunkAccess. Skipping method.
+[24Apr2025 17:46:53.527] [pool-4-thread-1/WARN] [mixin/]: Method overwrite conflict for getScheduledRandomTicks in corgilib-common.mixins.json:chunk.MixinChunkAccess from mod corgilib, previously written by dev.corgitaco.ohthetreesyoullgrow.mixin.chunk.MixinChunkAccess. Skipping method.
+[24Apr2025 17:46:53.777] [pool-4-thread-1/INFO] [net.minecraftforge.coremod.CoreMod.apotheosis/COREMODLOG]: Patching FishingHook#catchingFish
+[24Apr2025 17:46:53.900] [pool-4-thread-1/INFO] [mixin/]: Mixing server.MixinServerGamePacketListenerImpl from mixins/common/nochatreports.mixins.json into net.minecraft.server.network.ServerGamePacketListenerImpl
+[24Apr2025 17:46:54.544] [pool-4-thread-1/INFO] [net.minecraftforge.coremod.CoreMod.apotheosis/COREMODLOG]: Replaced 1 calls to Enchantment#getMaxLevel() in net/minecraft/world/level/storage/loot/functions/EnchantRandomlyFunction
+[24Apr2025 17:46:54.545] [pool-4-thread-1/INFO] [net.minecraftforge.coremod.CoreMod.apotheosis/COREMODLOG]: Replaced 1 calls to Enchantment#isDiscoverable() in net/minecraft/world/level/storage/loot/functions/EnchantRandomlyFunction
+[24Apr2025 17:46:55.284] [pool-4-thread-1/WARN] [mixin/]: Static binding violation: PRIVATE @Overwrite method m_47505_ in modernfix-common.mixins.json:perf.remove_biome_temperature_cache.BiomeMixin from mod modernfix cannot reduce visibiliy of PUBLIC target method, visibility will be upgraded.
+[24Apr2025 17:46:56.322] [Render thread/INFO] [mixin/]: Mixing client.MixinTitleScreen from mixins/common/nochatreports.mixins.json into net.minecraft.client.gui.screens.TitleScreen
+[24Apr2025 17:46:56.380] [Render thread/INFO] [mixin/]: Mixing client.MixinChatScreen from mixins/common/nochatreports.mixins.json into net.minecraft.client.gui.screens.ChatScreen
+[24Apr2025 17:46:56.381] [Render thread/INFO] [mixin/]: Renaming synthetic method lambda$onInit$4()Lnet/minecraft/network/chat/Component; to mdfb25db$nochatreports$lambda$onInit$4$0 in mixins/common/nochatreports.mixins.json:client.MixinChatScreen from mod nochatreports
+[24Apr2025 17:46:56.381] [Render thread/INFO] [mixin/]: Renaming synthetic method lambda$onInit$3(Lnet/minecraft/client/gui/components/Button;)V to mdfb25db$nochatreports$lambda$onInit$3$1 in mixins/common/nochatreports.mixins.json:client.MixinChatScreen from mod nochatreports
+[24Apr2025 17:46:56.381] [Render thread/INFO] [mixin/]: Renaming synthetic method lambda$onInit$2()Lnet/minecraft/network/chat/Component; to mdfb25db$nochatreports$lambda$onInit$2$2 in mixins/common/nochatreports.mixins.json:client.MixinChatScreen from mod nochatreports
+[24Apr2025 17:46:56.381] [Render thread/INFO] [mixin/]: Renaming synthetic method lambda$onInit$1(Lnet/minecraft/client/gui/components/Button;)V to mdfb25db$nochatreports$lambda$onInit$1$3 in mixins/common/nochatreports.mixins.json:client.MixinChatScreen from mod nochatreports
+[24Apr2025 17:46:56.382] [Render thread/INFO] [mixin/]: Renaming synthetic method lambda$onBeforeMessage$0(Ljava/lang/String;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;Lcom/aizistral/nochatreports/common/encryption/Encryptor;)V to mdfb25db$nochatreports$lambda$onBeforeMessage$0$4 in mixins/common/nochatreports.mixins.json:client.MixinChatScreen from mod nochatreports
+[24Apr2025 17:46:56.439] [Render thread/INFO] [net.minecraftforge.coremod.CoreMod.attributeslib/COREMODLOG]: Patching EffectRenderingInventoryScreen#renderEffects
+[24Apr2025 17:46:56.544] [Render thread/INFO] [mixin/]: BeforeConstant is searching for constants in method with descriptor (Lnet/minecraft/network/chat/Component;Z)V
+[24Apr2025 17:46:56.544] [Render thread/INFO] [mixin/]:   BeforeConstant found INTEGER constant: value = 0, intValue = null
+[24Apr2025 17:46:56.544] [Render thread/INFO] [mixin/]:     BeforeConstant found a matching constant TYPE at ordinal 0
+[24Apr2025 17:46:56.544] [Render thread/INFO] [mixin/]:       BeforeConstant found Insn [ICONST_0] 
+[24Apr2025 17:46:56.544] [Render thread/INFO] [mixin/]:   BeforeConstant found INTEGER constant: value = 60, intValue = null
+[24Apr2025 17:46:56.544] [Render thread/INFO] [mixin/]:     BeforeConstant found a matching constant TYPE at ordinal 1
+[24Apr2025 17:46:56.544] [Render thread/INFO] [mixin/]:       BeforeConstant found IntInsn 60
+[24Apr2025 17:46:56.701] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/home/arts/.local/share/PrismLauncher/libraries/net/minecraft/client/1.20.1-20230612.114412/client-1.20.1-20230612.114412-srg.jar%23631!/assets/.mcassetsroot' uses unexpected schema
+[24Apr2025 17:46:56.702] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/home/arts/.local/share/PrismLauncher/libraries/net/minecraft/client/1.20.1-20230612.114412/client-1.20.1-20230612.114412-srg.jar%23631!/data/.mcassetsroot' uses unexpected schema
+[24Apr2025 17:46:56.749] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[24Apr2025 17:46:56.759] [Render thread/INFO] [mixin/]: Mixing client.MixinYggdrasilUserApiService from mixins/common/nochatreports.mixins.json into com.mojang.authlib.yggdrasil.YggdrasilUserApiService
+[24Apr2025 17:46:57.375] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Art_of_Arts
+[24Apr2025 17:46:57.521] [Render thread/INFO] [ModernFix/]: Bypassed Mojang DFU
+[24Apr2025 17:46:57.523] [Render thread/INFO] [mixin/]: Mixing client.MixinToastComponent from mixins/common/nochatreports.mixins.json into net.minecraft.client.gui.components.toasts.ToastComponent
+[24Apr2025 17:46:57.766] [Render thread/INFO] [org.betterx.worlds.together.util.Logger/]: [bclib] Added Config betterend.entities to auto sync (file hash)
+[24Apr2025 17:46:57.767] [Render thread/INFO] [org.betterx.worlds.together.util.Logger/]: [bclib] Added Config betterend.blocks to auto sync (file hash)
+[24Apr2025 17:46:57.768] [Render thread/INFO] [org.betterx.worlds.together.util.Logger/]: [bclib] Added Config betterend.items to auto sync (file hash)
+[24Apr2025 17:46:57.769] [Render thread/INFO] [org.betterx.worlds.together.util.Logger/]: [bclib] Added Config betterend.biomes to auto sync (file hash)
+[24Apr2025 17:46:57.770] [Render thread/INFO] [org.betterx.worlds.together.util.Logger/]: [bclib] Added Config betterend.recipes to auto sync (file hash)
+[24Apr2025 17:46:57.770] [Render thread/INFO] [org.betterx.worlds.together.util.Logger/]: [bclib] Added Config betterend.enchantments to auto sync (file hash)
+[24Apr2025 17:46:57.790] [Render thread/WARN] [mixin/]: Static binding violation: PRIVATE @Overwrite method m_215924_ in modernfix-forge.mixins.json:perf.tag_id_caching.TagEntryMixin from mod modernfix cannot reduce visibiliy of PUBLIC target method, visibility will be upgraded.
+[24Apr2025 17:46:57.953] [Render thread/INFO] [org.betterx.worlds.together.util.Logger/]: [bclib] Added Config bclib.generator to auto sync (file hash)
+[24Apr2025 17:46:57.954] [Render thread/INFO] [org.betterx.worlds.together.util.Logger/]: [bclib] Added Config bclib.main to auto sync (content diff)
+[24Apr2025 17:46:57.966] [Render thread/INFO] [org.betterx.worlds.together.util.Logger/]: [bclib] Added Config bclib.biomes to auto sync (file hash)
+[24Apr2025 17:46:58.384] [Render thread/INFO] [mixin/]: Mixing client.MixinClientPacketListener from mixins/common/nochatreports.mixins.json into net.minecraft.client.multiplayer.ClientPacketListener
+[24Apr2025 17:46:58.386] [Render thread/INFO] [mixin/]: Mixing client.MixinClientPacketListener from mixins/forge/nochatreports-forge.mixins.json into net.minecraft.client.multiplayer.ClientPacketListener
+[24Apr2025 17:46:58.468] [Render thread/WARN] [mixin/]: @Inject(@At("INVOKE")) Shift.BY=5 on attributeslib.mixins.json:client.ClientPacketListenerMixin from mod attributeslib::handler$bje000$attributeslib$apoth_postAttrChangedEvent exceeds the maximum allowed value: 0. Increase the value of maxShiftBy to suppress this warning.
+[24Apr2025 17:46:58.503] [Render thread/INFO] [mixin/]: Mixing client.MixinServerData from mixins/common/nochatreports.mixins.json into net.minecraft.client.multiplayer.ServerData
+[24Apr2025 17:46:58.537] [Render thread/INFO] [mixin/]: Mixing client.MixinOptions from mixins/common/nochatreports.mixins.json into net.minecraft.client.Options
+[24Apr2025 17:46:58.538] [Render thread/INFO] [mixin/]: Renaming synthetic method lambda$onlyShowSecureChat$0(Ljava/lang/Boolean;)V to mdfb25db$nochatreports$lambda$onlyShowSecureChat$0$0 in mixins/common/nochatreports.mixins.json:client.MixinOptions from mod nochatreports
+[24Apr2025 17:46:58.854] [Render thread/INFO] [mixin/]: Mixing client.MixinChatListener from mixins/common/nochatreports.mixins.json into net.minecraft.client.multiplayer.chat.ChatListener
+[24Apr2025 17:46:58.945] [Render thread/INFO] [mixin/]: Mixing client.MixinClientConnection from mixins/forge/nochatreports-forge.mixins.json into net.minecraft.network.Connection

@@ -1,0 +1,19 @@
+2025-04-28 21:39:10.021 [info] Extension host with pid 1740540 started
+2025-04-28 21:39:10.037 [error] Error: ENOENT: no such file or directory, access '/home/arts/.vscode-oss/extensions/ms-python.debugpy-2025.6.0-linux-x64'
+    at async Object.access (node:internal/original-fs/promises:606:10)
+    at async y6 (file:///usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:28:93478)
+    at async vV.cb (file:///usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:115:11164)
+    at async file:///usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:115:11458
+    at async Promise.all (index 94)
+    at async vV.db (file:///usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:115:11401)
+    at async installFullHandler (file:///usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:115:25372)
+2025-04-28 21:39:11.022 [error] Error: ENOENT: no such file or directory, access '/home/arts/.vscode-oss/extensions/ms-python.debugpy-2025.6.0-linux-x64'
+    at async Object.access (node:internal/original-fs/promises:606:10)
+    at async y6 (file:///usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:28:93478)
+    at async vV.cb (file:///usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:115:11164)
+    at async file:///usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:115:11458
+    at async Promise.all (index 94)
+    at async vV.db (file:///usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:115:11401)
+    at async installFullHandler (file:///usr/lib/code/out/vs/workbench/api/node/extensionHostProcess.js:115:25372)
+2025-04-28 21:41:25.764 [info] Extension host terminating: renderer closed the MessagePort
+2025-04-28 21:41:25.764 [info] Extension host with pid 1740540 exiting with code 0

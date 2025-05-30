@@ -1,0 +1,1262 @@
+{
+  "menus": [
+    {
+      "shortcut": "Control+Space",
+      "shortcutID": "default-menu",
+      "centered": false,
+      "root": {
+        "type": "submenu",
+        "name": "Default Menu :3",
+        "icon": "award_star",
+        "iconTheme": "material-symbols-rounded",
+        "children": [
+          {
+            "type": "submenu",
+            "data": {},
+            "name": "Desktop Drawing",
+            "icon": "draw",
+            "iconTheme": "material-symbols-rounded",
+            "children": [
+              {
+                "type": "command",
+                "data": {
+                  "command": "qdbus org.kde.kglobalaccel /component/kwin org.kde.kglobalaccel.Component.invokeShortcut \"ClearMouseMarks\"",
+                  "delayed": false
+                },
+                "name": "Clear All Marks",
+                "icon": "ink_eraser",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "notify-send \"Drawing Help Notification\" -u critical \"hold shift to draw freehand\\nhold shift + ctrl to draw arrows\\npress meta + z to undo last action\"",
+                  "delayed": false
+                },
+                "name": "help command",
+                "icon": "help",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "qdbus org.kde.KWin /Effects org.kde.kwin.Effects.toggleEffect \"mousemark\"",
+                  "delayed": false
+                },
+                "name": "Toggle Drawing",
+                "icon": "format_ink_highlighter",
+                "iconTheme": "material-symbols-rounded"
+              }
+            ]
+          },
+          {
+            "type": "submenu",
+            "name": "Apps",
+            "icon": "apps",
+            "iconTheme": "material-symbols-rounded",
+            "children": [
+              {
+                "type": "command",
+                "data": {
+                  "command": "steam && notify-send \"opening steam\"",
+                  "delayed": false
+                },
+                "name": "Steam",
+                "icon": "steam",
+                "iconTheme": "simple-icons"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "zen-browser --new-tab \"https://mail.google.com\""
+                },
+                "name": "E-Mail",
+                "icon": "mail",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "submenu",
+                "data": {},
+                "name": "File Browser Paths",
+                "icon": "folder",
+                "iconTheme": "material-symbols-rounded",
+                "children": [
+                  {
+                    "type": "command",
+                    "data": {
+                      "command": "xdg-open \"$(xdg-user-dir VIDEOS)\""
+                    },
+                    "name": "Videos",
+                    "icon": "video_camera_front",
+                    "iconTheme": "material-symbols-rounded"
+                  },
+                  {
+                    "type": "command",
+                    "data": {
+                      "command": "xdg-open \"$(xdg-user-dir DESKTOP)\""
+                    },
+                    "name": "Desktop",
+                    "icon": "desktop_windows",
+                    "iconTheme": "material-symbols-rounded"
+                  },
+                  {
+                    "type": "command",
+                    "data": {
+                      "command": "xdg-open \"$(xdg-user-dir MUSIC)\""
+                    },
+                    "name": "Music",
+                    "icon": "music_note",
+                    "iconTheme": "material-symbols-rounded"
+                  },
+                  {
+                    "type": "command",
+                    "data": {
+                      "command": "xdg-open ~"
+                    },
+                    "name": "Home",
+                    "icon": "home",
+                    "iconTheme": "material-symbols-rounded"
+                  },
+                  {
+                    "type": "command",
+                    "data": {
+                      "command": "xdg-open \"$(xdg-user-dir DOCUMENTS)\""
+                    },
+                    "name": "Documents",
+                    "icon": "text_ad",
+                    "iconTheme": "material-symbols-rounded"
+                  },
+                  {
+                    "type": "command",
+                    "data": {
+                      "command": "xdg-open \"$(xdg-user-dir DOWNLOAD)\""
+                    },
+                    "name": "Downloads",
+                    "icon": "download",
+                    "iconTheme": "material-symbols-rounded"
+                  },
+                  {
+                    "type": "command",
+                    "data": {
+                      "command": "xdg-open \"$(xdg-user-dir PICTURES)\""
+                    },
+                    "name": "Pictures",
+                    "icon": "imagesmode",
+                    "iconTheme": "material-symbols-rounded"
+                  }
+                ]
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "gimp"
+                },
+                "name": "GIMP",
+                "icon": "gimp",
+                "iconTheme": "simple-icons"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "alacritty"
+                },
+                "name": "Terminal",
+                "icon": "terminal",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "zen-browser --new-tab \"about:newtab\"",
+                  "delayed": false
+                },
+                "name": "Web Browser",
+                "icon": "globe",
+                "iconTheme": "material-symbols-rounded"
+              }
+            ]
+          },
+          {
+            "type": "submenu",
+            "name": "Web Links",
+            "icon": "public",
+            "iconTheme": "material-symbols-rounded",
+            "children": [
+              {
+                "type": "uri",
+                "data": {
+                  "uri": "https://www.google.com"
+                },
+                "name": "Google",
+                "icon": "google",
+                "iconTheme": "simple-icons"
+              },
+              {
+                "type": "uri",
+                "data": {
+                  "uri": "https://github.com/kando-menu/kando"
+                },
+                "name": "Kando on GitHub",
+                "icon": "github",
+                "iconTheme": "simple-icons"
+              },
+              {
+                "type": "uri",
+                "data": {
+                  "uri": "https://ko-fi.com/schneegans"
+                },
+                "name": "Kando on Ko-fi",
+                "icon": "kofi",
+                "iconTheme": "simple-icons"
+              },
+              {
+                "type": "uri",
+                "data": {
+                  "uri": "https://www.youtube.com/@simonschneegans"
+                },
+                "name": "Kando on YouTube",
+                "icon": "youtube",
+                "iconTheme": "simple-icons"
+              },
+              {
+                "type": "uri",
+                "data": {
+                  "uri": "https://discord.gg/hZwbVSDkhy"
+                },
+                "name": "Kando on Discord",
+                "icon": "discord",
+                "iconTheme": "simple-icons"
+              }
+            ]
+          },
+          {
+            "type": "hotkey",
+            "data": {
+              "hotkey": "ControlLeft+MetaLeft+Period",
+              "delayed": false
+            },
+            "name": "Next Workspace",
+            "icon": "arrow_forward",
+            "iconTheme": "material-symbols-rounded",
+            "angle": 90
+          },
+          {
+            "type": "submenu",
+            "name": "System Shortcuts",
+            "icon": "computer",
+            "iconTheme": "material-symbols-rounded",
+            "children": [
+              {
+                "type": "hotkey",
+                "data": {
+                  "hotkey": "AltLeft+F1",
+                  "delayed": true
+                },
+                "name": "Open Start Menu",
+                "icon": "apps",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "submenu",
+                "data": {},
+                "name": "Keyboard Layouts",
+                "icon": "keyboard_keys",
+                "iconTheme": "material-symbols-rounded",
+                "children": [
+                  {
+                    "type": "command",
+                    "data": {
+                      "command": "qdbus org.kde.kglobalaccel /component/KDE_Keyboard_Layout_Switcher org.kde.kglobalaccel.Component.invokeShortcut \"Switch keyboard layout to English (UK)\"",
+                      "delayed": false
+                    },
+                    "name": "English Keyboard",
+                    "icon": "keyboard",
+                    "iconTheme": "material-symbols-rounded"
+                  },
+                  {
+                    "type": "command",
+                    "data": {
+                      "command": "qdbus org.kde.kglobalaccel /component/KDE_Keyboard_Layout_Switcher org.kde.kglobalaccel.Component.invokeShortcut \"Switch keyboard layout to Russian\"",
+                      "delayed": false
+                    },
+                    "name": "Russian Keyboard",
+                    "icon": "keyboard",
+                    "iconTheme": "material-symbols-rounded"
+                  }
+                ]
+              },
+              {
+                "type": "submenu",
+                "data": {},
+                "name": "Clipboard",
+                "icon": "assignment",
+                "iconTheme": "material-symbols-rounded",
+                "children": [
+                  {
+                    "type": "hotkey",
+                    "data": {
+                      "hotkey": "ControlLeft+KeyC",
+                      "delayed": true
+                    },
+                    "name": "Copy",
+                    "icon": "content_copy",
+                    "iconTheme": "material-symbols-rounded"
+                  },
+                  {
+                    "type": "hotkey",
+                    "data": {
+                      "hotkey": "ControlLeft+KeyX",
+                      "delayed": true
+                    },
+                    "name": "Cut",
+                    "icon": "cut",
+                    "iconTheme": "material-symbols-rounded"
+                  },
+                  {
+                    "type": "hotkey",
+                    "data": {
+                      "hotkey": "ControlLeft+KeyV",
+                      "delayed": true
+                    },
+                    "name": "Paste",
+                    "icon": "content_paste_go",
+                    "iconTheme": "material-symbols-rounded"
+                  }
+                ]
+              },
+              {
+                "type": "submenu",
+                "name": "Audio",
+                "icon": "play_circle",
+                "iconTheme": "material-symbols-rounded",
+                "children": [
+                  {
+                    "type": "hotkey",
+                    "data": {
+                      "hotkey": "MediaTrackNext",
+                      "delayed": false
+                    },
+                    "name": "Next Track",
+                    "icon": "skip_next",
+                    "iconTheme": "material-symbols-rounded",
+                    "angle": 90
+                  },
+                  {
+                    "type": "hotkey",
+                    "data": {
+                      "hotkey": "MediaPlayPause",
+                      "delayed": false
+                    },
+                    "name": "Play / Pause",
+                    "icon": "play_pause",
+                    "iconTheme": "material-symbols-rounded"
+                  },
+                  {
+                    "type": "hotkey",
+                    "data": {
+                      "hotkey": "AudioVolumeMute",
+                      "delayed": false
+                    },
+                    "name": "Mute",
+                    "icon": "music_off",
+                    "iconTheme": "material-symbols-rounded"
+                  },
+                  {
+                    "type": "hotkey",
+                    "data": {
+                      "hotkey": "MediaTrackPrevious",
+                      "delayed": false
+                    },
+                    "name": "Previous Track",
+                    "icon": "skip_previous",
+                    "iconTheme": "material-symbols-rounded",
+                    "angle": 270
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "command",
+            "data": {
+              "command": "swaync-client -t",
+              "delayed": false
+            },
+            "name": "Open Notification Center",
+            "icon": "notifications",
+            "iconTheme": "material-symbols-rounded"
+          },
+          {
+            "type": "submenu",
+            "name": "Windows",
+            "icon": "select_window",
+            "iconTheme": "material-symbols-rounded",
+            "children": [
+              {
+                "type": "hotkey",
+                "data": {
+                  "hotkey": "MetaLeft+KeyF",
+                  "delayed": true
+                },
+                "name": "Toggle Window Tiling",
+                "icon": "open_in_full",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "hotkey",
+                "data": {
+                  "hotkey": "AltLeft+F4",
+                  "delayed": true
+                },
+                "name": "Close Window",
+                "icon": "cancel_presentation",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "submenu",
+                "data": {},
+                "name": "Default Floating Controls",
+                "icon": "apps",
+                "iconTheme": "material-symbols-rounded",
+                "children": [
+                  {
+                    "type": "hotkey",
+                    "data": {
+                      "hotkey": "MetaLeft+ArrowRight",
+                      "delayed": true
+                    },
+                    "name": "Tile Right",
+                    "icon": "text_select_jump_to_end",
+                    "iconTheme": "material-symbols-rounded"
+                  },
+                  {
+                    "type": "hotkey",
+                    "data": {
+                      "hotkey": "MetaLeft+ArrowUp",
+                      "delayed": true
+                    },
+                    "name": "Toggle Maximize",
+                    "icon": "open_in_full",
+                    "iconTheme": "material-symbols-rounded"
+                  },
+                  {
+                    "type": "hotkey",
+                    "data": {
+                      "hotkey": "MetaLeft+ArrowLeft",
+                      "delayed": true
+                    },
+                    "name": "Tile Left",
+                    "icon": "text_select_jump_to_beginning",
+                    "iconTheme": "material-symbols-rounded"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "hotkey",
+            "data": {
+              "hotkey": "MetaLeft+ControlLeft+Comma",
+              "delayed": false
+            },
+            "name": "Previous Workspace",
+            "icon": "arrow_back",
+            "iconTheme": "material-symbols-rounded",
+            "angle": 270
+          }
+        ]
+      }
+    },
+    {
+      "root": {
+        "type": "submenu",
+        "name": "Discord Utils",
+        "icon": "discord",
+        "iconTheme": "simple-icons",
+        "children": [
+          {
+            "type": "submenu",
+            "data": {},
+            "name": "Message People",
+            "icon": "phone_android",
+            "iconTheme": "material-symbols-rounded",
+            "children": [
+              {
+                "type": "macro",
+                "data": {
+                  "macro": [
+                    {
+                      "type": "keyDown",
+                      "key": "ControlLeft",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyK",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyK",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "ControlLeft",
+                      "delay": 150
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyC",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyA",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyC",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyA",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyL",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyL",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyV",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyV",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyA",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyA",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyT",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyT",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyR",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyR",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyO",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyO",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyN",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyN",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "Enter",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "Enter",
+                      "delay": 50
+                    }
+                  ],
+                  "delayed": true
+                },
+                "name": "Message Calvie",
+                "icon": "calvie.webp",
+                "iconTheme": "myicons"
+              },
+              {
+                "type": "macro",
+                "data": {
+                  "macro": [
+                    {
+                      "type": "keyDown",
+                      "key": "ControlLeft",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyK",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyK",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "ControlLeft",
+                      "delay": 150
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyT",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyT",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyH",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyH",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyE",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyE",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyN",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyN",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyE",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyE",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyX",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyX",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyT",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyT",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyG",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyG",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyU",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyU",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyY",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyY",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "Digit1",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "Digit1",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "Digit0",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "Digit0",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "Digit0",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "Digit0",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "Enter",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "Enter",
+                      "delay": 50
+                    }
+                  ],
+                  "delayed": true
+                },
+                "name": "Message Dan",
+                "icon": "thenextguy100.webp",
+                "iconTheme": "myicons"
+              },
+              {
+                "type": "macro",
+                "data": {
+                  "macro": [
+                    {
+                      "type": "keyDown",
+                      "key": "ControlLeft",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyK",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyK",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "ControlLeft",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyC",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyC",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyO",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyO",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyM",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyM",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyM",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyM",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyU",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyU",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyN",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyN",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyI",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyI",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyS",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyS",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyM",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyM",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyA",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyA",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyL",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyL",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyT",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyT",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "Enter",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "Enter",
+                      "delay": 50
+                    }
+                  ],
+                  "delayed": true
+                },
+                "name": "Open Personal Notepad",
+                "icon": "commiealt.webp",
+                "iconTheme": "myicons"
+              },
+              {
+                "type": "macro",
+                "data": {
+                  "macro": [
+                    {
+                      "type": "keyDown",
+                      "key": "ControlLeft",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyK",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyK",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "ControlLeft",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyZ",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyI",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyZ",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyI",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyF",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyF",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyF",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyF",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyY",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyY",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyS",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyS",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyP",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyP",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyI",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyI",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyF",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyF",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyF",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyF",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyY",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyY",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "Enter",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "Enter",
+                      "delay": 10
+                    }
+                  ],
+                  "delayed": true
+                },
+                "name": "Message Ziffy",
+                "icon": "ziffy.webp",
+                "iconTheme": "myicons"
+              },
+              {
+                "type": "macro",
+                "data": {
+                  "macro": [
+                    {
+                      "type": "keyDown",
+                      "key": "ControlLeft",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyK",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyK",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "ControlLeft",
+                      "delay": 150
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyT",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyT",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyR",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyR",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyU",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyU",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyE",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyE",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "Enter",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "Enter",
+                      "delay": 10
+                    }
+                  ],
+                  "delayed": true
+                },
+                "name": "Message True",
+                "icon": "true.webp",
+                "iconTheme": "myicons"
+              }
+            ]
+          }
+        ]
+      },
+      "shortcut": "",
+      "shortcutID": "default-menu",
+      "centered": false,
+      "warpMouse": false,
+      "anchored": false,
+      "conditions": {
+        "appName": "vesktop"
+      }
+    },
+    {
+      "root": {
+        "type": "submenu",
+        "name": "My Future Custom Menu",
+        "icon": "cycle",
+        "iconTheme": "material-symbols-rounded",
+        "children": []
+      },
+      "shortcut": "",
+      "shortcutID": "",
+      "centered": false,
+      "warpMouse": false,
+      "anchored": false
+    }
+  ],
+  "templates": [
+    {
+      "type": "submenu",
+      "name": "Web Links",
+      "icon": "public",
+      "iconTheme": "material-symbols-rounded",
+      "children": [
+        {
+          "type": "uri",
+          "data": {
+            "uri": "https://www.google.com"
+          },
+          "name": "Google",
+          "icon": "google",
+          "iconTheme": "simple-icons"
+        },
+        {
+          "type": "uri",
+          "data": {
+            "uri": "https://github.com/kando-menu/kando"
+          },
+          "name": "Kando on GitHub",
+          "icon": "github",
+          "iconTheme": "simple-icons"
+        },
+        {
+          "type": "uri",
+          "data": {
+            "uri": "https://ko-fi.com/schneegans"
+          },
+          "name": "Kando on Ko-fi",
+          "icon": "kofi",
+          "iconTheme": "simple-icons"
+        },
+        {
+          "type": "uri",
+          "data": {
+            "uri": "https://www.youtube.com/@simonschneegans"
+          },
+          "name": "Kando on YouTube",
+          "icon": "youtube",
+          "iconTheme": "simple-icons"
+        },
+        {
+          "type": "uri",
+          "data": {
+            "uri": "https://discord.gg/hZwbVSDkhy"
+          },
+          "name": "Kando on Discord",
+          "icon": "discord",
+          "iconTheme": "simple-icons"
+        }
+      ]
+    }
+  ]
+}

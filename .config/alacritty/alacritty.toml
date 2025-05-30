@@ -1,0 +1,28 @@
+terminal.osc52 = "CopyPaste"
+
+[general]
+import = ["~/.config/alacritty/theme/rose-pine.toml"]
+live_config_reload = true
+
+[window]
+padding = { x = 3, y = 3 }
+dynamic_padding = true
+opacity = 0.8
+blur = true
+decorations = "None"
+title = "Terminal"
+dynamic_title = true
+class = { instance = "terminal", general = "Alacritty" }
+decorations_theme_variant = "Dark"
+
+
+[mouse]
+hide_when_typing = true
+bindings = [ 
+	{ mouse = "Middle", mods = "Control", action = "Paste" },
+] 
+
+[cursor]
+style = { shape = "Beam", blinking = "on" }
+blink_interval = 500
+blink_timeout = 3

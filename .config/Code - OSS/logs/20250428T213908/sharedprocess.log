@@ -1,0 +1,22 @@
+2025-04-28 21:39:09.725 [warning] [vscode-clangd]: Couldn't find message for key showAST.
+2025-04-28 21:39:09.779 [warning] [vscode-clangd]: Couldn't find message for key showAST.
+2025-04-28 21:39:09.790 [warning] [vscode-clangd]: Couldn't find message for key showAST.
+2025-04-28 21:39:09.792 [warning] [vscode-clangd]: Couldn't find message for key showAST.
+2025-04-28 21:39:09.931 [warning] [vscode-clangd]: Couldn't find message for key showAST.
+2025-04-28 21:39:09.960 [info] Deleted marked for removal extension from disk ms-python.debugpy /home/arts/.vscode-oss/extensions/ms-python.debugpy-2025.6.0-linux-x64
+2025-04-28 21:39:09.965 [info] Deleted marked for removal extension from disk ms-python.python /home/arts/.vscode-oss/extensions/ms-python.python-2025.4.0-universal
+2025-04-28 21:39:09.992 [warning] [vscode-clangd]: Couldn't find message for key showAST.
+2025-04-28 21:39:10.295 [warning] [vscode-clangd]: Couldn't find message for key showAST.
+2025-04-28 21:39:10.406 [warning] [vscode-clangd]: Couldn't find message for key showAST.
+2025-04-28 21:39:12.683 [warning] [vscode-clangd]: Couldn't find message for key showAST.
+2025-04-28 21:39:13.419 [info] Getting Manifest... redhat.vscode-yaml
+2025-04-28 21:39:13.932 [info] Installing extension: redhat.vscode-yaml {"productVersion":{"version":"1.99.2","date":"2025-04-10T20:33:23.184Z"},"pinned":false,"operation":3,"isApplicationScoped":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/arts/.vscode-oss/extensions/extensions.json","path":"/home/arts/.vscode-oss/extensions/extensions.json","scheme":"vscode-userdata"}}
+2025-04-28 21:39:13.945 [warning] [vscode-clangd]: Couldn't find message for key showAST.
+2025-04-28 21:39:13.957 [warning] [vscode-clangd]: Couldn't find message for key showAST.
+2025-04-28 21:39:14.631 [error] Could not load vsce-sign module Cannot find package '@vscode/vsce-sign' imported from /usr/lib/code/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js
+2025-04-28 21:39:14.631 [info] Extension signature verification is not done: redhat.vscode-yaml
+2025-04-28 21:39:14.707 [info] Extracted extension to file:///home/arts/.vscode-oss/extensions/redhat.vscode-yaml-1.18.0-universal: redhat.vscode-yaml
+2025-04-28 21:39:14.717 [info] Renamed to /home/arts/.vscode-oss/extensions/redhat.vscode-yaml-1.18.0-universal
+2025-04-28 21:39:14.732 [info] Marked extension as removed redhat.vscode-yaml-1.17.0
+2025-04-28 21:39:14.738 [warning] [vscode-clangd]: Couldn't find message for key showAST.
+2025-04-28 21:39:14.740 [info] Extension installed successfully: redhat.vscode-yaml vscode-userdata:/home/arts/.vscode-oss/extensions/extensions.json

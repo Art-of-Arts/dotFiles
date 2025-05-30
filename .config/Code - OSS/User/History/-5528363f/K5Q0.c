@@ -1,0 +1,13 @@
+#include <stdio.h>
+10093774
+const int NUMBER = 10093774;
+int number = 10093774, revNumber = 0;
+
+int main () {
+    while (number) {
+        printf("revNumber: %d\nnumber: %d\nstep 1: %d\n step 2: %d\n",revNumber, number, revNumber = revNumber * 10, revnumber +);
+        revNumber = revNumber * 10 + number % 10;
+        number /= 10;
+        printf("step 5: %d", revNumber);
+    }
+}

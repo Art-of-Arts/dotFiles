@@ -1,0 +1,14 @@
+nnoremap j h
+nnoremap ; l
+nnoremap ; l
+nnoremap h ;
+
+xnoremap j h
+xnoremap l j
+xnoremap ; l
+xnoremap h ;
+
+set number
+set hls is
+
+cmap w!! w !sudo tee > /dev/null %

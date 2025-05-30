@@ -23,6 +23,6 @@ bindings = [
 ] 
 
 [cursor]
-style = { shape = "Beam", blinking = "on" }
+style = { shape = "Block", blinking = "on" }
 blink_interval = 500
 blink_timeout = 3

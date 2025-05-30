@@ -1,0 +1,47 @@
+EDITOR=vim
+PUBLICIP=82.0.191.90
+
+alias bashsrc="vim ~/.bashrc && source ~/.bashrc"
+alias clear="/bin/clear && fetch"
+alias ls="lsd --color always" # --icon never"
+alias sdb="~/scripts/systemAuto/ddcutilScreenBrightness.sh"
+alias initenv="source ./env/bin/activate || virtualenv ./env && source ./env/bin/activate"
+alias virtMon="krfb-virtualmonitor --resolution 1920x1080 --name VirtualMonitor --password password --port 3355"
+
+#sudoify those guys
+
+alias pacman="yay"
+alias mount="sudo mount"
+alias umount="sudo umount"
+
+# i'll forget about this
+
+alias fetch='/bin/fastfetch'
+alias fetche='/bin/clear && fastfetch --load-config ~/.config/fastfetch/extra.jsonc'
+alias visudo="EDITOR=vim sudo visudo"
+alias soft-reboot="systemctl soft-reboot"
+alias grep="grep --colour=auto "
+alias egrep="grep --colour=auto -E "
+ 
+if [[ "$(cat /etc/hostname)" != "holo-overlord" ]]; then
+	alias SERVERCON='ssh server@$PUBLICIP -o PubkeyAuthentication=no && clear'
+	alias COMPCON="ssh holo-overlord && clear"
+
+	alias syncUP='scp ~/{.bashrc,.aliases,.tmux.conf,.vimrc} arts@$PUBLICIP:~/ && scp ~/.config/kitty/{kitty.conf,kitty-keybinds.conf,rose-pine.conf} arts@$PUBLICIP:~/.config/kitty/'
+	alias syncDOWN='scp arts@$PUBLICIP:~/{.bashrc,.aliases,.tmux.conf,.vimrc} && scp arts@$PUBLICIP:~/.config/kitty/kitty.conf ~/.config/kitty/'
+fi
+
+# tmux in session stuff
+
+if [[ -n $TMUX ]] ; then 
+	alias detach="tmux detach -P"
+	alias close="detach && exit"
+
+else # if not in a tmux session
+	alias tmuxn="tmux a -t$USER || tmux new -s$USER"
+	alias needChrome="pacman -S chromium --noconfirm && chromium && pacman -Rsu chromium --noconfirm && rm -rf .config/chromium"
+fi
+
+if [ -f /sbin/audiorelay ]; then
+	alias SOTP="$HOME/scripts/systemScripts/sendOutputToPhone.sh"
+fi

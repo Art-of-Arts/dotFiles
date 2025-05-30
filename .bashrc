@@ -1,7 +1,7 @@
 #colours and prompt
 
 if [[ $XDG_SESSION_TYPE == 'tty' ]] ; then
-        tmux a -t$USER || tmux new -s$USER && exit
+	tmux a -t$USER || tmux new -s$USER && exit
 fi
 
 [[ $- == *i* ]] && source ~/.local/share/blesh/ble.sh
@@ -31,6 +31,13 @@ fastfetch
 source /home/arts/.aliases
 
 colour() {
-    perl -e 'foreach $a(@ARGV){print "\e[48:2::".join(":",unpack("C*",pack("H*",$a)))."m \e[49m "};print "\n"' "$@"
+	perl -e 'foreach $a(@ARGV){print "\e[48:2::".join(":",unpack("C*",pack("H*",$a)))."m \e[49m "};print "\n"' "$@"
 
 }
+
+# adding ssh keys to ssh-agent and setting SSH_AUTH_SOCK
+if [ -z "$SSH_AUTH_SOCK" ] ; then
+  export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR"/ssh-agent.socket
+	ssh-add ~/.ssh/artsKey &> /dev/null
+fi
+

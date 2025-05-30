@@ -1,5 +1,6 @@
+#!/bin/bash
+
 EDITOR=vim
-PUBLICIP=82.0.191.90
 
 alias bashsrc="vim ~/.bashrc && source ~/.bashrc"
 alias clear="/bin/clear && fetch"
@@ -27,8 +28,8 @@ if [[ "$(cat /etc/hostname)" != "holo-overlord" ]]; then
 	alias SERVERCON='ssh server@$PUBLICIP -o PubkeyAuthentication=no && clear'
 	alias COMPCON="ssh holo-overlord && clear"
 
-	alias syncUP='scp ~/{.bashrc,.aliases,.tmux.conf,.vimrc} arts@$PUBLICIP:~/ && scp ~/.config/kitty/{kitty.conf,kitty-keybinds.conf,rose-pine.conf} arts@$PUBLICIP:~/.config/kitty/'
-	alias syncDOWN='scp arts@$PUBLICIP:~/{.bashrc,.aliases,.tmux.conf,.vimrc} && scp arts@$PUBLICIP:~/.config/kitty/kitty.conf ~/.config/kitty/'
+	alias syncUP='scp ~/{.bashrc,.aliases,.tmux.conf,.vimrc} holo-overlord:~/ && scp -r ~/.config/alacritty holo-overlord:~/.config/' # scp ~/.config/alacritty/alacritty.toml arts@$PUBLICIP:~/.config/alacritty/ && scp ~/.config/alacritty/theme/rose-pine.toml arts@$PUBLICIP:~/.config/alacritty/theme/'
+	alias syncDOWN='scp holo-overlord:~/{.bashrc,.aliases,.tmux.conf,.vimrc} ~/ && scp -r holo-overlord:~/.config/alacritty ~/.config/'
 fi
 
 # tmux in session stuff
@@ -40,8 +41,4 @@ if [[ -n $TMUX ]] ; then
 else # if not in a tmux session
 	alias tmuxn="tmux a -t$USER || tmux new -s$USER"
 	alias needChrome="pacman -S chromium --noconfirm && chromium && pacman -Rsu chromium --noconfirm && rm -rf .config/chromium"
-fi
-
-if [ -f /sbin/audiorelay ]; then
-	alias SOTP="$HOME/scripts/systemScripts/sendOutputToPhone.sh"
 fi

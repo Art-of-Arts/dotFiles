@@ -2370,8 +2370,8 @@
                   "uri": "https://twitch.tv/mokou_taiyo"
                 },
                 "name": "Taihou",
-                "icon": "public",
-                "iconTheme": "material-symbols-rounded"
+                "icon": "taiyo.webp",
+                "iconTheme": "my-friends"
               },
               {
                 "type": "uri",

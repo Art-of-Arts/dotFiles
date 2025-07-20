@@ -1,0 +1,3 @@
+-[ ] find a way to stage my god damnned blender files
+-[ ] hyprland
+-[ ] yeah!

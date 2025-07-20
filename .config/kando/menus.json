@@ -352,6 +352,16 @@
                 "iconTheme": "material-symbols-rounded"
               },
               {
+                "type": "command",
+                "data": {
+                  "command": "bash -c 'qdbus org.kde.KWin /Effects org.kde.kwin.Effects.isEffectLoaded kwin6_effect_grayscale | grep -q true && qdbus org.kde.KWin /Effects org.kde.kwin.Effects.unloadEffect kwin6_effect_grayscale || qdbus org.kde.KWin /Effects org.kde.kwin.Effects.loadEffect kwin6_effect_grayscale'",
+                  "delayed": false
+                },
+                "name": "Toggle Grayscale",
+                "icon": "custom_typography",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
                 "type": "submenu",
                 "data": {},
                 "name": "Power",
@@ -410,21 +420,32 @@
                   {
                     "type": "command",
                     "data": {
-                      "command": "qdbus org.kde.kglobalaccel /component/KDE_Keyboard_Layout_Switcher org.kde.kglobalaccel.Component.invokeShortcut \"Switch keyboard layout to Russian\"",
-                      "delayed": false
-                    },
-                    "name": "Russian Keyboard",
-                    "icon": "keyboard",
-                    "iconTheme": "material-symbols-rounded"
-                  },
-                  {
-                    "type": "command",
-                    "data": {
                       "command": "onboard",
                       "delayed": false
                     },
                     "name": "Onscreen Keyboard",
                     "icon": "keyboard_onscreen",
+                    "iconTheme": "material-symbols-rounded"
+                  },
+                  {
+                    "type": "command",
+                    "data": {
+                      "command": "qdbus org.kde.kglobalaccel /component/KDE_Keyboard_Layout_Switcher org.kde.kglobalaccel.Component.invokeShortcut \"Switch to Next Keyboard Layout\"",
+                      "delayed": false
+                    },
+                    "name": "Next Layout",
+                    "icon": "keyboard",
+                    "iconTheme": "material-symbols-rounded",
+                    "angle": 135
+                  },
+                  {
+                    "type": "command",
+                    "data": {
+                      "command": "qdbus org.kde.kglobalaccel /component/KDE_Keyboard_Layout_Switcher org.kde.kglobalaccel.Component.invokeShortcut \"Switch keyboard layout to Russian\"",
+                      "delayed": false
+                    },
+                    "name": "Russian Keyboard",
+                    "icon": "keyboard",
                     "iconTheme": "material-symbols-rounded"
                   }
                 ]
@@ -2320,13 +2341,656 @@
             "iconTheme": "material-symbols-rounded"
           },
           {
-            "type": "text",
-            "data": {
-              "text": "i need a portal #"
-            },
-            "name": "i need a portal",
-            "icon": "tag",
-            "iconTheme": "material-symbols-rounded"
+            "type": "submenu",
+            "data": {},
+            "name": "Chat Shortcuts",
+            "icon": "chat_paste_go",
+            "iconTheme": "material-symbols-rounded",
+            "children": [
+              {
+                "type": "macro",
+                "data": {
+                  "macro": [
+                    {
+                      "type": "keyDown",
+                      "key": "ControlLeft",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyV",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyV",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "ControlLeft",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "Enter",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "Enter",
+                      "delay": 300
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyS",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyS",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "Slash",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "Slash",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyB",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyB",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyE",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyE",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "Period",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "Period",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyC",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyO",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyC",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyM",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyO",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyM",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "IntlBackslash",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "IntlBackslash",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "Slash",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "Slash",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyS",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyS",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyH",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyO",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyH",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyO",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyR",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyR",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyT",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyT",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyS",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyS",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "Slash",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "Slash",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "Period",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "Period",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyB",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyB",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyE",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyE",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "Enter",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "Enter",
+                      "delay": 10
+                    }
+                  ],
+                  "delayed": true
+                },
+                "name": "youtu.be/<link>",
+                "icon": "keyboard_keys",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "macro",
+                "data": {
+                  "macro": [
+                    {
+                      "type": "keyDown",
+                      "key": "KeyS",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyS",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "Slash",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "Slash",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyB",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyE",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyB",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyE",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "Period",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "Period",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyC",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyO",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyC",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyM",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyO",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyM",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "IntlBackslash",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "IntlBackslash",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "Slash",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "Slash",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyS",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyH",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyS",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyO",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyH",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyO",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyR",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyR",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyT",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyT",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyS",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyS",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "Slash",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "Slash",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "Period",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "Period",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyB",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyB",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyE",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyE",
+                      "delay": 10
+                    }
+                  ],
+                  "delayed": true
+                },
+                "name": ".be/shorts",
+                "icon": "keyboard_keys",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "macro",
+                "data": {
+                  "macro": [
+                    {
+                      "type": "keyDown",
+                      "key": "KeyI",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyI",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "Space",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "Space",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyN",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyN",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyE",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyE",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyE",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyE",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyD",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyD",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "Space",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "Space",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyA",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyA",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "Space",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "Space",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyP",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyP",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyO",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyO",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyR",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyR",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyT",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyT",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyA",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyA",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyL",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyL",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "Space",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "Space",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "Backslash",
+                      "delay": 10
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "Backslash",
+                      "delay": 10
+                    }
+                  ],
+                  "delayed": true
+                },
+                "name": "i need a portal",
+                "icon": "tag",
+                "iconTheme": "material-symbols-rounded"
+              }
+            ]
           },
           {
             "type": "hotkey",
@@ -2361,8 +3025,8 @@
             "type": "submenu",
             "data": {},
             "name": "Twitch Friends",
-            "icon": "apps",
-            "iconTheme": "material-symbols-rounded",
+            "icon": "twitch",
+            "iconTheme": "simple-icons",
             "children": [
               {
                 "type": "uri",
@@ -2447,6 +3111,17 @@
               }
             ],
             "angle": 0
+          },
+          {
+            "type": "hotkey",
+            "data": {
+              "hotkey": "MetaLeft+AltLeft+Space",
+              "delayed": true
+            },
+            "name": "Krunner",
+            "icon": "search",
+            "iconTheme": "material-symbols-rounded",
+            "angle": 60
           },
           {
             "type": "uri",
@@ -3920,6 +4595,16 @@
           "angle": 270
         }
       ]
+    },
+    {
+      "type": "hotkey",
+      "data": {
+        "hotkey": "MetaLeft+AltLeft+Space",
+        "delayed": true
+      },
+      "name": "Krunner",
+      "icon": "search",
+      "iconTheme": "material-symbols-rounded"
     }
   ]
 }

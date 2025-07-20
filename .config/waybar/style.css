@@ -1,0 +1,17 @@
+@import "./rose-pine.css";
+*{
+  font-family: "InputMono Nerd Font Medium", "OpenSans-Regular";
+  font-size: 13px;
+}
+
+#waybar {
+  background-color: rgba(0,0,0,0.7);
+  color: #b4ffb4;
+  transition: height 0.3s ease-in-out;
+  /* width instead for vertical */
+}
+
+#waybar.revealed {
+  height: 30px;
+  /* width: 30px for vertical bar */
+}

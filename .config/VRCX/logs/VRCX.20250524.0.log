@@ -1,5 +1,0 @@
-2025-05-24 22:34:51.5066 [INFO ] VRCX.Program         - VRCX (Linux) 2025.05.09 Starting... 
-2025-05-24 22:34:51.7008 [INFO ] VRCX.Program         - Args: ["--ozone-platform-hint=auto"] 
-2025-05-24 22:34:51.7086 [INFO ] VRCX.AppApiElectron  - Using steam library path /home/arts/.local/share/Steam 
-2025-05-24 22:34:52.9276 [INFO ] VRCX.Update          - AppImagePath: /home/arts/Applications/VRCX.AppImage 
-2025-05-24 22:35:00.2360 [INFO ] VRCX.LogWatcher      - SetDateTill: 24/05/2025 22:35:00 

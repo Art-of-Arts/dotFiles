@@ -4,5 +4,11 @@
     "include": [
       "~/.config/waybar/bars/top.jsonc"
     ]
+  },
+  {
+  "output": [ "eDP-1" ],
+    "include": [
+      "~/.config/waybar/bars/top.jsonc"
+    ]
   }
 ]

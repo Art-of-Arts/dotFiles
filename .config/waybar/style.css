@@ -4,14 +4,16 @@
   font-size: 13px;
 }
 
+/*
 #waybar {
   background-color: rgba(0,0,0,0.7);
   color: #b4ffb4;
   transition: height 0.3s ease-in-out;
-  /* width instead for vertical */
+  use width instead for vertical <<< REMEMBER TO RECOMMNET IF DOING THIS AGAIN
 }
 
 #waybar.revealed {
   height: 30px;
-  /* width: 30px for vertical bar */
+  width: 30px for vertical bar <<< REMEMBER TO RECOMMNET IF DOING THIS AGAIN
 }
+*/

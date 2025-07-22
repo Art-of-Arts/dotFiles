@@ -1,0 +1,8 @@
+Description= Kill fprintd before sleep
+Before=sleep.target
+
+[Service]
+ExecStart=/bin/killall fprintd
+
+[Install]
+WantedBy=sleep.target

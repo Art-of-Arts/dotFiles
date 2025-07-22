@@ -1,0 +1,9 @@
+[Unit]
+Description=Starts xremap with config
+
+[Service]
+Type=simple
+ExecStart=/bin/xremap /home/arts/.config/xremap/config.yml
+
+[Install]
+WantedBy=multi-user.target

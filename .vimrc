@@ -13,7 +13,7 @@ endfunction
 
 " Function to reset background (you can set this to another color if you prefer)
 function! ResetGhosttyBackground()
-  call system('printf "\033]111\007\"')
+  call system('printf "\033]111\007"')
 endfunction
 
 " Set rose-pine background on Vim startup
@@ -43,3 +43,4 @@ let g:coc_clangd_path = '/path/to/clangd'
 let @i="c\"\"\<Esc>Pl"
 let @b="ggi#!/bin/bash\<CR>\<BS>\<CR>\<Esc>"
 
+" hi Normal guibg=NONE ctermbg=NONE

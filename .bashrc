@@ -1,4 +1,4 @@
-#colours and prompt
+# colours and prompt
 
 if [[ $XDG_SESSION_TYPE == 'tty' ]] ; then
 	tmux a -t$USER || tmux new -s$USER && exit
@@ -26,7 +26,7 @@ fi
 /bin/clear
 fastfetch
 
-# aliases
+# aliases and exports
 . ~/.git-prompt.sh
 source /home/arts/.aliases
 

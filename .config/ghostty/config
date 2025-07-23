@@ -44,7 +44,7 @@
 theme = rose-pine
 background = #1e1e1e
 background-blur = 1
-background-opacity = 0.5
+background-opacity = 0.6
 window-decoration = none
 
 # === keybinds ===

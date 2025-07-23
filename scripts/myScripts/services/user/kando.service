@@ -1,0 +1,12 @@
+[Unit]
+Description=Custom sevice to start kando
+After=graphical-session.target
+BindsTo=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/bin/kando
+Restart=on-failure
+
+[Install]
+WantedBy=graphical-session.target

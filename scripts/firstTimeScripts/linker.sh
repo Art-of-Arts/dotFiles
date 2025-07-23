@@ -1,6 +1,6 @@
 #!/bin/bash
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-CONFIG_DIR="$(realpath "$SCRIPT_DIR/../.config")"
+CONFIG_DIR="$(realpath "$SCRIPT_DIR/../../.config")"
 
 function __help_menu() {
   local CODE

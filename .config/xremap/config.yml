@@ -12,8 +12,8 @@ modmap:
       # capslock/ctrl_l <-> esc
       capslock: esc
       esc: capslock
-    device:
-      only: "/dev/input/event3"
+#     device:
+#       only: "/dev/input/event6"
 
 #keymap:
 #  - name: Firefox & vesktop

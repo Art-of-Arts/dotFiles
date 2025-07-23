@@ -139,7 +139,7 @@
         {
             "type": "publicip",
             "timeout": 1000,
-            "url": "http://icanhazip.com",
+            "url": "http://ident.me",
             "format": "{1}"
         },
         {

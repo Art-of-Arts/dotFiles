@@ -6,9 +6,10 @@ export TERMINAL=ghostty
 alias bashsrc="vim ~/.bashrc && source ~/.bashrc"
 alias clear="/bin/clear && fetch"
 alias ls="lsd --color always" # --icon never"
-alias sdb="~/scripts/systemAuto/ddcutilScreenBrightness.sh"
+# alias sdb="~/scripts/systemAuto/ddcutilScreenBrightness.sh" # superceeded by SDB or monitorBrightness use that stupid
 alias initenv="source ./env/bin/activate || virtualenv ./env && source ./env/bin/activate"
 alias virtMon="krfb-virtualmonitor --resolution 1920x1080 --name VirtualMonitor --password password --port 3355"
+alias SDB="monitorBrightness"
 
 #sudoify those guys
 
@@ -44,3 +45,14 @@ else # if not in a tmux session
 	alias tmuxn="tmux a -t$USER || tmux new -s$USER"
 	alias needChrome="pacman -S chromium --noconfirm && chromium && pacman -Rsu chromium --noconfirm && rm -rf .config/chromium"
 fi
+
+# we got the budget go-ahead to upgrade to functions too!
+
+function monitorBrightness() {
+  if [[ -n "$1" ]]; then
+    ddcutil --display 1 setvcp 0x10 $1
+    ddcutil --display 2 setvcp 0x10 $1
+  else
+    echo "must provide a numerical value from 0-100"
+  fi
+}

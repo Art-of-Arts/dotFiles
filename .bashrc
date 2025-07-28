@@ -4,6 +4,7 @@ if [[ $XDG_SESSION_TYPE == 'tty' ]] ; then
 	tmux a -t$USER || tmux new -s$USER && exit
 fi
 
+# ble.sh
 [[ $- == *i* ]] && source ~/.local/share/blesh/ble.sh
 
 # same bashrc prompt for root and user

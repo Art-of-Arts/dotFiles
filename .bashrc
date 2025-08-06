@@ -38,7 +38,6 @@ colour() {
 
 # adding ssh keys to ssh-agent and setting SSH_AUTH_SOCK
 if [ -z "$SSH_AUTH_SOCK" ] ; then
-  export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR"/ssh-agent.socket
   ssh-add ~/.ssh/artsKey &> /dev/null
 fi
 

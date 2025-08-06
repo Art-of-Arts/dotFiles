@@ -38,6 +38,7 @@ colour() {
 
 # adding ssh keys to ssh-agent and setting SSH_AUTH_SOCK
 if [ -z "$SSH_AUTH_SOCK" ] ; then
+  eval "$(ssh-agent -t 2h)" > /tmp/ssh-agent.pid
   ssh-add ~/.ssh/artsKey &> /dev/null
 fi
 

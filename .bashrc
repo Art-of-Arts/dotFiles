@@ -40,9 +40,10 @@ colour() {
 if [ -z "$SSH_AUTH_SOCK" ] ; then
   export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR"/ssh-agent.socket
   ssh-add ~/.ssh/artsKey &> /dev/null
-#  ssh-add ~/.ssh/artsGHK # &> /dev/null
 fi
 
 set -o vi
 bind -m vi-insert '"\C-c": "\C-u"'
 bind -m vi-command '"\C-c": "\C-u"'
+
+eval "$(zoxide init bash)"

@@ -47,3 +47,4 @@ bind -m vi-insert '"\C-c": "\C-u"'
 bind -m vi-command '"\C-c": "\C-u"'
 
 eval "$(zoxide init bash)"
+eval "$(direnv hook bash)"

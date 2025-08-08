@@ -1,9 +1,13 @@
 #!/bin/bash
 
-sudo /bin/pacman -S --needed --noconfirm tlp cliphist wl-clipboard cmake gcc 7zip ark bitwarden blender btop curl git wget libqalculate ddcutil discover flatpak dolphin fakeroot ffmpeg fastfetch ghostty gzip gvim brightnessctl less man-db obs-studio obsidian openssh playerctl steam spotify-launcher swaync telegram-desktop tmux v4l2loopback-dkms v4l2loopback-utils vlc vlc-cli zoxide fzf direnv
+sudo /bin/pacman -S --needed --noconfirm cliphist wl-clipboard cmake gcc 7zip ark \
+bitwarden blender btop curl git wget libqalculate ddcutil discover flatpak dolphin \
+fakeroot ffmpeg fastfetch ghostty gzip gvim brightnessctl less man-db obs-studio \
+obsidian openssh playerctl steam spotify-launcher swaync telegram-desktop tmux \
+v4l2loopback-dkms v4l2loopback-utils vlc vlc-cli zoxide fzf direnv
 
 if [[ "$(hostnamectl hostname)" = "holo-machine" ]]; then
-  sudo /bin/pacman -S fprintd
+  sudo /bin/pacman -S tlp fprintd
 fi
 
 if [[ -f "/bin/yay" ]]; then

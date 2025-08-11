@@ -1,6 +1,7 @@
 #!/bin/bash
 
 if [[ -f /bin/vim ]]; then
+  pacman -S nodejs
   curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
 

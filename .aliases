@@ -4,7 +4,7 @@ export EDITOR=vim
 export TERMINAL=ghostty
 
 alias bashsrc="vim ~/.bashrc && source ~/.bashrc"
-alias clear="/bin/clear && fetch"
+alias clear="/bin/clear && fetch && echo"
 alias ls="lsd --color always" # --icon never"
 # alias sdb="~/scripts/systemAuto/ddcutilScreenBrightness.sh" # superceeded by SDB or monitorBrightness use that stupid
 alias initenv="source ./env/bin/activate || virtualenv ./env && source ./env/bin/activate"

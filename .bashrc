@@ -1,6 +1,7 @@
 # colours and prompt
 
 if [[ $XDG_SESSION_TYPE == 'tty' ]] ; then
+  export TERM="xterm-256color"
 	tmux a -t$USER || tmux new -s$USER && exit
 fi
 
@@ -24,12 +25,11 @@ fi
 
 # cosmetic
 
-/bin/clear
-fastfetch
+/bin/clear; fastfetch; echo; # ls -A; 
 
 # aliases and exports
-. ~/.git-prompt.sh
-source /home/arts/.aliases
+. /home/arts/.git-prompt.sh
+. /home/arts/.aliases
 
 colour() {
 	perl -e 'foreach $a(@ARGV){print "\e[48:2::".join(":",unpack("C*",pack("H*",$a)))."m \e[49m "};print "\n"' "$@"

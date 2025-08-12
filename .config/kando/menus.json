@@ -2833,6 +2833,236 @@
         "children": [
           {
             "type": "submenu",
+            "name": "Submenu",
+            "icon": "music_note_add",
+            "iconTheme": "material-symbols-rounded",
+            "data": {},
+            "children": [
+              {
+                "type": "macro",
+                "name": "Execute Macro",
+                "icon": "macro-item.svg",
+                "iconTheme": "kando",
+                "data": {
+                  "macro": [
+                    {
+                      "type": "keyDown",
+                      "key": "AltLeft",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyJ",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyJ",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "AltLeft",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "ArrowDown",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "ArrowDown",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "ArrowRight",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "ArrowRight",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "ControlLeft",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyA",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyA",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "ControlLeft",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "Backspace",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "Backspace",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyR",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyR",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyO",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyO",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyC",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyC",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyK",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyK",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "Space",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "Space",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyN",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyN",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "Space",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "Space",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyR",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyR",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyO",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyO",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyL",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyL",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyL",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyL",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "ArrowDown",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "ArrowDown",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "ArrowDown",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "ArrowDown",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "Enter",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "Enter",
+                      "delay": 50
+                    }
+                  ],
+                  "delayed": true
+                }
+              }
+            ]
+          },
+          {
+            "type": "submenu",
             "data": {},
             "name": "Common Searches",
             "icon": "search",
@@ -3954,27 +4184,8 @@
                 "icon": "sleep-token.png",
                 "iconTheme": "music-artists"
               }
-            ]
-          },
-          {
-            "type": "hotkey",
-            "data": {
-              "hotkey": "AltLeft+ArrowRight",
-              "delayed": true
-            },
-            "name": "Forwards",
-            "icon": "arrow_forward",
-            "iconTheme": "material-symbols-rounded",
-            "angle": 90
-          },
-          {
-            "type": "redirect",
-            "data": {
-              "menu": "Hyprland Menu :3"
-            },
-            "name": "Hyprland Menu :3",
-            "icon": "redo",
-            "iconTheme": "material-symbols-rounded"
+            ],
+            "angle": 0
           },
           {
             "type": "submenu",
@@ -3985,22 +4196,22 @@
               {
                 "type": "hotkey",
                 "data": {
-                  "hotkey": "MediaTrackNext",
-                  "delayed": false
-                },
-                "name": "Next Track",
-                "icon": "skip_next",
-                "iconTheme": "material-symbols-rounded",
-                "angle": 90
-              },
-              {
-                "type": "hotkey",
-                "data": {
                   "hotkey": "MediaPlayPause",
                   "delayed": false
                 },
                 "name": "Play / Pause",
                 "icon": "play_pause",
+                "iconTheme": "material-symbols-rounded",
+                "angle": 48
+              },
+              {
+                "type": "hotkey",
+                "data": {
+                  "hotkey": "MediaTrackNext",
+                  "delayed": false
+                },
+                "name": "Next Track",
+                "icon": "skip_next",
                 "iconTheme": "material-symbols-rounded"
               },
               {
@@ -4021,10 +4232,30 @@
                 },
                 "name": "Previous Track",
                 "icon": "skip_previous",
-                "iconTheme": "material-symbols-rounded",
-                "angle": 270
+                "iconTheme": "material-symbols-rounded"
               }
             ]
+          },
+          {
+            "type": "hotkey",
+            "data": {
+              "hotkey": "AltLeft+ArrowRight",
+              "delayed": true
+            },
+            "name": "Forwards",
+            "icon": "arrow_forward",
+            "iconTheme": "material-symbols-rounded",
+            "angle": 90
+          },
+          {
+            "type": "redirect",
+            "data": {
+              "menu": "Hyprland Menu :3"
+            },
+            "name": "Hyprland Menu :3",
+            "icon": "redo",
+            "iconTheme": "material-symbols-rounded",
+            "angle": 180
           },
           {
             "type": "hotkey",

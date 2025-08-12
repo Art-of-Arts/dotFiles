@@ -7,7 +7,7 @@ if [[ "$(hostnamectl hostname)" = "holo-machine" ]]; then
 fi
 
 if [[ -f "/bin/yay" ]]; then
-  /bin/yay -S --needed --noconfirm tlp audiorelay rose-pine-gtk-theme xwaylandvideobridge rangoli 
+  /bin/yay -S --needed --noconfirm tlp audiorelay rose-pine-gtk-theme xwaylandvideobridge rangoli kando-bin
 else
   echo "yay not installed, install yay and re-run the script"
 fi

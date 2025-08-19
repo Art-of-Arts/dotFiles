@@ -42,7 +42,7 @@ fi
 # linker script
 
 if [[ "${1,,}" = "all" ]]; then 
-  for FILE in "$CONFIG_DIR"/*; do
+  for FILE in "$CONFIG_DIR/*"; do
     __linker_linking $(basename "$FILE")
   done
   __linker_linking "Code - OSS"

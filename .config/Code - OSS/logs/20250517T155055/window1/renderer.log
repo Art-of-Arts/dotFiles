@@ -1,8 +1,0 @@
-2025-05-17 15:50:57.748 [info] Started local extension host with pid 945926.
-2025-05-17 15:50:57.798 [info] ComputeTargetPlatform: linux-x64
-2025-05-17 15:51:00.916 [warning] [vscode-clangd]: Couldn't find message for key showAST.
-2025-05-17 15:51:00.946 [info] [perf] Render performance baseline is 78ms
-2025-05-17 15:51:01.083 [info] Auto updating outdated extensions. vscodevim.vim
-2025-05-17 15:51:04.555 [error] Signature verification was not executed.: SignatureVerificationInternal: Signature verification was not executed.
-    at yh.xb (file:///usr/lib/code/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:63971)
-    at async yh.wb (file:///usr/lib/code/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:62886)

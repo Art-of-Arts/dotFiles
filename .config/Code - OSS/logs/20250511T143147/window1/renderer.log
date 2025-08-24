@@ -1,3 +1,0 @@
-2025-05-11 14:31:48.484 [info] Started local extension host with pid 1225479.
-2025-05-11 14:31:51.246 [info] [perf] Render performance baseline is 40ms
-2025-05-11 14:31:51.540 [warning] [vscode-clangd]: Couldn't find message for key showAST.

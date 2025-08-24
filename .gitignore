@@ -1,0 +1,11 @@
+.config/kando/session/
+.config/kando/SingletonLock
+.config/kando/SingletonSocket
+.config/kando/SingletonCookie
+.gitconfig
+.config/VRCX/Cache/
+.config/VRCX/logs/
+.config/PureRef/crash-data
+.config/blender/
+.config/hypr/monitors.conf
+.config/hypr/workspaces.conf

@@ -33,6 +33,7 @@ if [[ "$(cat /etc/hostname)" != "holo-overlord" ]]; then
 
 	alias syncUP='scp ~/{.bashrc,.aliases,.tmux.conf,.vimrc} holo-overlord:~/ && scp -r ~/.config/alacritty holo-overlord:~/.config/' # scp ~/.config/alacritty/alacritty.toml arts@$PUBLICIP:~/.config/alacritty/ && scp ~/.config/alacritty/theme/rose-pine.toml arts@$PUBLICIP:~/.config/alacritty/theme/'
 	alias syncDOWN='scp holo-overlord:~/{.bashrc,.aliases,.tmux.conf,.vimrc} ~/ && scp -r holo-overlord:~/.config/alacritty ~/.config/'
+  alias wifi="~/scripts/systemScripts/connectToWifi.sh"
 fi
 
 # tmux in session stuff

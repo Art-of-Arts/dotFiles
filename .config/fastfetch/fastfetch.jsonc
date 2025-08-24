@@ -13,8 +13,8 @@
             "width": 12
         },
         "bar": {
-            "charElapsed": "■",
-            "charTotal": " ",
+            "char.elapsed": "■",
+            "char.total": " ",
             "width": 10
         },
         "percent": {"type": 10},

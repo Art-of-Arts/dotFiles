@@ -8,6 +8,11 @@ use = "Joao-Queiroga/drag"
 rev = "65414ea"
 hash = "f8e58779135ee1cdd298812bfae846c1"
 
+[[plugin.deps]]
+use = "boydaihungst/restore"
+rev = "2a2ba2f"
+hash = "12d8576d0cb8355a7e15d622913eb250"
+
 [[flavor.deps]]
 use = "Mintass/rose-pine"
 rev = "8343340"

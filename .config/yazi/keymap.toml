@@ -1,0 +1,9 @@
+[[mgr.prepend_keymap]]
+on  = "M"
+run = "plugin mount"
+desc = "mount and unmount drives"
+
+[[mgr.prepend_keymap]]
+on = [ "<C-d>" ]
+run = "plugin drag"
+desc = "Drag and Drop files"

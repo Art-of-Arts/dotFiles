@@ -2753,15 +2753,55 @@
             "angle": 0
           },
           {
-            "type": "hotkey",
-            "data": {
-              "hotkey": "MetaLeft+AltLeft+Space",
-              "delayed": true
-            },
-            "name": "Krunner",
+            "type": "macro",
+            "name": "Open Copied Link",
             "icon": "search",
             "iconTheme": "material-symbols-rounded",
-            "angle": 60
+            "data": {
+              "macro": [
+                {
+                  "type": "keyDown",
+                  "key": "ControlLeft",
+                  "delay": 10
+                },
+                {
+                  "type": "keyDown",
+                  "key": "KeyT",
+                  "delay": 10
+                },
+                {
+                  "type": "keyUp",
+                  "key": "KeyT",
+                  "delay": 10
+                },
+                {
+                  "type": "keyDown",
+                  "key": "KeyV",
+                  "delay": 10
+                },
+                {
+                  "type": "keyUp",
+                  "key": "KeyV",
+                  "delay": 10
+                },
+                {
+                  "type": "keyUp",
+                  "key": "ControlLeft",
+                  "delay": 10
+                },
+                {
+                  "type": "keyDown",
+                  "key": "Enter",
+                  "delay": 10
+                },
+                {
+                  "type": "keyUp",
+                  "key": "Enter",
+                  "delay": 10
+                }
+              ],
+              "delayed": true
+            }
           },
           {
             "type": "uri",

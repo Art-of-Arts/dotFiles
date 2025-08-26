@@ -20,7 +20,7 @@ alias umount="sudo umount"
 # i'll forget about this
 
 alias fetch='fastfetch'
-alias fetche='fastfetch --load-config ~/.config/fastfetch/extra.jsonc'
+alias fetche='fastfetch --config ~/.config/fastfetch/extra.jsonc'
 alias visudo="EDITOR=vim sudo visudo"
 alias soft-reboot="systemctl soft-reboot"
 alias grep="grep --colour=auto "

@@ -14,7 +14,7 @@
 # fi
  
 
-sudo /bin/pacman -S --noconfirm --needed hyprland hyprlang hyprlock hyprshot hypridle hyprutils hyprpicker hyprsunset hyprcursor hyprgraphics hyprpolkitagent hyprland-qtutils hyprland-protocols hyprland-qt-support hyprwayland-scanner xdg-desktop-portal-hyprland waybar wofi nwg-displays gimp swaync
+sudo /bin/pacman -S --noconfirm --needed hyprland hyprlang hyprlock hyprshot hypridle hyprutils hyprpicker hyprsunset hyprcursor hyprgraphics hyprpolkitagent hyprland-qtutils hyprland-protocols hyprland-qt-support hyprwayland-scanner xdg-desktop-portal-hyprland waybar wofi nwg-displays gimp swaync papirus-icon-theme
 
 if [[ -z "/bin/yay" ]]; then
   if ! [[ "$(cat /etc/hostname)" = "holo-machine" ]] ; then

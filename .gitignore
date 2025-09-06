@@ -9,3 +9,5 @@
 .config/blender/
 .config/hypr/monitors.conf
 .config/hypr/workspaces.conf
+.config/obs-studio/logs/
+.config/obs-studio/profiler_data/

@@ -9,7 +9,7 @@
     "name": "Fucked up scenes",
     "sources": [
         {
-            "prev_ver": 520093699,
+            "prev_ver": 520159234,
             "name": "Scene",
             "uuid": "2419033c-c284-4055-9e4d-7eda928de9e1",
             "id": "scene",
@@ -43,16 +43,16 @@
                             "y": 0.0
                         },
                         "pos_rel": {
-                            "x": -0.9990741014480591,
+                            "x": -1.7777777910232544,
                             "y": -1.0
                         },
                         "scale": {
-                            "x": 1.0,
-                            "y": 1.0
+                            "x": 0.75,
+                            "y": 0.75
                         },
                         "scale_rel": {
-                            "x": 1.0,
-                            "y": 1.0
+                            "x": 0.75,
+                            "y": 0.75
                         },
                         "bounds": {
                             "x": 0.0,
@@ -94,16 +94,17 @@
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
             "monitoring_type": 0,
+            "canvas_uuid": "6c69626f-6273-4c00-9d88-c5136d61696e",
             "private_settings": {}
         },
         {
-            "prev_ver": 520093699,
+            "prev_ver": 520159234,
             "name": "labdob diplay",
             "uuid": "a20d9765-1e92-4b29-994e-089739e77f79",
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "RestoreToken": "9874f516-9a1c-4a32-9812-0eea161e46de"
+                "RestoreToken": ""
             },
             "mixers": 0,
             "sync": 0,
@@ -149,11 +150,12 @@
     ],
     "transitions": [],
     "saved_projectors": [],
+    "canvases": [],
     "current_transition": "Fade",
     "transition_duration": 300,
     "preview_locked": false,
     "scaling_enabled": false,
-    "scaling_level": 0,
+    "scaling_level": -11,
     "scaling_off_x": 0.0,
     "scaling_off_y": 0.0,
     "virtual-camera": {
@@ -174,7 +176,7 @@
         }
     },
     "resolution": {
-        "x": 1079,
+        "x": 1920,
         "y": 1080
     },
     "version": 2

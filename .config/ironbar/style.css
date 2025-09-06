@@ -1,0 +1,44 @@
+@define-color colour_base #191724;
+@define-color colour_surface #1f1d2e;
+@define-color colour_overlay #26233a;
+@define-color colour_text #e0def4;
+@define-color colour_highlight_high #9ccfd8;
+@define-color colour_love #eb6f92;
+@define-color colour_iris #c4a7e7;
+
+/* -- base styles -- */
+
+* {
+  font-family: Noto Sans Nerd Font, sans-serif;
+  font-size: 16px;
+  border: none;
+  border-radius: 0;
+}
+
+box, menubar, button {
+  background-color: @colour_base;
+  background-image: none;
+  box-shadow: none;
+}
+
+button, label {
+  color: @colour_text;
+}
+
+button:hover {
+  background-color: @colour_overlay;
+}
+
+scale trough {
+  min-width: 1px;
+  min-height: 2px;
+}
+
+#bar {
+  border-top: 1px solid @colour_iris;
+}
+
+.popup {
+  border: 1px solid @colour_surface;
+  padding: 1em;
+}

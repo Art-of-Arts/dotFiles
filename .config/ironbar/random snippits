@@ -1,0 +1,16 @@
+    "hdmi-1": {
+      "center": [
+      {
+        "type": "sys_info",
+        "interval": {
+          "memory": 30,
+          "cpu": 1,
+          "temps": 5,
+          "disks": 300,
+          "networks": 3
+        }
+      }
+      ]
+    },
+
+

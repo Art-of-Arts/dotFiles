@@ -13,6 +13,11 @@ use = "boydaihungst/restore"
 rev = "2a2ba2f"
 hash = "12d8576d0cb8355a7e15d622913eb250"
 
+[[plugin.deps]]
+use = "tasnimAlam/rotate-image"
+rev = "9d61146"
+hash = "409b403a7b7ed009fae98e8526c0b2c8"
+
 [[flavor.deps]]
 use = "Mintass/rose-pine"
 rev = "8343340"

@@ -12,3 +12,8 @@ desc = "Drag and Drop files"
 on = [ "u" ]
 run = "plugin restore"
 desc = "Open Recent Trash"
+
+[[manager.prepend_keymap]]
+on   = ["R"]
+run  = "plugin rotate-image"
+desc = "Rotate images"

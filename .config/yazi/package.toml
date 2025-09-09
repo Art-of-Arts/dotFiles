@@ -9,14 +9,19 @@ rev = "65414ea"
 hash = "f8e58779135ee1cdd298812bfae846c1"
 
 [[plugin.deps]]
-use = "boydaihungst/restore"
-rev = "2a2ba2f"
-hash = "12d8576d0cb8355a7e15d622913eb250"
-
-[[plugin.deps]]
 use = "tasnimAlam/rotate-image"
 rev = "9d61146"
 hash = "409b403a7b7ed009fae98e8526c0b2c8"
+
+[[plugin.deps]]
+use = "uhs-robert/recycle-bin"
+rev = "728c0af"
+hash = "6e6a68328ace9b6369ce16b35116894a"
+
+[[plugin.deps]]
+use = "boydaihungst/restore"
+rev = "dc40509"
+hash = "e7e377f9b1bbaca4a2e5d9ec9709ac4d"
 
 [[flavor.deps]]
 use = "Mintass/rose-pine"

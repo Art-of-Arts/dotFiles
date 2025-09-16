@@ -51,3 +51,4 @@ bind -m vi-command '"\C-c": "\C-u"'
 
 eval "$(zoxide init bash)"
 eval "$(direnv hook bash)"
+eval "$(register-python-argcomplete gcalcli)"

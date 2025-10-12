@@ -16,7 +16,7 @@ path="$4"
 out="$5"
 
 cmd="yazi"
-termcmd="${TERMCMD:-ghostty --title='termfilechooser'}"
+termcmd="${TERMCMD:-ghostty --title='termfilechooser' --confirm-close-surface=false}"
 
 if [ "$save" = "1" ]; then
     # save a file

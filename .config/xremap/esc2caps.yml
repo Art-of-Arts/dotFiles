@@ -2,5 +2,9 @@ modmap:
   - name: global
     remap:
       # capslock <-> esc
-      capslock: esc
-      esc: capslock
+      capslock:
+        alone: esc
+        held: Alt_R
+      esc: 
+        alone: capslock
+        held: Pause

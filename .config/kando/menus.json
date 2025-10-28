@@ -12,8 +12,8 @@
             "type": "submenu",
             "data": {},
             "name": "System Shortcuts",
-            "icon": "all-menus.svg",
-            "iconTheme": "kando",
+            "icon": "archlinux",
+            "iconTheme": "simple-icons",
             "children": [
               {
                 "type": "submenu",
@@ -62,6 +62,52 @@
                     "iconTheme": "material-symbols-rounded",
                     "angle": 150
                   }
+                ],
+                "angle": 150
+              },
+              {
+                "type": "command",
+                "name": "Run Command",
+                "icon": "android_wifi_3_bar_plus",
+                "iconTheme": "material-symbols-rounded",
+                "data": {
+                  "command": "/home/arts/scripts/systemScripts/connectToWifi.sh",
+                  "detached": true,
+                  "isolated": false,
+                  "delayed": false
+                }
+              },
+              {
+                "type": "submenu",
+                "name": "Keyboard",
+                "icon": "keyboard",
+                "iconTheme": "material-symbols-rounded",
+                "data": {},
+                "children": [
+                  {
+                    "type": "command",
+                    "name": "Kbd: English",
+                    "icon": "🇬🇧",
+                    "iconTheme": "emoji",
+                    "data": {
+                      "command": "hyprctl switchxkblayout at-translated-set-2-keyboard 0",
+                      "detached": true,
+                      "isolated": false,
+                      "delayed": false
+                    }
+                  },
+                  {
+                    "type": "command",
+                    "name": "Kbd: Russian",
+                    "icon": "🇷🇺",
+                    "iconTheme": "emoji",
+                    "data": {
+                      "command": "hyprctl switchxkblayout at-translated-set-2-keyboard 1",
+                      "detached": true,
+                      "isolated": false,
+                      "delayed": false
+                    }
+                  }
                 ]
               }
             ]
@@ -91,7 +137,7 @@
                   "isolated": false,
                   "delayed": true
                 },
-                "name": "Lock Active Group",
+                "name": "Lock Active",
                 "icon": "lock",
                 "iconTheme": "material-symbols-rounded"
               },
@@ -103,7 +149,7 @@
                   "isolated": false,
                   "delayed": true
                 },
-                "name": "Toggle Group",
+                "name": "Toggle",
                 "icon": "ad_group",
                 "iconTheme": "material-symbols-rounded"
               },
@@ -115,7 +161,7 @@
                   "isolated": false,
                   "delayed": true
                 },
-                "name": "Run Command",
+                "name": "Detach Active",
                 "icon": "ungroup",
                 "iconTheme": "material-symbols-rounded"
               }
@@ -165,210 +211,35 @@
                       "isolated": false,
                       "delayed": false
                     },
-                    "name": "Run Command",
-                    "icon": "command-item.svg",
-                    "iconTheme": "kando"
+                    "name": "Nezzie's Owlbear",
+                    "icon": "owlbear.svg",
+                    "iconTheme": "custom-icons"
+                  },
+                  {
+                    "type": "command",
+                    "data": {
+                      "command": "chromium --kiosk ",
+                      "detached": true,
+                      "isolated": false,
+                      "delayed": false
+                    },
+                    "name": "Dan's Foundry",
+                    "icon": "foundryvirtualtabletop",
+                    "iconTheme": "simple-icons-colored"
+                  },
+                  {
+                    "type": "command",
+                    "data": {
+                      "command": "chromium --kiosk ",
+                      "detached": true,
+                      "isolated": false,
+                      "delayed": false
+                    },
+                    "name": "Finnji's Owlbear",
+                    "icon": "owlbear.svg",
+                    "iconTheme": "custom-icons"
                   }
                 ]
-              },
-              {
-                "type": "submenu",
-                "data": {},
-                "name": "Desktop Apps Common",
-                "icon": "apps",
-                "iconTheme": "material-symbols-rounded",
-                "children": [
-                  {
-                    "type": "command",
-                    "data": {
-                      "command": "gtk-launch obsidian.desktop",
-                      "delayed": false
-                    },
-                    "name": "Obsidian",
-                    "icon": "obsidian",
-                    "iconTheme": "simple-icons"
-                  },
-                  {
-                    "type": "command",
-                    "data": {
-                      "command": "gtk-launch vim.desktop",
-                      "delayed": false
-                    },
-                    "name": "Vim",
-                    "icon": "vim",
-                    "iconTheme": "simple-icons"
-                  },
-                  {
-                    "type": "command",
-                    "data": {
-                      "command": "$HOME/Applications/VRCX.AppImage",
-                      "delayed": false
-                    },
-                    "name": "VRCX",
-                    "icon": "vrchat",
-                    "iconTheme": "simple-icons"
-                  },
-                  {
-                    "type": "submenu",
-                    "data": {},
-                    "name": "Desktop Apps Uncommon",
-                    "icon": "apps",
-                    "iconTheme": "material-symbols-rounded",
-                    "children": [
-                      {
-                        "type": "command",
-                        "data": {
-                          "command": "gtk-launch bitwarden.desktop",
-                          "delayed": false
-                        },
-                        "name": "Bitwarden",
-                        "icon": "bitwarden",
-                        "iconTheme": "simple-icons"
-                      },
-                      {
-                        "type": "command",
-                        "data": {
-                          "command": "notify-send \"opening steam\" && steam",
-                          "delayed": false
-                        },
-                        "name": "Steam",
-                        "icon": "steam",
-                        "iconTheme": "simple-icons"
-                      },
-                      {
-                        "type": "command",
-                        "data": {
-                          "command": "zen-browser --new-tab \"about:newtab\"",
-                          "delayed": false
-                        },
-                        "name": "Web Browser",
-                        "icon": "globe",
-                        "iconTheme": "material-symbols-rounded"
-                      },
-                      {
-                        "type": "command",
-                        "data": {
-                          "command": "gtk-launch spotify-launcher ",
-                          "delayed": false
-                        },
-                        "name": "Spotify",
-                        "icon": "spotify",
-                        "iconTheme": "simple-icons"
-                      },
-                      {
-                        "type": "command",
-                        "data": {
-                          "command": "gtk-launch dev.vencord.Vesktop.desktop",
-                          "delayed": false
-                        },
-                        "name": "Vesktop",
-                        "icon": "discord",
-                        "iconTheme": "simple-icons"
-                      },
-                      {
-                        "type": "command",
-                        "data": {
-                          "command": "gtk-launch systemsettings.desktop",
-                          "delayed": false
-                        },
-                        "name": "Settings",
-                        "icon": "settings",
-                        "iconTheme": "material-symbols-rounded"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "command",
-                    "data": {
-                      "command": "gtk-launch com.obsproject.Studio.desktop",
-                      "delayed": false
-                    },
-                    "name": "Obs Studio",
-                    "icon": "obsstudio",
-                    "iconTheme": "simple-icons"
-                  }
-                ],
-                "angle": 90
-              },
-              {
-                "type": "submenu",
-                "data": {},
-                "name": "File Browser Paths",
-                "icon": "folder",
-                "iconTheme": "material-symbols-rounded",
-                "children": [
-                  {
-                    "type": "command",
-                    "data": {
-                      "command": "xdg-open \"$(xdg-user-dir DESKTOP)\""
-                    },
-                    "name": "Desktop",
-                    "icon": "desktop_windows",
-                    "iconTheme": "material-symbols-rounded",
-                    "angle": 0
-                  },
-                  {
-                    "type": "command",
-                    "data": {
-                      "command": "xdg-open \"$(xdg-user-dir MUSIC)\""
-                    },
-                    "name": "Music",
-                    "icon": "music_note",
-                    "iconTheme": "material-symbols-rounded",
-                    "angle": 90
-                  },
-                  {
-                    "type": "command",
-                    "data": {
-                      "command": "xdg-open ~"
-                    },
-                    "name": "Home",
-                    "icon": "home",
-                    "iconTheme": "material-symbols-rounded",
-                    "angle": 135
-                  },
-                  {
-                    "type": "command",
-                    "data": {
-                      "command": "xdg-open \"$(xdg-user-dir PICTURES)\""
-                    },
-                    "name": "Pictures",
-                    "icon": "imagesmode",
-                    "iconTheme": "material-symbols-rounded",
-                    "angle": 180
-                  },
-                  {
-                    "type": "command",
-                    "data": {
-                      "command": "xdg-open \"$(xdg-user-dir DOWNLOAD)\""
-                    },
-                    "name": "Downloads",
-                    "icon": "download",
-                    "iconTheme": "material-symbols-rounded",
-                    "angle": 225
-                  },
-                  {
-                    "type": "command",
-                    "data": {
-                      "command": "xdg-open \"$(xdg-user-dir DOCUMENTS)\""
-                    },
-                    "name": "Documents",
-                    "icon": "text_ad",
-                    "iconTheme": "material-symbols-rounded",
-                    "angle": 270
-                  },
-                  {
-                    "type": "command",
-                    "data": {
-                      "command": "xdg-open \"$(xdg-user-dir VIDEOS)\""
-                    },
-                    "name": "Videos",
-                    "icon": "video_camera_front",
-                    "iconTheme": "material-symbols-rounded",
-                    "angle": 315
-                  }
-                ],
-                "angle": 225
               },
               {
                 "type": "submenu",
@@ -404,8 +275,7 @@
                     "icon": "blender",
                     "iconTheme": "simple-icons"
                   }
-                ],
-                "angle": 270
+                ]
               }
             ]
           },
@@ -441,19 +311,22 @@
         "iconTheme": "simple-icons",
         "children": [
           {
-            "type": "file",
-            "data": {
-              "path": "/home/arts/Documents/meme/"
-            },
+            "type": "command",
             "name": "Open Memes Folder",
             "icon": "folder_open",
-            "iconTheme": "material-symbols-rounded"
+            "iconTheme": "material-symbols-rounded",
+            "data": {
+              "command": "ghostty --confirm-close-surface=false -e /bin/yazi /home/arts/Documents/meme/",
+              "detached": true,
+              "isolated": false,
+              "delayed": false
+            }
           },
           {
             "type": "submenu",
             "data": {},
             "name": "Message People",
-            "icon": "phone_android",
+            "icon": "inbox_text",
             "iconTheme": "material-symbols-rounded",
             "children": [
               {
@@ -2663,6 +2536,15 @@
         "iconTheme": "simple-icons",
         "children": [
           {
+            "type": "uri",
+            "data": {
+              "uri": "https://www.youtube.com/@TheRussianBadger"
+            },
+            "name": "The Russian Badger",
+            "icon": "youtube",
+            "iconTheme": "simple-icons"
+          },
+          {
             "type": "submenu",
             "data": {},
             "name": "Twitch Friends",
@@ -2688,16 +2570,6 @@
                 "iconTheme": "my-friends"
               }
             ]
-          },
-          {
-            "type": "hotkey",
-            "data": {
-              "hotkey": "ShiftLeft+AltLeft+KeyD",
-              "delayed": true
-            },
-            "name": "Toggle Dark Mode",
-            "icon": "dark_mode",
-            "iconTheme": "material-symbols-rounded"
           },
           {
             "type": "submenu",
@@ -2802,16 +2674,8 @@
             },
             "name": "Open Copied Link",
             "icon": "search",
-            "iconTheme": "material-symbols-rounded"
-          },
-          {
-            "type": "uri",
-            "data": {
-              "uri": "https://www.youtube.com/@TheRussianBadger"
-            },
-            "name": "The Russian Badger",
-            "icon": "youtube",
-            "iconTheme": "simple-icons"
+            "iconTheme": "material-symbols-rounded",
+            "angle": 60
           },
           {
             "type": "redirect",
@@ -5163,6 +5027,219 @@
       "tags": [
         "old"
       ]
+    },
+    {
+      "shortcut": "",
+      "shortcutID": "",
+      "centered": false,
+      "anchored": false,
+      "hoverMode": false,
+      "tags": [],
+      "root": {
+        "type": "submenu",
+        "name": "The SAVER menu",
+        "icon": "apps",
+        "iconTheme": "material-symbols-rounded",
+        "children": [
+          {
+            "type": "hotkey",
+            "data": {
+              "hotkey": "ShiftLeft+AltLeft+KeyD",
+              "delayed": true
+            },
+            "name": "Toggle Dark Mode",
+            "icon": "dark_mode",
+            "iconTheme": "material-symbols-rounded"
+          },
+          {
+            "type": "submenu",
+            "data": {},
+            "name": "Desktop Apps Common",
+            "icon": "apps",
+            "iconTheme": "material-symbols-rounded",
+            "children": [
+              {
+                "type": "command",
+                "data": {
+                  "command": "gtk-launch obsidian.desktop",
+                  "delayed": false
+                },
+                "name": "Obsidian",
+                "icon": "obsidian",
+                "iconTheme": "simple-icons"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "gtk-launch vim.desktop",
+                  "delayed": false
+                },
+                "name": "Vim",
+                "icon": "vim",
+                "iconTheme": "simple-icons"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "$HOME/Applications/VRCX.AppImage",
+                  "delayed": false
+                },
+                "name": "VRCX",
+                "icon": "vrchat",
+                "iconTheme": "simple-icons"
+              },
+              {
+                "type": "submenu",
+                "data": {},
+                "name": "Desktop Apps Uncommon",
+                "icon": "apps",
+                "iconTheme": "material-symbols-rounded",
+                "children": [
+                  {
+                    "type": "command",
+                    "data": {
+                      "command": "gtk-launch bitwarden.desktop",
+                      "delayed": false
+                    },
+                    "name": "Bitwarden",
+                    "icon": "bitwarden",
+                    "iconTheme": "simple-icons"
+                  },
+                  {
+                    "type": "command",
+                    "data": {
+                      "command": "notify-send \"opening steam\" && steam",
+                      "delayed": false
+                    },
+                    "name": "Steam",
+                    "icon": "steam",
+                    "iconTheme": "simple-icons"
+                  },
+                  {
+                    "type": "command",
+                    "data": {
+                      "command": "zen-browser --new-tab \"about:newtab\" || app.zen.zen-browser --new-tab \"about:newtab\"",
+                      "delayed": false
+                    },
+                    "name": "Web Browser",
+                    "icon": "globe",
+                    "iconTheme": "material-symbols-rounded"
+                  },
+                  {
+                    "type": "command",
+                    "data": {
+                      "command": "gtk-launch spotify-launcher ",
+                      "delayed": false
+                    },
+                    "name": "Spotify",
+                    "icon": "spotify",
+                    "iconTheme": "simple-icons"
+                  },
+                  {
+                    "type": "command",
+                    "data": {
+                      "command": "gtk-launch dev.vencord.Vesktop.desktop",
+                      "delayed": false
+                    },
+                    "name": "Vesktop",
+                    "icon": "discord",
+                    "iconTheme": "simple-icons"
+                  }
+                ]
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "gtk-launch com.obsproject.Studio.desktop",
+                  "delayed": false
+                },
+                "name": "Obs Studio",
+                "icon": "obsstudio",
+                "iconTheme": "simple-icons"
+              }
+            ]
+          },
+          {
+            "type": "submenu",
+            "data": {},
+            "name": "File Browser Paths",
+            "icon": "folder",
+            "iconTheme": "material-symbols-rounded",
+            "children": [
+              {
+                "type": "command",
+                "data": {
+                  "command": "xdg-open \"$(xdg-user-dir DESKTOP)\""
+                },
+                "name": "Desktop",
+                "icon": "desktop_windows",
+                "iconTheme": "material-symbols-rounded",
+                "angle": 0
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "xdg-open \"$(xdg-user-dir MUSIC)\""
+                },
+                "name": "Music",
+                "icon": "music_note",
+                "iconTheme": "material-symbols-rounded",
+                "angle": 90
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "xdg-open ~"
+                },
+                "name": "Home",
+                "icon": "home",
+                "iconTheme": "material-symbols-rounded",
+                "angle": 135
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "xdg-open \"$(xdg-user-dir PICTURES)\""
+                },
+                "name": "Pictures",
+                "icon": "imagesmode",
+                "iconTheme": "material-symbols-rounded",
+                "angle": 180
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "xdg-open \"$(xdg-user-dir DOWNLOAD)\""
+                },
+                "name": "Downloads",
+                "icon": "download",
+                "iconTheme": "material-symbols-rounded",
+                "angle": 225
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "xdg-open \"$(xdg-user-dir DOCUMENTS)\""
+                },
+                "name": "Documents",
+                "icon": "text_ad",
+                "iconTheme": "material-symbols-rounded",
+                "angle": 270
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "xdg-open \"$(xdg-user-dir VIDEOS)\""
+                },
+                "name": "Videos",
+                "icon": "video_camera_front",
+                "iconTheme": "material-symbols-rounded",
+                "angle": 315
+              }
+            ]
+          }
+        ]
+      }
     }
   ],
   "collections": [

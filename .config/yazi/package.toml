@@ -23,6 +23,16 @@ use = "boydaihungst/restore"
 rev = "dc40509"
 hash = "e7e377f9b1bbaca4a2e5d9ec9709ac4d"
 
+[[plugin.deps]]
+use = "Deepak22903/kdeconnect-send"
+rev = "5757a65"
+hash = "c23a7c129f3b972569414c8f2a5dd823"
+
+[[plugin.deps]]
+use = "ktunprasert/git-files"
+rev = "c7289ad"
+hash = "cdb1a69bed63211c75b72521bbab875d"
+
 [[flavor.deps]]
 use = "Mintass/rose-pine"
 rev = "8343340"

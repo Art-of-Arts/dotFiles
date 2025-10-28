@@ -1,5 +1,4 @@
 {
-  "version": "2.1.0",
   "locale": "auto",
   "showIntroductionDialog": false,
   "menuTheme": "neon-lights",
@@ -9,16 +8,13 @@
   "enableDarkModeForMenuThemes": false,
   "soundTheme": "none",
   "soundVolume": 0.5,
-  "enableVersionCheck": false,
   "ignoreWriteProtectedConfigFiles": false,
   "settingsWindowColorScheme": "system",
   "settingsWindowFlavor": "transparent-system",
   "trayIconFlavor": "color",
-  "hardwareAcceleration": true,
   "lazyInitialization": false,
+  "enableVersionCheck": false,
   "zoomFactor": 1,
-  "hideSettingsButton": true,
-  "settingsButtonPosition": "bottom-right",
   "centerDeadZone": 50,
   "minParentDistance": 150,
   "dragThreshold": 15,
@@ -39,5 +35,11 @@
   "gamepadBackButton": 1,
   "gamepadCloseButton": 2,
   "sameShortcutBehavior": "close",
-  "useDefaultOsShowSettingsHotkey": true
+  "useDefaultOsShowSettingsHotkey": true,
+  "hideSettingsButton": true,
+  "settingsButtonPosition": "bottom-right",
+  "editorOptions": {
+    "showSidebarButtonVisible": true,
+    "showEditorButtonVisible": true
+  }
 }

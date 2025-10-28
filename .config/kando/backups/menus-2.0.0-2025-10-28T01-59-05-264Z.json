@@ -1,7 +1,14 @@
 {
-  "version": "2.1.0",
   "menus": [
     {
+      "shortcut": "",
+      "shortcutID": "default-menu",
+      "centered": false,
+      "anchored": false,
+      "hoverMode": false,
+      "tags": [
+        "favs"
+      ],
       "root": {
         "type": "submenu",
         "name": "Hyprland Menu :3",
@@ -10,10 +17,10 @@
         "children": [
           {
             "type": "submenu",
-            "data": {},
             "name": "System Shortcuts",
             "icon": "all-menus.svg",
             "iconTheme": "kando",
+            "data": {},
             "children": [
               {
                 "type": "submenu",
@@ -78,60 +85,60 @@
           },
           {
             "type": "submenu",
-            "data": {},
             "name": "Groups",
             "icon": "tab_group",
             "iconTheme": "material-symbols-rounded",
+            "data": {},
             "children": [
               {
                 "type": "command",
+                "name": "Lock Active Group",
+                "icon": "lock",
+                "iconTheme": "material-symbols-rounded",
                 "data": {
                   "command": "hyprctl dispatch lockactivegroup toggle",
                   "detached": true,
                   "isolated": false,
                   "delayed": true
-                },
-                "name": "Lock Active Group",
-                "icon": "lock",
-                "iconTheme": "material-symbols-rounded"
+                }
               },
               {
                 "type": "command",
+                "name": "Toggle Group",
+                "icon": "ad_group",
+                "iconTheme": "material-symbols-rounded",
                 "data": {
                   "command": "hyprctl dispatch togglegroup",
                   "detached": true,
                   "isolated": false,
                   "delayed": true
-                },
-                "name": "Toggle Group",
-                "icon": "ad_group",
-                "iconTheme": "material-symbols-rounded"
+                }
               },
               {
                 "type": "command",
+                "name": "Run Command",
+                "icon": "ungroup",
+                "iconTheme": "material-symbols-rounded",
                 "data": {
                   "command": "hyprctl dispatch moveoutofgroup active",
                   "detached": true,
                   "isolated": false,
                   "delayed": true
-                },
-                "name": "Run Command",
-                "icon": "ungroup",
-                "iconTheme": "material-symbols-rounded"
+                }
               }
             ]
           },
           {
             "type": "command",
+            "name": "Previous Workspace",
+            "icon": "arrow_back",
+            "iconTheme": "material-symbols-rounded",
             "data": {
               "command": "hyprctl dispatch workspace e-1",
               "detached": true,
               "isolated": false,
               "delayed": false
             },
-            "name": "Previous Workspace",
-            "icon": "arrow_back",
-            "iconTheme": "material-symbols-rounded",
             "angle": 270
           },
           {
@@ -152,22 +159,22 @@
               },
               {
                 "type": "submenu",
-                "data": {},
                 "name": "D&D",
                 "icon": "dungeonsanddragons",
                 "iconTheme": "simple-icons",
+                "data": {},
                 "children": [
                   {
                     "type": "command",
+                    "name": "Run Command",
+                    "icon": "command-item.svg",
+                    "iconTheme": "kando",
                     "data": {
                       "command": "chromium --kiosk ",
                       "detached": true,
                       "isolated": false,
                       "delayed": false
-                    },
-                    "name": "Run Command",
-                    "icon": "command-item.svg",
-                    "iconTheme": "kando"
+                    }
                   }
                 ]
               },
@@ -411,27 +418,19 @@
           },
           {
             "type": "command",
+            "name": "Next Workspace",
+            "icon": "arrow_forward",
+            "iconTheme": "material-symbols-rounded",
             "data": {
               "command": "hyprctl dispatch workspace e+1",
               "detached": true,
               "isolated": false,
               "delayed": false
             },
-            "name": "Next Workspace",
-            "icon": "arrow_forward",
-            "iconTheme": "material-symbols-rounded",
             "angle": 450
           }
         ]
-      },
-      "shortcut": "",
-      "shortcutID": "default-menu",
-      "centered": false,
-      "anchored": false,
-      "hoverMode": false,
-      "tags": [
-        "favs"
-      ]
+      }
     },
     {
       "root": {
@@ -2646,8 +2645,8 @@
       "shortcut": "",
       "shortcutID": "default-menu",
       "centered": false,
+      "warpMouse": false,
       "anchored": false,
-      "hoverMode": false,
       "conditions": {
         "appName": "vesktop"
       },
@@ -2755,6 +2754,9 @@
           },
           {
             "type": "macro",
+            "name": "Open Copied Link",
+            "icon": "search",
+            "iconTheme": "material-symbols-rounded",
             "data": {
               "macro": [
                 {
@@ -2799,10 +2801,7 @@
                 }
               ],
               "delayed": true
-            },
-            "name": "Open Copied Link",
-            "icon": "search",
-            "iconTheme": "material-symbols-rounded"
+            }
           },
           {
             "type": "uri",
@@ -2828,8 +2827,8 @@
       "shortcut": "",
       "shortcutID": "default-menu",
       "centered": false,
+      "warpMouse": false,
       "anchored": false,
-      "hoverMode": false,
       "conditions": {
         "appName": "zen"
       },
@@ -2859,12 +2858,11 @@
       "shortcut": "",
       "shortcutID": "default-menu",
       "centered": false,
+      "warpMouse": false,
       "anchored": false,
-      "hoverMode": false,
       "conditions": {
         "appName": "blender"
-      },
-      "tags": []
+      }
     },
     {
       "root": {
@@ -2875,13 +2873,16 @@
         "children": [
           {
             "type": "submenu",
-            "data": {},
             "name": "Submenu",
             "icon": "music_note_add",
             "iconTheme": "material-symbols-rounded",
+            "data": {},
             "children": [
               {
                 "type": "macro",
+                "name": "Execute Macro",
+                "icon": "macro-item.svg",
+                "iconTheme": "kando",
                 "data": {
                   "macro": [
                     {
@@ -3096,10 +3097,7 @@
                     }
                   ],
                   "delayed": true
-                },
-                "name": "Execute Macro",
-                "icon": "macro-item.svg",
-                "iconTheme": "kando"
+                }
               }
             ]
           },
@@ -4315,8 +4313,8 @@
       "shortcut": "",
       "shortcutID": "default-menu",
       "centered": false,
+      "warpMouse": false,
       "anchored": false,
-      "hoverMode": false,
       "conditions": {
         "appName": "Spotify"
       },
@@ -4396,8 +4394,8 @@
       "shortcut": "",
       "shortcutID": "default-menu",
       "centered": false,
+      "warpMouse": false,
       "anchored": false,
-      "hoverMode": false,
       "conditions": {
         "appName": "obsidian"
       },
@@ -4406,6 +4404,9 @@
       ]
     },
     {
+      "shortcut": "Control+Space",
+      "shortcutID": "",
+      "centered": false,
       "root": {
         "type": "submenu",
         "name": "KDE Menu :3",
@@ -5155,11 +5156,6 @@
           }
         ]
       },
-      "shortcut": "Control+Space",
-      "shortcutID": "",
-      "centered": false,
-      "anchored": false,
-      "hoverMode": false,
       "tags": [
         "old"
       ]

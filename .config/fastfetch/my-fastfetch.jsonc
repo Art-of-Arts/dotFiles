@@ -93,7 +93,7 @@
         {
             "type": "battery",
             "key": "battery",
-            "percent": {"green": 50, "yellow": 25},
+            "percent": {"green": 40, "yellow": 15},
             "format": "{5} {4} {10} @ {7} cycles"
         },
         {

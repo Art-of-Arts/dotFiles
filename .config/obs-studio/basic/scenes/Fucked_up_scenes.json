@@ -9,7 +9,7 @@
     "name": "Fucked up scenes",
     "sources": [
         {
-            "prev_ver": 520159234,
+            "prev_ver": 536870913,
             "name": "Scene",
             "uuid": "2419033c-c284-4055-9e4d-7eda928de9e1",
             "id": "scene",
@@ -47,12 +47,12 @@
                             "y": -1.0
                         },
                         "scale": {
-                            "x": 0.75,
-                            "y": 0.75
+                            "x": 1.0,
+                            "y": 1.0
                         },
                         "scale_rel": {
-                            "x": 0.75,
-                            "y": 0.75
+                            "x": 1.0,
+                            "y": 1.0
                         },
                         "bounds": {
                             "x": 0.0,
@@ -98,7 +98,7 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 520159234,
+            "prev_ver": 536870913,
             "name": "labdob diplay",
             "uuid": "a20d9765-1e92-4b29-994e-089739e77f79",
             "id": "pipewire-screen-capture-source",
@@ -155,7 +155,7 @@
     "transition_duration": 300,
     "preview_locked": false,
     "scaling_enabled": false,
-    "scaling_level": -11,
+    "scaling_level": -7,
     "scaling_off_x": 0.0,
     "scaling_off_y": 0.0,
     "virtual-camera": {

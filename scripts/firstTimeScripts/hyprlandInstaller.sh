@@ -14,11 +14,11 @@
 # fi
  
 
-sudo /bin/pacman -S --noconfirm --needed hyprland hyprlang hyprlock hyprshot hypridle hyprutils hyprpicker hyprsunset hyprcursor hyprgraphics hyprpolkitagent hyprland-qtutils hyprland-protocols hyprland-qt-support hyprwayland-scanner xdg-desktop-portal-hyprland waybar wofi nwg-displays gimp swaync papirus-icon-theme
+sudo /bin/pacman -S --noconfirm --needed hyprland hyprlang hyprlock hyprshot hypridle hyprutils hyprpicker hyprsunset hyprcursor hyprgraphics hyprland-qtutils hyprland-protocols hyprland-qt-support hyprwayland-scanner xdg-desktop-portal-hyprland waybar wofi nwg-displays gimp swaync papirus-icon-theme polkit polkit-gnome
 
 if [[ -z "/bin/yay" ]]; then
   if ! [[ "$(cat /etc/hostname)" = "holo-machine" ]] ; then
     /bin/yay -S --noconfirm --needed tlpui
   fi
-  /bin/yay -S --noconfirm --needed xdg-desktop-portal-termfilechooser-hunkyburrito-git
+  /bin/yay -S --noconfirm --needed  
 fi

@@ -41,7 +41,9 @@ function y() {
 
 # adding ssh keys to ssh-agent and setting SSH_AUTH_SOCK
 if [ -z "$SSH_AUTH_SOCK" ] ; then
-  eval "$(ssh-agent -t 2h)" > /tmp/ssh-agent.pid
+  eval "$(ssh-agent -t 8h)" > /tmp/ssh-agent.pid
+  ssh-add ~/.ssh/artsKey &> /dev/null
+else
   ssh-add ~/.ssh/artsKey &> /dev/null
 fi
 

@@ -18,6 +18,16 @@ on   = ["R"]
 run  = "plugin rotate-image"
 desc = "Rotate images"
 
+[[mgr.prepend_keymap]]
+on   = [ "<C-s>" ]
+run  = "plugin kdenconnect-send"
+desc = "Send selected files via KDE Connect"
+
+[[mgr.prepend_keymap]]
+on   = [ "e", "c" ]
+run  = "plugin git-files"
+desc = "Show Git file changes"
+
 ### recycle-bin plugin maps
 
 [[mgr.prepend_keymap]]

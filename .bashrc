@@ -11,8 +11,8 @@ fi
 # same bashrc prompt for root and user
 
 if [[ "$(whoami)" == "root" ]]; then
-    RESET="\[$(tput sgr0)\]"
-    RED="\[$(tput setaf 1)\]"
+  RESET="\[$(tput sgr0)\]"
+  RED="\[$(tput setaf 1)\]"
   BLUE="\[$(tput setaf 6)\]"
   PS1="${RED}\u${BLUE}@${RED}\h${BLUE} • ${RED}\w\n ${RED}\$ ${RESET}"
 else
@@ -23,7 +23,7 @@ fi
 
 /bin/clear; fastfetch; echo; # ls -A; 
 
-# aliases and exports
+# sources
 . /home/arts/.git-prompt.sh
 . /home/arts/.aliases
 

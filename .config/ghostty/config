@@ -42,7 +42,8 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 theme = Rose Pine
-background = #1e1e1e
+# background = #1e1e1e
+background = #191724
 background-blur = 1
 background-opacity = 0.6
 window-decoration = none

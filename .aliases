@@ -11,7 +11,7 @@ alias ls="lsd --color always" # --icon never"
 alias initenv="source ./env/bin/activate || virtualenv ./env && source ./env/bin/activate"
 alias virtMon="krfb-virtualmonitor --resolution 1920x1080 --name VirtualMonitor --password password --port 3355"
 alias SDB="monitorBrightness"
-alias GHK="ssh-add ~/.ssh/artsGHK 2>&1 /dev/null <<< systemd-ask-password"
+alias GHK="ssh-add ~/.ssh/artsGHK"
 
 #sudoify those guys
 

@@ -16,7 +16,7 @@
 
   "modules-left": [  
     "group/workspaces",
-    "idle_inhibitor",
+    "group/idleNwalpaper",
     "group/playerControls",
   ],
   "modules-center": [
@@ -75,12 +75,11 @@
       "custom/pkg-aur",
     ],
   },
-  "group/special": {
+  "group/idleNwalpaper": {
     "orientation": "horizontal",
     "modules": [
-      "custom/discord",
-      "custom/spotify",
-      "custom/firefox",
+      "custom/idle_inhibitor",
+      "custom/wallpaper",
     ],
   },
   "group/special2": {
@@ -440,7 +439,7 @@
    },
     "custom/wallpaper": {
      "format": " ",
-     "on-click": "~/.config/rofi/wallselect/script.sh",
+     "on-click": "~/.config/hypr/scripts/swww-bg-selector.sh",
      "tooltip": false,
    },
     "custom/whatsapp": {

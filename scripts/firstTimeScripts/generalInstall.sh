@@ -7,7 +7,7 @@ if [[ "$(hostnamectl hostname)" = "holo-machine" ]]; then
 fi
 
 if [[ -f "/bin/yay" ]]; then
-  /bin/yay -Sy --needed --noconfirm rose-pine-gtk-theme xwaylandvideobridge rangoli kando-bin gcalcli arronax xdg-desktop-portal-termfilechooser-hunkyburrito-git tlpui
+  /bin/yay -Sy --needed --noconfirm rose-pine-gtk-theme xwaylandvideobridge rangoli kando-bin gcalcli arronax dbus_filemanager tlpui
 
   if [[ "$(hostnamectl hostname)" = "holo-machine" ]]; then
     /bin/yay -Sy --needed --noconfirm 

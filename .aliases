@@ -1,17 +1,17 @@
-#!/bin/bash
+#!/usr/bin/bash
 
 export EDITOR=vim
 export TERMINAL=ghostty
 export TERMCMD="ghostty --confirm-close-surface=false"
 
-alias bashsrc="vim ~/.bashrc && source ~/.bashrc"
+alias bashsrc="vim ~/.{bashrc,aliases,vimrc} && source ~/.bashrc"
 alias clear="/bin/clear && fetch && echo"
 alias ls="lsd --color always" # --icon never"
 # alias sdb="~/scripts/systemAuto/ddcutilScreenBrightness.sh" # superceeded by SDB or monitorBrightness use that stupid
 alias initenv="source ./env/bin/activate || virtualenv ./env && source ./env/bin/activate"
 alias virtMon="krfb-virtualmonitor --resolution 1920x1080 --name VirtualMonitor --password password --port 3355"
 alias SDB="monitorBrightness"
-alias GHK="ssh-add ~/.ssh/artsGHK"
+alias GHK="ssh-add ~/.ssh/artsGHK 2>&1 /dev/null <<< systemd-ask-password"
 
 #sudoify those guys
 
@@ -31,11 +31,7 @@ alias xterm="ghostty"
 alias vi="vim"
  
 if [[ "$(cat /etc/hostname)" != "holo-overlord" ]]; then
-	alias SERVERCON='ssh server@$PUBLICIP -o PubkeyAuthentication=no && clear'
 	alias COMPCON="ssh holo-overlord && clear"
-
-	alias syncUP='scp ~/{.bashrc,.aliases,.tmux.conf,.vimrc} holo-overlord:~/ && scp -r ~/.config/alacritty holo-overlord:~/.config/' # scp ~/.config/alacritty/alacritty.toml arts@$PUBLICIP:~/.config/alacritty/ && scp ~/.config/alacritty/theme/rose-pine.toml arts@$PUBLICIP:~/.config/alacritty/theme/'
-	alias syncDOWN='scp holo-overlord:~/{.bashrc,.aliases,.tmux.conf,.vimrc} ~/ && scp -r holo-overlord:~/.config/alacritty ~/.config/'
   alias wifi="~/scripts/systemScripts/connectToWifi.sh"
 fi
 
@@ -60,3 +56,16 @@ function monitorBrightness() {
     echo "must provide a numerical value from 0-100"
   fi
 }
+alias color="colour"
+colour() {
+	perl -e 'foreach $a(@ARGV){print "\e[48:2::".join(":",unpack("C*",pack("H*",$a)))."m \e[49m "};print "\n"' "$@"
+}
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
+
+

@@ -39,7 +39,7 @@ function getSongInfo() {
 
 function notifyDecision() {
   sleep .1
-  if [[ "$(playerctl -p $PLAYER status)" != "Playing" ]]; then
+  if [[ "$(playerctl -p $PLAYER status)" == "Playing" ]]; then
     hyprctl notify-send -1 5000 "rgb($NOTIFCOLOUR)" "Now Playing: $(getSongInfo)"
   else
     hyprctl notify-send -1 5000 "rgb($NOTIFCOLOUR)" "Current Song: $(getSongInfo)"

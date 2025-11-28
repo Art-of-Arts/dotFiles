@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-BLURSTR=100
+BLURSTR=80
 
 if ! [[ -d "/tmp/hyprlock-cache/" ]]; then
   echo "cache directory doesn't exist, making one now."

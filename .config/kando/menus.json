@@ -5,9 +5,251 @@
       "root": {
         "type": "submenu",
         "name": "Hyprland Menu :3",
-        "icon": "apps",
-        "iconTheme": "material-symbols-rounded",
+        "icon": "logo-large.svg",
+        "iconTheme": "kando",
         "children": [
+          {
+            "type": "command",
+            "data": {
+              "command": "pkill rofi || rofi -show drun -i",
+              "detached": true,
+              "isolated": false,
+              "delayed": false
+            },
+            "name": "Open rofi",
+            "icon": "apps",
+            "iconTheme": "material-symbols-rounded",
+            "angle": 135
+          },
+          {
+            "type": "submenu",
+            "data": {},
+            "name": "Overlays",
+            "icon": "computer",
+            "iconTheme": "material-symbols-rounded",
+            "children": [
+              {
+                "type": "command",
+                "data": {
+                  "command": "hyprctl dispatch togglespecialworkspace bitwarden",
+                  "detached": true,
+                  "isolated": false,
+                  "delayed": false
+                },
+                "name": "Bitwarden workspace",
+                "icon": "bitwarden",
+                "iconTheme": "simple-icons"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "hyprctl dispatch togglespecialworkspace distify",
+                  "detached": true,
+                  "isolated": false,
+                  "delayed": false
+                },
+                "name": "Distify workspace",
+                "icon": "comic_bubble",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "swaync-client -t",
+                  "delayed": false
+                },
+                "name": "Open Notification Center",
+                "icon": "notifications",
+                "iconTheme": "material-symbols-rounded",
+                "angle": 180
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "pkill -SIGUSR1 waybar",
+                  "detached": true,
+                  "isolated": false,
+                  "delayed": false
+                },
+                "name": "Toggle Waybar",
+                "icon": "toolbar",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "pkill rofi || rofi -show drun -i",
+                  "detached": true,
+                  "isolated": false,
+                  "delayed": false
+                },
+                "name": "Open rofi",
+                "icon": "menu",
+                "iconTheme": "material-symbols-rounded"
+              }
+            ]
+          },
+          {
+            "type": "submenu",
+            "data": {},
+            "name": "Groups",
+            "icon": "tab_group",
+            "iconTheme": "material-symbols-rounded",
+            "children": [
+              {
+                "type": "command",
+                "data": {
+                  "command": "hyprctl dispatch lockactivegroup toggle",
+                  "detached": true,
+                  "isolated": false,
+                  "delayed": true
+                },
+                "name": "Lock Active",
+                "icon": "lock",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "hyprctl dispatch togglegroup",
+                  "detached": true,
+                  "isolated": false,
+                  "delayed": true
+                },
+                "name": "Toggle",
+                "icon": "ad_group",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "hyprctl dispatch moveoutofgroup active",
+                  "detached": true,
+                  "isolated": false,
+                  "delayed": true
+                },
+                "name": "Detach Active",
+                "icon": "ungroup",
+                "iconTheme": "material-symbols-rounded"
+              }
+            ],
+            "angle": 225
+          },
+          {
+            "type": "submenu",
+            "name": "Apps",
+            "icon": "apps",
+            "iconTheme": "material-symbols-rounded",
+            "children": [
+              {
+                "type": "command",
+                "data": {
+                  "command": "ghostty"
+                },
+                "name": "Terminal",
+                "icon": "terminal",
+                "iconTheme": "material-symbols-rounded",
+                "angle": 0
+              },
+              {
+                "type": "submenu",
+                "data": {},
+                "name": "D&D",
+                "icon": "dungeonsanddragons",
+                "iconTheme": "simple-icons",
+                "children": [
+                  {
+                    "type": "command",
+                    "data": {
+                      "command": "chromium --kiosk ",
+                      "detached": true,
+                      "isolated": false,
+                      "delayed": false
+                    },
+                    "name": "Nezzie's Owlbear",
+                    "icon": "owlbear.svg",
+                    "iconTheme": "custom-icons",
+                    "angle": 0
+                  },
+                  {
+                    "type": "command",
+                    "data": {
+                      "command": "chromium --kiosk ",
+                      "detached": true,
+                      "isolated": false,
+                      "delayed": false
+                    },
+                    "name": "Dan's Foundry",
+                    "icon": "foundryvirtualtabletop",
+                    "iconTheme": "simple-icons-colored",
+                    "angle": 90
+                  },
+                  {
+                    "type": "command",
+                    "data": {
+                      "command": "chromium --kiosk ",
+                      "detached": true,
+                      "isolated": false,
+                      "delayed": false
+                    },
+                    "name": "Finnji's Owlbear",
+                    "icon": "owlbear.svg",
+                    "iconTheme": "custom-icons",
+                    "angle": 180
+                  },
+                  {
+                    "type": "command",
+                    "name": "Obsidian",
+                    "icon": "obsidian",
+                    "iconTheme": "simple-icons-colored",
+                    "data": {
+                      "command": "/usr/bin/obsidian",
+                      "detached": true,
+                      "isolated": false,
+                      "delayed": false
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "submenu",
+                "data": {},
+                "name": "Creative",
+                "icon": "brush",
+                "iconTheme": "material-symbols-rounded",
+                "children": [
+                  {
+                    "type": "command",
+                    "data": {
+                      "command": "krita"
+                    },
+                    "name": "Krita",
+                    "icon": "krita",
+                    "iconTheme": "simple-icons"
+                  },
+                  {
+                    "type": "command",
+                    "data": {
+                      "command": "gimp"
+                    },
+                    "name": "GIMP",
+                    "icon": "gimp",
+                    "iconTheme": "simple-icons"
+                  },
+                  {
+                    "type": "command",
+                    "data": {
+                      "command": "blender"
+                    },
+                    "name": "Blender",
+                    "icon": "blender",
+                    "iconTheme": "simple-icons"
+                  }
+                ]
+              }
+            ],
+            "angle": 360
+          },
           {
             "type": "submenu",
             "data": {},
@@ -63,234 +305,142 @@
                     "angle": 150
                   }
                 ],
-                "angle": 150
-              },
-              {
-                "type": "command",
-                "name": "Run Command",
-                "icon": "android_wifi_3_bar_plus",
-                "iconTheme": "material-symbols-rounded",
-                "data": {
-                  "command": "/home/arts/scripts/systemScripts/connectToWifi.sh",
-                  "detached": true,
-                  "isolated": false,
-                  "delayed": false
-                }
+                "angle": 135
               },
               {
                 "type": "submenu",
+                "data": {},
+                "name": "Manual Wifi Connections",
+                "icon": "android_wifi_3_bar_plus",
+                "iconTheme": "material-symbols-rounded",
+                "children": [
+                  {
+                    "type": "command",
+                    "data": {
+                      "command": "nmcli connection up Bruh337\\ 2.4GHz --ask &> /dev/null <<< gwd7tbdqVfZx",
+                      "detached": true,
+                      "isolated": false,
+                      "delayed": false
+                    },
+                    "name": "Bruh337 2.4GHz",
+                    "icon": "android_wifi_3_bar",
+                    "iconTheme": "material-symbols-rounded"
+                  },
+                  {
+                    "type": "command",
+                    "data": {
+                      "command": "nmcli connection up Bruh337\\ 5GHz --ask &> /dev/null <<< gwd7tbdqVfZx",
+                      "detached": true,
+                      "isolated": false,
+                      "delayed": false
+                    },
+                    "name": "Bruh337 5GHz",
+                    "icon": "android_wifi_3_bar",
+                    "iconTheme": "material-symbols-rounded"
+                  },
+                  {
+                    "type": "command",
+                    "data": {
+                      "command": "nmcli connection up Slav\\ WiFi --ask &> /dev/null <<< weslav.com",
+                      "detached": true,
+                      "isolated": false,
+                      "delayed": false
+                    },
+                    "name": "Slav WiFi",
+                    "icon": "android_wifi_3_bar",
+                    "iconTheme": "material-symbols-rounded"
+                  }
+                ]
+              },
+              {
+                "type": "submenu",
+                "data": {},
                 "name": "Keyboard",
                 "icon": "keyboard",
                 "iconTheme": "material-symbols-rounded",
-                "data": {},
                 "children": [
                   {
-                    "type": "command",
-                    "name": "Kbd: English",
-                    "icon": "🇬🇧",
-                    "iconTheme": "emoji",
-                    "data": {
-                      "command": "hyprctl switchxkblayout at-translated-set-2-keyboard 0",
-                      "detached": true,
-                      "isolated": false,
-                      "delayed": false
-                    }
+                    "type": "submenu",
+                    "data": {},
+                    "name": "Backlight Control",
+                    "icon": "light_mode",
+                    "iconTheme": "material-symbols-rounded",
+                    "children": [
+                      {
+                        "type": "command",
+                        "data": {
+                          "command": "brightnessctl -d *:kbd_backlight s 0",
+                          "detached": true,
+                          "isolated": false,
+                          "delayed": false
+                        },
+                        "name": "Backlight Off",
+                        "icon": "backlight_high_off",
+                        "iconTheme": "material-symbols-rounded"
+                      },
+                      {
+                        "type": "command",
+                        "data": {
+                          "command": "brightnessctl -d *:kbd_backlight s 2",
+                          "detached": true,
+                          "isolated": false,
+                          "delayed": false
+                        },
+                        "name": "Backlight High",
+                        "icon": "backlight_high",
+                        "iconTheme": "material-symbols-rounded"
+                      },
+                      {
+                        "type": "command",
+                        "data": {
+                          "command": "brightnessctl -d *:kbd_backlight s 1",
+                          "detached": true,
+                          "isolated": false,
+                          "delayed": false
+                        },
+                        "name": "Backlight Low",
+                        "icon": "backlight_low",
+                        "iconTheme": "material-symbols-rounded"
+                      }
+                    ]
                   },
                   {
-                    "type": "command",
-                    "name": "Kbd: Russian",
-                    "icon": "🇷🇺",
-                    "iconTheme": "emoji",
-                    "data": {
-                      "command": "hyprctl switchxkblayout at-translated-set-2-keyboard 1",
-                      "detached": true,
-                      "isolated": false,
-                      "delayed": false
-                    }
+                    "type": "submenu",
+                    "data": {},
+                    "name": "Language",
+                    "icon": "language",
+                    "iconTheme": "material-symbols-rounded",
+                    "children": [
+                      {
+                        "type": "command",
+                        "data": {
+                          "command": "hyprctl switchxkblayout at-translated-set-2-keyboard 0",
+                          "detached": true,
+                          "isolated": false,
+                          "delayed": false
+                        },
+                        "name": "Kbd: English",
+                        "icon": "🇬🇧",
+                        "iconTheme": "emoji"
+                      },
+                      {
+                        "type": "command",
+                        "data": {
+                          "command": "hyprctl switchxkblayout at-translated-set-2-keyboard 1",
+                          "detached": true,
+                          "isolated": false,
+                          "delayed": false
+                        },
+                        "name": "Kbd: Russian",
+                        "icon": "🇷🇺",
+                        "iconTheme": "emoji"
+                      }
+                    ]
                   }
                 ]
               }
-            ]
-          },
-          {
-            "type": "command",
-            "data": {
-              "command": "swaync-client -t",
-              "delayed": false
-            },
-            "name": "Open Notification Center",
-            "icon": "notifications",
-            "iconTheme": "material-symbols-rounded"
-          },
-          {
-            "type": "submenu",
-            "data": {},
-            "name": "Groups",
-            "icon": "tab_group",
-            "iconTheme": "material-symbols-rounded",
-            "children": [
-              {
-                "type": "command",
-                "data": {
-                  "command": "hyprctl dispatch lockactivegroup toggle",
-                  "detached": true,
-                  "isolated": false,
-                  "delayed": true
-                },
-                "name": "Lock Active",
-                "icon": "lock",
-                "iconTheme": "material-symbols-rounded"
-              },
-              {
-                "type": "command",
-                "data": {
-                  "command": "hyprctl dispatch togglegroup",
-                  "detached": true,
-                  "isolated": false,
-                  "delayed": true
-                },
-                "name": "Toggle",
-                "icon": "ad_group",
-                "iconTheme": "material-symbols-rounded"
-              },
-              {
-                "type": "command",
-                "data": {
-                  "command": "hyprctl dispatch moveoutofgroup active",
-                  "detached": true,
-                  "isolated": false,
-                  "delayed": true
-                },
-                "name": "Detach Active",
-                "icon": "ungroup",
-                "iconTheme": "material-symbols-rounded"
-              }
-            ]
-          },
-          {
-            "type": "command",
-            "data": {
-              "command": "hyprctl dispatch workspace e-1",
-              "detached": true,
-              "isolated": false,
-              "delayed": false
-            },
-            "name": "Previous Workspace",
-            "icon": "arrow_back",
-            "iconTheme": "material-symbols-rounded",
-            "angle": 270
-          },
-          {
-            "type": "submenu",
-            "name": "Apps",
-            "icon": "apps",
-            "iconTheme": "material-symbols-rounded",
-            "children": [
-              {
-                "type": "command",
-                "data": {
-                  "command": "ghostty"
-                },
-                "name": "Terminal",
-                "icon": "terminal",
-                "iconTheme": "material-symbols-rounded",
-                "angle": 0
-              },
-              {
-                "type": "submenu",
-                "data": {},
-                "name": "D&D",
-                "icon": "dungeonsanddragons",
-                "iconTheme": "simple-icons",
-                "children": [
-                  {
-                    "type": "command",
-                    "data": {
-                      "command": "chromium --kiosk ",
-                      "detached": true,
-                      "isolated": false,
-                      "delayed": false
-                    },
-                    "name": "Nezzie's Owlbear",
-                    "icon": "owlbear.svg",
-                    "iconTheme": "custom-icons"
-                  },
-                  {
-                    "type": "command",
-                    "data": {
-                      "command": "chromium --kiosk ",
-                      "detached": true,
-                      "isolated": false,
-                      "delayed": false
-                    },
-                    "name": "Dan's Foundry",
-                    "icon": "foundryvirtualtabletop",
-                    "iconTheme": "simple-icons-colored"
-                  },
-                  {
-                    "type": "command",
-                    "data": {
-                      "command": "chromium --kiosk ",
-                      "detached": true,
-                      "isolated": false,
-                      "delayed": false
-                    },
-                    "name": "Finnji's Owlbear",
-                    "icon": "owlbear.svg",
-                    "iconTheme": "custom-icons"
-                  }
-                ]
-              },
-              {
-                "type": "submenu",
-                "data": {},
-                "name": "Creative",
-                "icon": "brush",
-                "iconTheme": "material-symbols-rounded",
-                "children": [
-                  {
-                    "type": "command",
-                    "data": {
-                      "command": "krita"
-                    },
-                    "name": "Krita",
-                    "icon": "krita",
-                    "iconTheme": "simple-icons"
-                  },
-                  {
-                    "type": "command",
-                    "data": {
-                      "command": "gimp"
-                    },
-                    "name": "GIMP",
-                    "icon": "gimp",
-                    "iconTheme": "simple-icons"
-                  },
-                  {
-                    "type": "command",
-                    "data": {
-                      "command": "blender"
-                    },
-                    "name": "Blender",
-                    "icon": "blender",
-                    "iconTheme": "simple-icons"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "command",
-            "data": {
-              "command": "hyprctl dispatch workspace e+1",
-              "detached": true,
-              "isolated": false,
-              "delayed": false
-            },
-            "name": "Next Workspace",
-            "icon": "arrow_forward",
-            "iconTheme": "material-symbols-rounded",
-            "angle": 450
+            ],
+            "angle": 405
           }
         ]
       },
@@ -312,15 +462,15 @@
         "children": [
           {
             "type": "command",
-            "name": "Open Memes Folder",
-            "icon": "folder_open",
-            "iconTheme": "material-symbols-rounded",
             "data": {
               "command": "ghostty --confirm-close-surface=false -e /bin/yazi /home/arts/Documents/meme/",
               "detached": true,
               "isolated": false,
               "delayed": false
-            }
+            },
+            "name": "Open Memes Folder",
+            "icon": "folder_open",
+            "iconTheme": "material-symbols-rounded"
           },
           {
             "type": "submenu",
@@ -2662,7 +2812,7 @@
                 {
                   "type": "keyDown",
                   "key": "Enter",
-                  "delay": 10
+                  "delay": 300
                 },
                 {
                   "type": "keyUp",
@@ -2676,6 +2826,18 @@
             "icon": "search",
             "iconTheme": "material-symbols-rounded",
             "angle": 60
+          },
+          {
+            "type": "command",
+            "data": {
+              "command": "pkill rofi || rofi -show calc -i",
+              "detached": true,
+              "isolated": false,
+              "delayed": false
+            },
+            "name": "Rofi Calculator",
+            "icon": "calculate",
+            "iconTheme": "material-symbols-rounded"
           },
           {
             "type": "redirect",
@@ -5029,18 +5191,45 @@
       ]
     },
     {
-      "shortcut": "",
-      "shortcutID": "",
-      "centered": false,
-      "anchored": false,
-      "hoverMode": false,
-      "tags": [],
       "root": {
         "type": "submenu",
         "name": "The SAVER menu",
         "icon": "apps",
         "iconTheme": "material-symbols-rounded",
         "children": [
+          {
+            "type": "submenu",
+            "data": {},
+            "name": "hyprland workspace switchers",
+            "icon": "submenu-item.svg",
+            "iconTheme": "kando",
+            "children": [
+              {
+                "type": "command",
+                "data": {
+                  "command": "hyprctl dispatch workspace e-1",
+                  "detached": true,
+                  "isolated": false,
+                  "delayed": false
+                },
+                "name": "Previous Workspace",
+                "icon": "arrow_back",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "hyprctl dispatch workspace e+1",
+                  "detached": true,
+                  "isolated": false,
+                  "delayed": false
+                },
+                "name": "Next Workspace",
+                "icon": "arrow_forward",
+                "iconTheme": "material-symbols-rounded"
+              }
+            ]
+          },
           {
             "type": "hotkey",
             "data": {
@@ -5239,7 +5428,13 @@
             ]
           }
         ]
-      }
+      },
+      "shortcut": "",
+      "shortcutID": "",
+      "centered": false,
+      "anchored": false,
+      "hoverMode": false,
+      "tags": []
     }
   ],
   "collections": [

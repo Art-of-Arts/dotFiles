@@ -2,6 +2,7 @@
 
 export EDITOR=vim
 export TERMINAL=ghostty
+export TERMCMD="ghostty --confirm-close-surface=false"
 
 alias bashsrc="vim ~/.bashrc && source ~/.bashrc"
 alias clear="/bin/clear && fetch && echo"
@@ -27,6 +28,7 @@ alias soft-reboot="systemctl soft-reboot"
 alias grep="grep --colour=auto "
 alias egrep="grep --colour=auto -E "
 alias xterm="ghostty"
+alias vi="vim"
  
 if [[ "$(cat /etc/hostname)" != "holo-overlord" ]]; then
 	alias SERVERCON='ssh server@$PUBLICIP -o PubkeyAuthentication=no && clear'

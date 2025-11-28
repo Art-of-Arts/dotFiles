@@ -1,3 +1,5 @@
+#!/usr/bin/bash
+
 export EDITOR=vim
 export TERMINAL=ghostty
 export TERMCMD="ghostty --confirm-close-surface=false"
@@ -29,7 +31,6 @@ alias xterm="ghostty"
 alias vi="vim"
  
 if [[ "$(cat /etc/hostname)" != "holo-overlord" ]]; then
-	alias SERVERCON='ssh server@$PUBLICIP -o PubkeyAuthentication=no && clear'
 	alias COMPCON="ssh holo-overlord && clear"
   alias wifi="~/scripts/systemScripts/connectToWifi.sh"
 fi

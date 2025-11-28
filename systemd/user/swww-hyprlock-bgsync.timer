@@ -1,0 +1,9 @@
+[Unit]
+Description = A timer to trigger a sync between swww wallpaper and hyprlock background image bluring it in the process
+
+[Timer]
+OnUnitActiveSec = 5m
+OnBootSec = 5m
+
+[Install]
+WantedBy = timers.target

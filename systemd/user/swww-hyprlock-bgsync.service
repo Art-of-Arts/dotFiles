@@ -1,0 +1,9 @@
+[Unit]
+Description = A service to sync the swww wallpaper and hyprlock background image bluring it in the process
+
+[Service]
+Type = Oneshot
+ExecStart = %h/.config/hypr/scripts/swww-hyprlock-bgsync.sh
+
+[Install]
+WantedBy = swww-hyprlock-bgsync.timer

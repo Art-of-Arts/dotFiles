@@ -25,6 +25,6 @@ let g:netrw_browse_split=4
 let g:coc_clangd_path = '/path/to/clangd'
 
 let @i="c\"\"\<Esc>Pl"
-let @b="ggi#!/bin/bash\<CR>\<BS>\<CR>\<Esc>"
+let @b="ggi#!/usr/bin/env bash\<CR>\<CR>\<Esc>"
 
 " hi Normal guibg=NONE ctermbg=NONE

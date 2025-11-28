@@ -24,20 +24,8 @@ fi
 /bin/clear; fastfetch; echo; # ls -A; 
 
 # sources
-. /home/arts/.git-prompt.sh
-. /home/arts/.aliases
-
-# fucntions :3
-colour() {
-	perl -e 'foreach $a(@ARGV){print "\e[48:2::".join(":",unpack("C*",pack("H*",$a)))."m \e[49m "};print "\n"' "$@"
-}
-function y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	yazi "$@" --cwd-file="$tmp"
-	IFS= read -r -d '' cwd < "$tmp"
-	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
-	rm -f -- "$tmp"
-}
+. .git-prompt.sh
+. .aliases
 
 # adding ssh keys to ssh-agent and setting SSH_AUTH_SOCK
 if [ -z "$SSH_AUTH_SOCK" ] ; then

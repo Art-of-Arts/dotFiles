@@ -24,8 +24,8 @@ fi
 /bin/clear; fastfetch; echo; # ls -A; 
 
 # sources
-. .git-prompt.sh
-. .aliases
+. ~/.git-prompt.sh
+. ~/.aliases
 
 # adding ssh keys to ssh-agent and setting SSH_AUTH_SOCK
 if [ -z "$SSH_AUTH_SOCK" ] ; then

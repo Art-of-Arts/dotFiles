@@ -1,5 +1,5 @@
 {
-  "version": "2.1.1",
+  "version": "2.1.0",
   "menus": [
     {
       "root": {
@@ -199,15 +199,15 @@
                   },
                   {
                     "type": "command",
+                    "name": "Obsidian",
+                    "icon": "obsidian",
+                    "iconTheme": "simple-icons-colored",
                     "data": {
                       "command": "/usr/bin/obsidian",
                       "detached": true,
                       "isolated": false,
                       "delayed": false
-                    },
-                    "name": "Obsidian",
-                    "icon": "obsidian",
-                    "iconTheme": "simple-icons-colored"
+                    }
                   }
                 ]
               },

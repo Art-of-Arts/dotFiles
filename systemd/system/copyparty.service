@@ -1,0 +1,13 @@
+[Unit]
+Description=Starts the copyparty docker container
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/docker compose -f /home/self-hosting/copyparty.dockercompose.yaml up
+ExecStop=/usr/bin/docker compose -f /home/self-hosting/copyparty.dockercompose.yaml down
+Restart=on-failure
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

@@ -9,10 +9,14 @@
   "enableDarkModeForMenuThemes": false,
   "soundTheme": "none",
   "soundVolume": 0.5,
+<<<<<<< Updated upstream
   "enableVersionCheck": false,
+=======
+  "enableVersionCheck": true,
+>>>>>>> Stashed changes
   "ignoreWriteProtectedConfigFiles": false,
-  "settingsWindowColorScheme": "system",
-  "settingsWindowFlavor": "transparent-system",
+  "settingsWindowColorScheme": "dark",
+  "settingsWindowFlavor": "transparent-dark",
   "trayIconFlavor": "color",
   "hardwareAcceleration": true,
   "lazyInitialization": false,

@@ -24,6 +24,7 @@
           {
             "type": "submenu",
             "data": {},
+<<<<<<< Updated upstream
             "name": "Overlays",
             "icon": "computer",
             "iconTheme": "material-symbols-rounded",
@@ -256,7 +257,45 @@
             "name": "System Shortcuts",
             "icon": "archlinux",
             "iconTheme": "simple-icons",
+=======
+            "name": "System Shortcuts",
+            "icon": "macro-item.svg",
+            "iconTheme": "kando",
+>>>>>>> Stashed changes
             "children": [
+              {
+                "type": "submenu",
+                "name": "Keyboard",
+                "icon": "macro-item.svg",
+                "iconTheme": "kando",
+                "data": {},
+                "children": [
+                  {
+                    "type": "command",
+                    "name": "Kbd: English",
+                    "icon": "🇬🇧",
+                    "iconTheme": "emoji",
+                    "data": {
+                      "command": "hyprctl switchxkblayout at-translated-set-2-keyboard 0",
+                      "detached": true,
+                      "isolated": false,
+                      "delayed": false
+                    }
+                  },
+                  {
+                    "type": "command",
+                    "name": "Kbd: Russian",
+                    "icon": "🇷🇺",
+                    "iconTheme": "emoji",
+                    "data": {
+                      "command": "hyprctl switchxkblayout at-translated-set-2-keyboard 1",
+                      "detached": true,
+                      "isolated": false,
+                      "delayed": false
+                    }
+                  }
+                ]
+              },
               {
                 "type": "submenu",
                 "name": "Audio",
@@ -306,49 +345,186 @@
                   }
                 ],
                 "angle": 135
+<<<<<<< Updated upstream
+=======
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "hyprctl kill",
+                  "detached": true,
+                  "isolated": false,
+                  "delayed": true
+                },
+                "name": "Kill window",
+                "icon": "swords",
+                "iconTheme": "material-symbols-rounded"
+              }
+            ]
+          },
+          {
+            "type": "command",
+            "data": {
+              "command": "swaync-client -t",
+              "delayed": false
+            },
+            "name": "Open Notification Center",
+            "icon": "notifications",
+            "iconTheme": "material-symbols-rounded"
+          },
+          {
+            "type": "submenu",
+            "data": {},
+            "name": "Groups",
+            "icon": "tab_group",
+            "iconTheme": "material-symbols-rounded",
+            "children": [
+              {
+                "type": "command",
+                "data": {
+                  "command": "hyprctl dispatch lockactivegroup toggle",
+                  "detached": true,
+                  "isolated": false,
+                  "delayed": true
+                },
+                "name": "Lock Active Group",
+                "icon": "lock",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "hyprctl dispatch togglegroup",
+                  "detached": true,
+                  "isolated": false,
+                  "delayed": true
+                },
+                "name": "Toggle Group",
+                "icon": "ad_group",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "hyprctl dispatch moveoutofgroup active",
+                  "detached": true,
+                  "isolated": false,
+                  "delayed": true
+                },
+                "name": "Run Command",
+                "icon": "ungroup",
+                "iconTheme": "material-symbols-rounded"
+              }
+            ]
+          },
+          {
+            "type": "command",
+            "data": {
+              "command": "hyprctl dispatch workspace e-1",
+              "detached": true,
+              "isolated": false,
+              "delayed": false
+            },
+            "name": "Previous Workspace",
+            "icon": "arrow_back",
+            "iconTheme": "material-symbols-rounded",
+            "angle": 270
+          },
+          {
+            "type": "submenu",
+            "name": "Apps",
+            "icon": "apps",
+            "iconTheme": "material-symbols-rounded",
+            "children": [
+              {
+                "type": "command",
+                "data": {
+                  "command": "ghostty"
+                },
+                "name": "Terminal",
+                "icon": "terminal",
+                "iconTheme": "material-symbols-rounded",
+                "angle": 0
+>>>>>>> Stashed changes
               },
               {
                 "type": "submenu",
                 "data": {},
+<<<<<<< Updated upstream
                 "name": "Manual Wifi Connections",
                 "icon": "android_wifi_3_bar_plus",
                 "iconTheme": "material-symbols-rounded",
+=======
+                "name": "D&D",
+                "icon": "dungeonsanddragons",
+                "iconTheme": "simple-icons",
+>>>>>>> Stashed changes
                 "children": [
                   {
                     "type": "command",
                     "data": {
+<<<<<<< Updated upstream
                       "command": "nmcli connection up Bruh337\\ 2.4GHz --ask &> /dev/null <<< gwd7tbdqVfZx",
+=======
+                      "command": "/usr/bin/chromium --kiosk https://www.owlbear.rodeo/room/K6XTBd7poMAx/TheSaneCurry",
+>>>>>>> Stashed changes
                       "detached": true,
                       "isolated": false,
                       "delayed": false
                     },
+<<<<<<< Updated upstream
                     "name": "Bruh337 2.4GHz",
                     "icon": "android_wifi_3_bar",
                     "iconTheme": "material-symbols-rounded"
+=======
+                    "name": "Nezzie's Owlbear",
+                    "icon": "owlbear.svg",
+                    "iconTheme": "custom-icons"
+>>>>>>> Stashed changes
                   },
                   {
                     "type": "command",
                     "data": {
+<<<<<<< Updated upstream
                       "command": "nmcli connection up Bruh337\\ 5GHz --ask &> /dev/null <<< gwd7tbdqVfZx",
+=======
+                      "command": "/usr/bin/chromium --kiosk http://68.97.201.206:30000/",
+>>>>>>> Stashed changes
                       "detached": true,
                       "isolated": false,
                       "delayed": false
                     },
+<<<<<<< Updated upstream
                     "name": "Bruh337 5GHz",
                     "icon": "android_wifi_3_bar",
                     "iconTheme": "material-symbols-rounded"
+=======
+                    "name": "Dan's Foundry",
+                    "icon": "foundryvirtualtabletop",
+                    "iconTheme": "simple-icons-colored"
+>>>>>>> Stashed changes
                   },
                   {
                     "type": "command",
                     "data": {
+<<<<<<< Updated upstream
                       "command": "nmcli connection up Slav\\ WiFi --ask &> /dev/null <<< weslav.com",
+=======
+                      "command": "/usr/bin/chromium --kiosk https://www.owlbear.rodeo/room/ecFC4h7XMg73/TheAntsyJoust",
+>>>>>>> Stashed changes
                       "detached": true,
                       "isolated": false,
                       "delayed": false
                     },
+<<<<<<< Updated upstream
                     "name": "Slav WiFi",
                     "icon": "android_wifi_3_bar",
                     "iconTheme": "material-symbols-rounded"
+=======
+                    "name": "Finnji's Owlbear",
+                    "icon": "owlbear.svg",
+                    "iconTheme": "custom-icons"
+>>>>>>> Stashed changes
                   }
                 ]
               },
@@ -437,10 +613,67 @@
                       }
                     ]
                   }
+<<<<<<< Updated upstream
                 ]
               }
             ],
             "angle": 405
+=======
+                ],
+                "angle": 90
+              },
+              {
+                "type": "submenu",
+                "data": {},
+                "name": "Creative",
+                "icon": "brush",
+                "iconTheme": "material-symbols-rounded",
+                "children": [
+                  {
+                    "type": "command",
+                    "data": {
+                      "command": "krita"
+                    },
+                    "name": "Krita",
+                    "icon": "krita",
+                    "iconTheme": "simple-icons"
+                  },
+                  {
+                    "type": "command",
+                    "data": {
+                      "command": "gimp"
+                    },
+                    "name": "GIMP",
+                    "icon": "gimp",
+                    "iconTheme": "simple-icons"
+                  },
+                  {
+                    "type": "command",
+                    "data": {
+                      "command": "blender"
+                    },
+                    "name": "Blender",
+                    "icon": "blender",
+                    "iconTheme": "simple-icons"
+                  }
+                ],
+                "angle": 270
+              }
+            ]
+          },
+          {
+            "type": "command",
+            "data": {
+              "command": "hyprctl dispatch workspace e+1",
+              "detached": true,
+              "isolated": false,
+              "delayed": false
+            },
+            "name": "Next Workspace",
+            "icon": "arrow_forward",
+            "iconTheme": "material-symbols-rounded",
+            "angle": 450
+>>>>>>> Stashed changes
           }
         ]
       },
@@ -462,6 +695,7 @@
         "children": [
           {
             "type": "command",
+<<<<<<< Updated upstream
             "data": {
               "command": "ghostty --confirm-close-surface=false -e /bin/yazi /home/arts/Documents/meme/",
               "detached": true,
@@ -469,8 +703,26 @@
               "delayed": false
             },
             "name": "Open Memes Folder",
+=======
+            "name": "Yazi",
+>>>>>>> Stashed changes
             "icon": "folder_open",
-            "iconTheme": "material-symbols-rounded"
+            "iconTheme": "material-symbols-rounded",
+            "data": {
+              "command": "/usr/bin/ghostty --confirm-close-surface=false -e /usr/bin/yazi /home/arts/Documents/meme/",
+              "detached": true,
+              "isolated": false,
+              "delayed": false
+            }
+          },
+          {
+            "type": "file",
+            "name": "Open File",
+            "icon": "file-item.svg",
+            "iconTheme": "kando",
+            "data": {
+              "path": ""
+            }
           },
           {
             "type": "submenu",
@@ -2824,8 +3076,12 @@
             },
             "name": "Open Copied Link",
             "icon": "search",
+<<<<<<< Updated upstream
             "iconTheme": "material-symbols-rounded",
             "angle": 60
+=======
+            "iconTheme": "material-symbols-rounded"
+>>>>>>> Stashed changes
           },
           {
             "type": "command",
@@ -5191,14 +5447,27 @@
       ]
     },
     {
+<<<<<<< Updated upstream
       "root": {
         "type": "submenu",
         "name": "The SAVER menu",
+=======
+      "shortcut": "",
+      "shortcutID": "",
+      "centered": false,
+      "anchored": false,
+      "hoverMode": false,
+      "tags": [],
+      "root": {
+        "type": "submenu",
+        "name": "The \"SAVIG\" Menu",
+>>>>>>> Stashed changes
         "icon": "apps",
         "iconTheme": "material-symbols-rounded",
         "children": [
           {
             "type": "submenu",
+<<<<<<< Updated upstream
             "data": {},
             "name": "hyprland workspace switchers",
             "icon": "submenu-item.svg",
@@ -5345,6 +5614,52 @@
                 "name": "Obs Studio",
                 "icon": "obsstudio",
                 "iconTheme": "simple-icons"
+=======
+            "name": "Audio",
+            "icon": "play_circle",
+            "iconTheme": "material-symbols-rounded",
+            "children": [
+              {
+                "type": "hotkey",
+                "data": {
+                  "hotkey": "MediaPlayPause",
+                  "delayed": false
+                },
+                "name": "Play / Pause",
+                "icon": "play_pause",
+                "iconTheme": "material-symbols-rounded",
+                "angle": 48
+              },
+              {
+                "type": "hotkey",
+                "data": {
+                  "hotkey": "MediaTrackNext",
+                  "delayed": false
+                },
+                "name": "Next Track",
+                "icon": "skip_next",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "hotkey",
+                "data": {
+                  "hotkey": "AudioVolumeMute",
+                  "delayed": false
+                },
+                "name": "Mute",
+                "icon": "music_off",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "hotkey",
+                "data": {
+                  "hotkey": "MediaTrackPrevious",
+                  "delayed": false
+                },
+                "name": "Previous Track",
+                "icon": "skip_previous",
+                "iconTheme": "material-symbols-rounded"
+>>>>>>> Stashed changes
               }
             ]
           },
@@ -5426,6 +5741,7 @@
                 "angle": 315
               }
             ]
+<<<<<<< Updated upstream
           }
         ]
       },
@@ -5435,6 +5751,30 @@
       "anchored": false,
       "hoverMode": false,
       "tags": []
+=======
+          },
+          {
+            "type": "submenu",
+            "name": "Stuff from browser",
+            "icon": "submenu-item.svg",
+            "iconTheme": "kando",
+            "data": {},
+            "children": [
+              {
+                "type": "hotkey",
+                "data": {
+                  "hotkey": "ShiftLeft+AltLeft+KeyD",
+                  "delayed": true
+                },
+                "name": "Toggle Dark Mode",
+                "icon": "dark_mode",
+                "iconTheme": "material-symbols-rounded"
+              }
+            ]
+          }
+        ]
+      }
+>>>>>>> Stashed changes
     }
   ],
   "collections": [

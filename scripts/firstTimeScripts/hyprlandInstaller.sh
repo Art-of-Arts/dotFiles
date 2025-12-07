@@ -20,5 +20,5 @@ if [[ -z "/bin/yay" ]]; then
   if ! [[ "$(cat /etc/hostname)" = "holo-machine" ]] ; then
     /bin/yay -S --noconfirm --needed tlpui
   fi
-  /bin/yay -S --noconfirm --needed  
+  /bin/yay -S --noconfirm --needed vigiland-git
 fi

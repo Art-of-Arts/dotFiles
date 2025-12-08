@@ -1,5 +1,5 @@
 {
-  "version": "2.1.1",
+  "version": "2.1.0",
   "menus": [
     {
       "root": {
@@ -259,34 +259,34 @@
             "children": [
               {
                 "type": "submenu",
-                "data": {},
                 "name": "Keyboard",
                 "icon": "macro-item.svg",
                 "iconTheme": "kando",
+                "data": {},
                 "children": [
                   {
                     "type": "command",
+                    "name": "Kbd: English",
+                    "icon": "🇬🇧",
+                    "iconTheme": "emoji",
                     "data": {
                       "command": "hyprctl switchxkblayout at-translated-set-2-keyboard 0",
                       "detached": true,
                       "isolated": false,
                       "delayed": false
-                    },
-                    "name": "Kbd: English",
-                    "icon": "🇬🇧",
-                    "iconTheme": "emoji"
+                    }
                   },
                   {
                     "type": "command",
+                    "name": "Kbd: Russian",
+                    "icon": "🇷🇺",
+                    "iconTheme": "emoji",
                     "data": {
                       "command": "hyprctl switchxkblayout at-translated-set-2-keyboard 1",
                       "detached": true,
                       "isolated": false,
                       "delayed": false
-                    },
-                    "name": "Kbd: Russian",
-                    "icon": "🇷🇺",
-                    "iconTheme": "emoji"
+                    }
                   }
                 ]
               },
@@ -496,23 +496,29 @@
           {
             "type": "command",
             "data": {
-              "command": "/usr/bin/ghostty --confirm-close-surface=false -e /usr/bin/yazi /home/arts/Documents/meme/",
+              "command": "ghostty --confirm-close-surface=false -e /bin/yazi /home/arts/Documents/meme/",
               "detached": true,
               "isolated": false,
               "delayed": false
             },
             "name": "Open Memes Folder",
             "icon": "folder_open",
-            "iconTheme": "material-symbols-rounded"
+            "iconTheme": "material-symbols-rounded",
+            "data": {
+              "command": "/usr/bin/ghostty --confirm-close-surface=false -e /usr/bin/yazi /home/arts/Documents/meme/",
+              "detached": true,
+              "isolated": false,
+              "delayed": false
+            }
           },
           {
             "type": "file",
-            "data": {
-              "path": ""
-            },
             "name": "Open File",
             "icon": "file-item.svg",
-            "iconTheme": "kando"
+            "iconTheme": "kando",
+            "data": {
+              "path": ""
+            }
           },
           {
             "type": "submenu",

@@ -1,5 +1,5 @@
 {
-  "version": "2.1.2",
+  "version": "2.1.1",
   "locale": "auto",
   "showIntroductionDialog": false,
   "menuTheme": "neon-lights",
@@ -34,7 +34,7 @@
   "gestureJitterThreshold": 10,
   "gesturePauseTimeout": 100,
   "fixedStrokeLength": 0,
-  "rmbSelectsParent": true,
+  "rmbSelectsParent": false,
   "enableGamepad": true,
   "gamepadBackButton": 1,
   "gamepadCloseButton": 2,

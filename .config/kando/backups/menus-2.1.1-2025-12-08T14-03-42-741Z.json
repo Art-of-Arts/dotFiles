@@ -1,5 +1,5 @@
 {
-  "version": "2.1.2",
+  "version": "2.1.1",
   "menus": [
     {
       "root": {
@@ -259,6 +259,39 @@
             "children": [
               {
                 "type": "submenu",
+                "data": {},
+                "name": "Keyboard",
+                "icon": "macro-item.svg",
+                "iconTheme": "kando",
+                "children": [
+                  {
+                    "type": "command",
+                    "data": {
+                      "command": "hyprctl switchxkblayout at-translated-set-2-keyboard 0",
+                      "detached": true,
+                      "isolated": false,
+                      "delayed": false
+                    },
+                    "name": "Kbd: English",
+                    "icon": "🇬🇧",
+                    "iconTheme": "emoji"
+                  },
+                  {
+                    "type": "command",
+                    "data": {
+                      "command": "hyprctl switchxkblayout at-translated-set-2-keyboard 1",
+                      "detached": true,
+                      "isolated": false,
+                      "delayed": false
+                    },
+                    "name": "Kbd: Russian",
+                    "icon": "🇷🇺",
+                    "iconTheme": "emoji"
+                  }
+                ]
+              },
+              {
+                "type": "submenu",
                 "name": "Audio",
                 "icon": "play_circle",
                 "iconTheme": "material-symbols-rounded",
@@ -362,7 +395,7 @@
                   {
                     "type": "submenu",
                     "data": {},
-                    "name": "Laptop Backlight Control",
+                    "name": "Backlight Control",
                     "icon": "light_mode",
                     "iconTheme": "material-symbols-rounded",
                     "children": [
@@ -407,20 +440,20 @@
                   {
                     "type": "submenu",
                     "data": {},
-                    "name": "Keyboard Language",
+                    "name": "Language",
                     "icon": "language",
                     "iconTheme": "material-symbols-rounded",
                     "children": [
                       {
                         "type": "command",
                         "data": {
-                          "command": "hyprctl switchxkblayout at-translated-set-2-keyboard 2",
+                          "command": "hyprctl switchxkblayout at-translated-set-2-keyboard 0",
                           "detached": true,
                           "isolated": false,
                           "delayed": false
                         },
-                        "name": "Kbd: Japanese",
-                        "icon": "🇯🇵",
+                        "name": "Kbd: English",
+                        "icon": "🇬🇧",
                         "iconTheme": "emoji"
                       },
                       {
@@ -433,18 +466,6 @@
                         },
                         "name": "Kbd: Russian",
                         "icon": "🇷🇺",
-                        "iconTheme": "emoji"
-                      },
-                      {
-                        "type": "command",
-                        "data": {
-                          "command": "hyprctl switchxkblayout at-translated-set-2-keyboard 0",
-                          "detached": true,
-                          "isolated": false,
-                          "delayed": false
-                        },
-                        "name": "Kbd: English",
-                        "icon": "🇬🇧",
                         "iconTheme": "emoji"
                       }
                     ]

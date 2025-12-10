@@ -78,7 +78,7 @@
   "group/idleNwalpaper": {
     "orientation": "horizontal",
     "modules": [
-      "custom/idle_inhibitor",
+      "idle_inhibitor",
       "custom/wallpaper",
     ],
   },
@@ -300,6 +300,7 @@
       "activated": "󰈈",
       "deactivated": "󰈉",
     },
+    "on-click": "killall vigiland || vigiland"
   },
 
    // Module Custom

@@ -171,13 +171,13 @@
     "interval": 2,
     "format": " {temperatureC:>2}°C",
     "format-icons": ["0", "", ""],
-    "on-click-middle": "ghostty --title='temps' --confirm-close-surface=false -e 'btop -p 1'",
+    "on-click-middle": "ghostty --title='stats' --confirm-close-surface=false -e 'btop'",
   },
 
   "cpu": {
     "interval": 2,
     "format": " {usage:>2}%",
-    "on-click-middle": "ghostty --title='cpu' --confirm-close-surface=false -e 'btop -p 1'",
+    "on-click-middle": "ghostty --title='stats' --confirm-close-surface=false -e 'btop'",
   },
 
   "memory": {
@@ -208,7 +208,7 @@
     "tooltip-format-connected": "{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}\t{device_battery_percentage}%",
 
-    "on-click-middle": "ghostty --title='bluetooth' --confirm-close-surface=false -e bluetui"
+    "on-click-middle": "ghostty --title='bluetooth' --confirm-close-surface=false -e 'bluetui'"
   },
 
   // "network": {
@@ -234,7 +234,7 @@
         "tooltip-format-disconnected": "󰖪 No Network Connection",
         "tooltip-format-linked": "󰌙 {ifname}: Not ip",
         "max-length": 30, 
-        "on-click-middle": "~/scripts/systemScripts/connectToWifi.sh", 
+        "on-click-middle": "ghostty --title='nmcli' --confirm-close-surface=false -e 'nmtui'", 
         "format-icons": {
             "wifi": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"], 
             "ethernet": ["󰌗"], 
@@ -268,7 +268,7 @@
     "format-bluetooth-muted": "󰖁 {icon} 󰂯", //{format_source}",
     "format-icons": ["", "", ""],
     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-    "on-click-middle": "com.saivert.pwvucontrol",
+    "on-click-middle": "ghostty --class='wiremix' --confirm-close-surface=false --title='Volume Control' -e 'wiremix'",
   },
 
   "cava": {
@@ -300,7 +300,9 @@
       "activated": "󰈈",
       "deactivated": "󰈉",
     },
-    "on-click": "killall vigiland || vigiland"
+    "on-click": "killall vigiland || vigiland",
+    "on-click-middle": "if [[ -n \"$(pidof vigiland)\" ]]; then hyprctl dismissnotify; hyprctl notify 1 5000 \"rgb(ffb4ff)\" \"Manual wakelock is ACTIVE\"; else hyprctl dismissnotify; hyprctl notify 1 5000 \"rgb(ffb4ff)\" \"Manual wakelock is INACTIVE\"; fi",
+    "on-click-right": "hyprctl dismissnotify; hyprctl notify 1 5000 \"rgb(ffb4ff)\" \"Killing vigiland wakelock\"; killall vigiland"
   },
 
    // Module Custom

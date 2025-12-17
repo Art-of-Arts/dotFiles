@@ -302,7 +302,7 @@
                     "name": "Play / Pause",
                     "icon": "play_pause",
                     "iconTheme": "material-symbols-rounded",
-                    "angle": 150
+                    "angle": 135
                   }
                 ],
                 "angle": 135

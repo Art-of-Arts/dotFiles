@@ -1,0 +1,9 @@
+[Unit]
+Description=adds a vpn network exception for sshd
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/nft -f /home/arts/aurGit/dotFiles/scripts/myScripts/sshd-exclude-traffic.rules
+
+[Install]
+WantedBy=network-online.target

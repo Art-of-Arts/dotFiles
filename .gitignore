@@ -5,10 +5,15 @@
 .gitconfig
 .config/VRCX/Cache/
 .config/VRCX/logs/
-.config/PureRef/crash-data
+.config/PureRef/crash-data/
 .config/blender/
 .config/hypr/monitors.conf
 .config/hypr/workspaces.conf
 .config/obs-studio/logs/
 .config/obs-studio/profiler_data/
 .config/waybar/config_1.jsonc
+.config/obs-studio/basic/
+.config/obs-studio/plugin_config/
+.config/obs-studio/plugin_manager/
+.config/obs-studio/profiler_data/
+.config/obs-studio/logs/

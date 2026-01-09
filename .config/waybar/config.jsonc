@@ -301,8 +301,8 @@
       "deactivated": "󰈉",
     },
     "on-click": "killall vigiland || vigiland",
-    "on-click-middle": "if [[ -n \"$(pidof vigiland)\" ]]; then hyprctl dismissnotify; hyprctl notify 1 5000 \"rgb(ffb4ff)\" \"Manual wakelock is ACTIVE\"; else hyprctl dismissnotify; hyprctl notify 1 5000 \"rgb(ffb4ff)\" \"Manual wakelock is INACTIVE\"; fi",
-    "on-click-right": "hyprctl dismissnotify; hyprctl notify 1 5000 \"rgb(ffb4ff)\" \"Killing vigiland wakelock\"; killall vigiland"
+    "on-click-middle": "hyprctl dismissnotify; hyprctl notify 1 5000 \"rgb(ffb4ff)\" \"Killing vigiland wakelock\"; killall vigiland",
+    "on-click-right": "if [[ -n \"$(pidof vigiland)\" ]]; then hyprctl dismissnotify; hyprctl notify 1 5000 \"rgb(ffb4ff)\" \"Manual wakelock is ACTIVE\"; else hyprctl dismissnotify; hyprctl notify 1 5000 \"rgb(ffb4ff)\" \"Manual wakelock is INACTIVE\"; fi",
   },
 
    // Module Custom

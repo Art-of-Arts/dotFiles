@@ -1,0 +1,9 @@
+[Unit]
+Description=adds a vpn network exception for certain ports
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/nft -f /home/arts/aurGit/dotFiles/scripts/myScripts/nftables-exclude-traffic.rules
+
+[Install]
+WantedBy=network-online.target

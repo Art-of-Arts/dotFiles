@@ -2,6 +2,8 @@
 .config/kando/SingletonLock
 .config/kando/SingletonSocket
 .config/kando/SingletonCookie
+.config/kando/config.json
+.config/kando/menus.json
 .gitconfig
 .config/VRCX/Cache/
 .config/VRCX/logs/

@@ -21,7 +21,7 @@ fi
 
 # cosmetic
 
-/bin/clear; fastfetch; echo; # ls -A; 
+fastfetch; echo; # ls -A; 
 
 # sources
 . ~/.git-prompt.sh

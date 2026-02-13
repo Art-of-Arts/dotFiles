@@ -160,7 +160,7 @@
     "format": "{:%a - %H:%M - %h}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format-alt": "{:%Y-%m-%d}",
-    "on-click-middle": "ghostty --title=\"Calendar\" --confirm-close-surface=false -e \"gcalcli calm; read -N1\"",
+    "on-click-middle": "/usr/sbin/ghostty --title='calendar' --confirm-close-surface=false --command='/usr/bin/gcalcli calm; read -N1'",
   },
 
   "temperature": {

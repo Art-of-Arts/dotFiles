@@ -19,3 +19,4 @@
 .config/obs-studio/plugin_manager/
 .config/obs-studio/profiler_data/
 .config/obs-studio/logs/
+*TEST_FILE*

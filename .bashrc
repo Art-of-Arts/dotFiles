@@ -42,3 +42,8 @@ bind -m vi-command '"\C-c": "\C-u"'
 eval "$(zoxide init bash)"
 eval "$(direnv hook bash)"
 eval "$(register-python-argcomplete gcalcli)"
+
+export EDITOR=vim
+export TERMINAL=ghostty
+# export TERMCMD="ghostty --confirm-close-surface=false"
+

@@ -1,9 +1,5 @@
 #!/usr/bin/bash
 
-export EDITOR=vim
-export TERMINAL=ghostty
-# export TERMCMD="ghostty --confirm-close-surface=false"
-
 alias bashsrc="vim ~/.{bashrc,aliases,vimrc} && source ~/.bashrc"
 alias clear="/bin/clear && fetch && echo"
 alias ls="lsd --color always" # --icon never"

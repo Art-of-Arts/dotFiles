@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 
+if [[ -z $2 ]]; then
+  echo "volume change number not provided"
+  exit 1
+elif [[ -z $1 ]]; then
+  echo "option argument not provided"
+  exit 1
+fi
+
 PLAYER="spotify"
 
 hyprctl dismissnotify
-
-if [[ -z $1 ]]; then
-  echo "option argument not provided"
-  exit 1
-elif [[ -z $2 ]]; then
-  echo "volume change number not provided"
-  exit 1
-fi
 
 OPTION=${1,,}
 NUM=$2

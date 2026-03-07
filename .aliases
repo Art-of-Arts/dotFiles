@@ -3,6 +3,7 @@
 alias bashsrc="vim ~/.{bashrc,aliases,vimrc} && source ~/.bashrc"
 alias clear="/bin/clear && fetch && echo"
 alias ls="lsd --color always" # --icon never"
+alias cat="bat"
 # alias sdb="~/scripts/systemAuto/ddcutilScreenBrightness.sh" # superceeded by SDB or monitorBrightness use that stupid
 alias initenv="source ./env/bin/activate || virtualenv ./env && source ./env/bin/activate"
 alias virtMon="krfb-virtualmonitor --resolution 1920x1080 --name VirtualMonitor --password password --port 3355"

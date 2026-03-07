@@ -21,11 +21,11 @@ set autoindent smartindent
 syntax on
 
 let g:netrw_browse_split=4
-let g:coc_clangd_path = '/path/to/clangd'
+let g:coc_clangd_path = '/usr/sbin/clangd'
 
 " macros & mappings
 let @i="c\"\"\<Esc>Pl"
-let @b="ggi#!/usr/bin/env bash\<CR>\<CR>\<Esc>"
+let @b="ggi#!/usr/bin/env bash\<CR>\<CR>"
 
 nnoremap <Esc> :noh<CR><C-l><Esc>
 cmap w!! w !sudo tee > /dev/null %

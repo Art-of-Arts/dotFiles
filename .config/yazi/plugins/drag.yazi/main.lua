@@ -18,7 +18,7 @@ end)
 return {
 	entry = function()
 		local files = selected_files()
-		local cmd = Command("ripdrag"):arg({ "-a", "-x" }):arg(files)
+		local cmd = Command("ripdrag"):arg({ "-a", "-x" , "-b" }):arg(files)
 		local child, err = cmd:spawn()
 		if not child then
 			fail("Spawn `ripdrag` failed with error code %s.", err)

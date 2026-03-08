@@ -24,7 +24,7 @@ let g:netrw_browse_split=4
 let g:coc_clangd_path = '/usr/sbin/clangd'
 
 " macros & mappings
-let @i="c\"\"\<Esc>Pl"
+let @i="c\"\<C-R>\"\"\<Esc>"
 let @b="ggi#!/usr/bin/env bash\<CR>\<CR>"
 
 nnoremap <Esc> :noh<CR><C-l><Esc>

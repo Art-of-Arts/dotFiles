@@ -42,6 +42,8 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 theme = Rose Pine
+font-family = "Cascadia Code NF"
+font-size = 13
 # background = #1e1e1e
 background = #191724
 background-blur = 1

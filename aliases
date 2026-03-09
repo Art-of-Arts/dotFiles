@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-alias bashsrc="vim ~/.{bashrc,aliases,vimrc} && source ~/.bashrc"
+alias bashsrc="nvim ~/.{bashrc,aliases} && source ~/.bashrc"
 alias clear="/bin/clear && fetch && echo"
 alias ls="lsd --color always" # --icon never"
 alias cat="bat"
@@ -25,22 +25,23 @@ alias soft-reboot="systemctl soft-reboot"
 alias grep="grep --colour=auto "
 alias egrep="grep --colour=auto -E "
 alias xterm="ghostty"
-alias vi="vim"
- 
+alias vim="nvim"
+alias vi="nvim"
+
 if [[ "$(cat /etc/hostname)" != "holo-overlord" ]]; then
-	alias COMPCON="ssh holo-overlord && clear"
+  alias COMPCON="ssh holo-overlord && clear"
   alias wifi="~/scripts/systemScripts/connectToWifi.sh"
 fi
 
 # tmux in session stuff
 
-if [[ -n $TMUX ]] ; then 
-	alias detach="tmux detach -P"
-	alias close="detach && exit"
+if [[ -n $TMUX ]]; then
+  alias detach="tmux detach -P"
+  alias close="detach && exit"
 
 else # if not in a tmux session
-	alias tmuxn="tmux a -t$USER || tmux new -s$USER"
-	alias needChrome="pacman -S chromium --noconfirm && chromium && pacman -Rsu chromium --noconfirm && rm -rf .config/chromium"
+  alias tmuxn="tmux a -t$USER || tmux new -s$USER"
+  alias needChrome="pacman -S chromium --noconfirm && chromium && pacman -Rsu chromium --noconfirm && rm -rf .config/chromium"
 fi
 
 # we got the budget go-ahead to upgrade to functions too!
@@ -55,15 +56,15 @@ function monitorBrightness() {
 }
 alias color="colour"
 colour() {
-	perl -e 'foreach $a(@ARGV){print "\e[48:2::".join(":",unpack("C*",pack("H*",$a)))."m \e[49m "};print "\n"' "$@"
+  perl -e 'foreach $a(@ARGV){print "\e[48:2::".join(":",unpack("C*",pack("H*",$a)))."m \e[49m "};print "\n"' "$@"
 }
 
 function y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	yazi "$@" --cwd-file="$tmp"
-	IFS= read -r -d '' cwd < "$tmp"
-	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
-	rm -f -- "$tmp"
+  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+  yazi "$@" --cwd-file="$tmp"
+  IFS= read -r -d '' cwd <"$tmp"
+  [ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+  rm -f -- "$tmp"
 }
 
 function dlNOW() {

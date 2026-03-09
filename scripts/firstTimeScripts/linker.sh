@@ -1,6 +1,7 @@
 #!/bin/bash
+
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-CONFIG_DIR="$(realpath "$SCRIPT_DIR/../../.config")"
+CONFIG_DIR="$(realpath "$SCRIPT_DIR/../../config")"
 
 function __help_menu() {
   local CODE
@@ -41,7 +42,7 @@ fi
 
 # linker script
 
-if [[ "${1,,}" = "all" ]]; then 
+if [[ "${1,,}" = "all" ]]; then
   for FILE in "$CONFIG_DIR/*"; do
     __linker_linking $(basename "$FILE")
   done
@@ -49,8 +50,8 @@ if [[ "${1,,}" = "all" ]]; then
 
 elif [[ -e "$CONFIG_DIR/$1" ]]; then # linking a single config
   echo "linking $1 to local .config folder"
-  __linker_linking "$1" 
-  
+  __linker_linking "$1"
+
 else # config is not there
   echo "config \"$1\" doesn't exist in the repo's .config folder"
   echo "use <$0 list> to see a list of configs"

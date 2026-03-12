@@ -1,11 +1,6 @@
 # colours and prompt
 
-if [[ $XDG_SESSION_TYPE == 'tty' ]]; then
-  export TERM="xterm-256color"
-  tmux a -tTmuxtty || tmux new -sTmuxtty && exit
-fi
-
-export EDITOR=vim
+export EDITOR=nvim
 export TERMINAL=ghostty
 # export TERMCMD="ghostty --confirm-close-surface=false"
 

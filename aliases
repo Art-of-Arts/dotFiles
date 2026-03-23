@@ -91,3 +91,13 @@ function temperature() {
     hyprctl hyprsunset identity
   fi
 }
+
+function mntcparty() {
+  if [[ -f "~/.rclone.pid" ]]; then
+    kill -9 $(cat ~/.rclone.pid)
+    rm ~/.rclone.pid
+  else
+    rclone mount --vfs-cache-mode writes --dir-cache-time 5s local-Storanator-9001: /mnt/Storenator9001/ --no-check-certificate --allow-non-empty &>/dev/null &
+    echo "$!" >~/.rclone.pid
+  fi
+}

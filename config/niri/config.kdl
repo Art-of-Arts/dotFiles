@@ -71,42 +71,11 @@ input {
     focus-follows-mouse max-scroll-amount="20%"
 }
 
-
 // INFO: MONITORS!
-// You can configure outputs by their name, which you can find
-// by running `niri msg outputs` while inside a niri instance.
-// The built-in laptop monitor is usually called "eDP-1".
-// Find more information on the wiki:
 // https://niri-wm.github.io/niri/Configuration:-Outputs
-// Remember to uncomment the node by removing "/-"!
+// WARN: trying to use nwg-displays for it
 
-output "HDMI-A-1" {
-  mode "2560x1440@74.971"
-  position x=0 y=0
-  focus-at-startup
-
-  hot-corners {
-    top-left
-  }
-}
-
-output "DP-1" {
-  mode "1920x1080@144.001"
-  position x=2560 y=164
-
-  hot-corners {
-    off
-  }
-}
-
-output "eDP-1" {
-  mode "1920x1080"
-  scale 1
-  hot-corners {
-    top-left
-  }
-}
-
+include "monitor.kdl"
 
 // INFO: windows & aesthetics
 // Settings that influence how windows are positioned and sized.
@@ -166,40 +135,7 @@ layout {
 
   // You can change how the focus ring looks.
   focus-ring {
-    // Uncomment this line to disable the focus ring.
     off
-
-    // How many logical pixels the ring extends out from the windows.
-    width 4
-
-    // Colors can be set in a variety of ways:
-    // - CSS named colors: "red"
-    // - RGB hex: "#rgb", "#rgba", "#rrggbb", "#rrggbbaa"
-    // - CSS-like notation: "rgb(255, 127, 0)", rgba(), hsl() and a few others.
-
-    // Color of the ring on the active monitor.
-    active-color "#FFB4FF"
-
-    // Color of the ring on inactive monitors.
-    //
-    // The focus ring only draws around the active window, so the only place
-    // where you can see its inactive-color is on other monitors.
-    inactive-color "#C4A7E7"
-
-    // You can also use gradients. They take precedence over solid colors.
-    // Gradients are rendered the same as CSS linear-gradient(angle, from, to).
-    // The angle is the same as in linear-gradient, and is optional,
-    // defaulting to 180 (top-to-bottom gradient).
-    // You can use any CSS linear-gradient tool on the web to set these up.
-    // Changing the color space is also supported, check the wiki for more info.
-    //
-    // active-gradient from="#80c8ff" to="#c7ff7f" angle=45
-
-    // You can also color the gradient relative to the entire view
-    // of the workspace, rather than relative to just the window itself.
-    // To do that, set relative-to="workspace-view".
-    //
-    // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
   }
 
   // You can also add a border. It's similar to the focus ring, but always visible.
@@ -355,9 +291,10 @@ window-rule {
 window-rule {
     match app-id=r#"^org\.keepassxc\.KeePassXC$"#
     match app-id=r#"^org\.gnome\.World\.Secrets$"#
-    // match app-id="zen"
+    match app-id=r#"^zen$"# title="- Gmail "
 
     block-out-from "screen-capture"
+
     tab-indicator {
       inactive-color "#ff8080"
     }
@@ -412,19 +349,15 @@ binds {
     // shows a list of important hotkeys.
     Mod+Shift+Slash { show-hotkey-overlay; }
 
+    Mod+NumberSign hotkey-overlay-title="Mouse overlay" { spawn-sh "wl-kbptr"; }
+
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Ctrl+Alt+T hotkey-overlay-title="Open Terminal (ghostty)" { spawn-sh "ghostty -e bash"; }
+    Mod+Alt+Ctrl+T hotkey-overlay-title="Open Terminal (ghostty)" { spawn-sh "ghostty -e bash"; }
     Mod+Alt+Home hotkey-overlay-title="Application Launcher (ROFI)" { spawn-sh "pkill rofi || rofi -show drun -i"; }
     // Mod+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
     Mod+E hotkey-overlay-title="Open yazi!" { spawn-sh "ghostty --confirm-close-surface=false -e yazi"; }
     Mod+W hotkey-overlay-title="Show / Hide Waybar" { spawn-sh "pkill -SIGUSR1 waybar"; }
     Mod+Space hotkey-overlay-title="Open kando menu" { spawn-sh "kando -t default-menu"; }
-
-    // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
-    // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
-    // For example, this is a standard bind to toggle the screen reader (orca).
-
-    // Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
 
     // Example volume keys mappings for PipeWire & WirePlumber.
     // The allow-when-locked=true property makes them work even when the session is locked.
@@ -437,16 +370,16 @@ binds {
 
     // Example media keys mapping using playerctl.
     // This will work with any MPRIS-enabled media player.
-    XF86AudioPlay        allow-when-locked=true { spawn-sh "playerctl play-pause"; }
-    XF86AudioStop        allow-when-locked=true { spawn-sh "playerctl stop"; }
-    XF86AudioPrev        allow-when-locked=true { spawn-sh "playerctl previous"; }
-    XF86AudioNext        allow-when-locked=true { spawn-sh "playerctl next"; }
+    XF86AudioPlay  repeat=false  allow-when-locked=true { spawn-sh "playerctl --player spotify play-pause"; }
+    XF86AudioStop  repeat=false  allow-when-locked=true { spawn-sh "playerctl --player spotify stop"; }
+    XF86AudioPrev  repeat=false  allow-when-locked=true { spawn-sh "playerctl --player spotify previous"; }
+    XF86AudioNext  repeat=false  allow-when-locked=true { spawn-sh "playerctl --player spotify next"; }
 
     // Example brightness key mappings for brightnessctl.
     // You can use regular spawn with multiple arguments too (to avoid going through "sh"),
     // but you need to manually put each argument in separate "" quotes.
-    XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
-    XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
+    XF86MonBrightnessUp allow-when-locked=true { spawn-sh "brightnessctl -n2 set 10%+"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn-sh "brightnessctl -n2 set 10%-"; }
 
     // Open/close the Overview: a zoomed-out view of workspaces and windows.
     // You can also move the mouse into the top-left hot corner,
@@ -465,13 +398,6 @@ binds {
     Mod+Ctrl+K     { move-window-up; }
     Mod+Ctrl+L     { move-column-right; }
 
-    // Alternative commands that move across workspaces when reaching
-    // the first or last window in a column.
-    // Mod+J     { focus-window-or-workspace-down; }
-    // Mod+K     { focus-window-or-workspace-up; }
-    // Mod+Ctrl+J     { move-window-down-or-to-workspace-down; }
-    // Mod+Ctrl+K     { move-window-up-or-to-workspace-up; }
-
     Mod+Home { focus-column-first; }
     Mod+End  { focus-column-last; }
     Mod+Ctrl+Home { move-column-to-first; }
@@ -482,10 +408,22 @@ binds {
     Mod+Alt+K     { focus-monitor-up; }
     Mod+Alt+L     { focus-monitor-right; }
 
+    // Alternative commands that move across workspaces when reaching
+    // the first or last window in a column.
+    // Mod+J     { focus-window-or-workspace-down; }
+    // Mod+K     { focus-window-or-workspace-up; }
+    // Mod+Ctrl+J     { move-window-down-or-to-workspace-down; }
+    // Mod+Ctrl+K     { move-window-up-or-to-workspace-up; }
+
     Mod+Alt+Ctrl+H     { move-column-to-monitor-left; }
     Mod+Alt+Ctrl+J     { move-column-to-monitor-down; }
     Mod+Alt+Ctrl+K     { move-column-to-monitor-up; }
     Mod+Alt+Ctrl+L     { move-column-to-monitor-right; }
+
+    Mod+Alt+Ctrl+Left   { move-window-to-monitor-left;  }
+    Mod+Alt+Ctrl+Down   { move-window-to-monitor-down;  }
+    Mod+Alt+Ctrl+Up     { move-window-to-monitor-up;    }
+    Mod+Alt+Ctrl+Right  { move-window-to-monitor-right; }
 
     // Alternatively, there are commands to move just a single window:
     // Mod+Shift+Ctrl+Left  { move-window-to-monitor-left; }
@@ -553,26 +491,26 @@ binds {
     //
     // For example, with 2 workspaces + 1 empty, indices 3, 4, 5 and so on
     // will all refer to the 3rd workspace.
-    Mod+F1 { focus-workspace 1; }
-    Mod+F2 { focus-workspace 2; }
-    Mod+F3 { focus-workspace 3; }
-    Mod+F4 { focus-workspace 4; }
-    Mod+F5 { focus-workspace 5; }
-    Mod+F6 { focus-workspace 6; }
-    Mod+F7 { focus-workspace 7; }
-    Mod+F8 { focus-workspace 8; }
-    Mod+F9 { focus-workspace 9; }
-    Mod+F10 { focus-workspace 10; }
-    Mod+Ctrl+F1 { move-window-to-workspace 1; }
-    Mod+Ctrl+F2 { move-window-to-workspace 2; }
-    Mod+Ctrl+F3 { move-window-to-workspace 3; }
-    Mod+Ctrl+F4 { move-window-to-workspace 4; }
-    Mod+Ctrl+F5 { move-window-to-workspace 5; }
-    Mod+Ctrl+F6 { move-window-to-workspace 6; }
-    Mod+Ctrl+F7 { move-window-to-workspace 7; }
-    Mod+Ctrl+F8 { move-window-to-workspace 8; }
-    Mod+Ctrl+F9 { move-window-to-workspace 9; }
-    Mod+Ctrl+F10 { move-window-to-workspace 10; }
+    // Mod+F1 { focus-workspace 1; }
+    // Mod+F2 { focus-workspace 2; }
+    // Mod+F3 { focus-workspace 3; }
+    // Mod+F4 { focus-workspace 4; }
+    // Mod+F5 { focus-workspace 5; }
+    // Mod+F6 { focus-workspace 6; }
+    // Mod+F7 { focus-workspace 7; }
+    // Mod+F8 { focus-workspace 8; }
+    // Mod+F9 { focus-workspace 9; }
+    // Mod+F10 { focus-workspace 10; }
+    // Mod+Ctrl+F1 { move-window-to-workspace 1; }
+    // Mod+Ctrl+F2 { move-window-to-workspace 2; }
+    // Mod+Ctrl+F3 { move-window-to-workspace 3; }
+    // Mod+Ctrl+F4 { move-window-to-workspace 4; }
+    // Mod+Ctrl+F5 { move-window-to-workspace 5; }
+    // Mod+Ctrl+F6 { move-window-to-workspace 6; }
+    // Mod+Ctrl+F7 { move-window-to-workspace 7; }
+    // Mod+Ctrl+F8 { move-window-to-workspace 8; }
+    // Mod+Ctrl+F9 { move-window-to-workspace 9; }
+    // Mod+Ctrl+F10 { move-window-to-workspace 10; }
 
     // Alternatively, there are commands to move just a single window:
     // Mod+Ctrl+1 { move-window-to-workspace 1; }
@@ -661,7 +599,7 @@ binds {
     //
     // The allow-inhibiting=false property can be applied to other binds as well,
     // which ensures niri always processes them, even when an inhibitor is active.
-    Mod+Pause allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
+    Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
     // The quit action will show a confirmation dialog to avoid accidental exits.
     Mod+Shift+E { quit; }

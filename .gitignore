@@ -24,3 +24,5 @@
 /config/hypr/monitors.conf
 /config/hypr/workspaces.conf
 /config/kando/session/DIPS
+/config/niri/monitor.kdl.bak
+/config/niri/monitor.kdl

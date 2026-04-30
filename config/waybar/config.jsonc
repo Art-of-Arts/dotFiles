@@ -442,7 +442,7 @@
    },
     "custom/wallpaper": {
      "format": " ",
-     "on-click": "~/.config/hypr/scripts/swww-bg-selector.sh",
+     "on-click": "~/.config/niri/scripts/awww-bg-selector.sh",
      "tooltip": false,
    },
     "custom/whatsapp": {

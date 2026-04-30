@@ -73,7 +73,6 @@ input {
 
 // INFO: MONITORS!
 // https://niri-wm.github.io/niri/Configuration:-Outputs
-// WARN: trying to use nwg-displays for it
 
 include "monitor.kdl"
 
@@ -228,7 +227,26 @@ overview {
   zoom 0.75
 }
 
-// INFO: autostart
+// INFO: Environment Variables
+// https://niri-wm.github.io/niri/Configuration%3A-Miscellaneous.html#Environment
+environment {
+  GTK_THEME "rose-pine-gtk"
+  GTK_USE_PORTAL "1"
+
+  QT_QPA_PLATFORMTHEME "kde"
+  QT_STYLE_OVERRIDE "kvantum"
+  QT_QPA_PLATFORM "wayland;xcb"
+  QT_AUTO_SCREEN_SCALE_FACTOR "1"
+  QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
+
+  ELECTRON_OZONE_PLATFORM_HINT "auto"
+
+  // GBM_BACKEND,nvidia-drm
+  // __GLX_VENDOR_LIBRARY_NAME,nvidia
+  // LIBVA_DRIVER_NAME,nvidia
+}
+
+// INFO: autostart & maintanence
 // Add lines like this to spawn processes at startup.
 // Note that running niri as a session supports xdg-desktop-autostart,
 // which may be more convenient to use.
@@ -236,7 +254,6 @@ overview {
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
 spawn-at-startup "waybar"
-// spawn-at-atartup "zen-browser"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
@@ -244,13 +261,9 @@ spawn-at-startup "waybar"
 hotkey-overlay {
     // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
     skip-at-startup
+    hide-not-bound
 }
 
-// Uncomment this line to ask the clients to omit their client-side decorations if possible.
-// If the client will specifically ask for CSD, the request will be honored.
-// Additionally, clients will be informed that they are tiled, removing some client-side rounded corners.
-// This option will also fix border/focus ring drawing behind some semitransparent windows.
-// After enabling or disabling this, you need to restart the apps for this to take effect.
 prefer-no-csd
 
 // You can change the path where screenshots are saved.
@@ -294,6 +307,7 @@ window-rule {
     match app-id=r#"^zen$"# title="- Gmail "
 
     block-out-from "screen-capture"
+    // block-out-from "screen"
 
     tab-indicator {
       inactive-color "#ff8080"
@@ -378,8 +392,10 @@ binds {
     // Example brightness key mappings for brightnessctl.
     // You can use regular spawn with multiple arguments too (to avoid going through "sh"),
     // but you need to manually put each argument in separate "" quotes.
-    XF86MonBrightnessUp allow-when-locked=true { spawn-sh "brightnessctl -n2 set 10%+"; }
-    XF86MonBrightnessDown allow-when-locked=true { spawn-sh "brightnessctl -n2 set 10%-"; }
+    XF86MonBrightnessUp allow-when-locked=true { spawn-sh "brightnessctl -n2 set 5%+"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn-sh "brightnessctl -n2 set 5%-"; }
+    Mod+XF86MonBrightnessUp allow-when-locked=true { spawn-sh "brightnessctl -n2 set 10%+"; }
+    Mod+XF86MonBrightnessDown allow-when-locked=true { spawn-sh "brightnessctl -n2 set 10%-"; }
 
     // Open/close the Overview: a zoomed-out view of workspaces and windows.
     // You can also move the mouse into the top-left hot corner,

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-pacman -S --noconfirm --needed niri xwayland-satellite swaylock
+sudo pacman -S --noconfirm --needed niri xwayland-satellite swaylock
 
 if [[-z "/bin/yay" ]]; then
   if ! [[ "$(cat /etc/hostname)" = "holo-machine" ]]; then

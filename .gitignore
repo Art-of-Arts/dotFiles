@@ -7,6 +7,7 @@
 /config/kando/config.json
 /config/kando/menus.json
 /config/kando/achievements.json
+/config/kando/ipc-info.json
 /config/VRCX/Cache/
 /config/VRCX/logs/
 /config/PureRef/crash-data/

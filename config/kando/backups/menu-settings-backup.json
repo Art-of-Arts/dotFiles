@@ -1,10 +1,10 @@
 {
-  "version": "2.2.0",
+  "version": "2.3.0",
   "menus": [
     {
       "root": {
         "type": "submenu",
-        "name": "Hyprland Menu :3",
+        "name": "Niri Menu :3",
         "icon": "logo-large.svg",
         "iconTheme": "kando",
         "children": [
@@ -24,14 +24,14 @@
           {
             "type": "submenu",
             "data": {},
-            "name": "Overlays",
+            "name": "Quick Actions",
             "icon": "computer",
             "iconTheme": "material-symbols-rounded",
             "children": [
               {
                 "type": "command",
                 "data": {
-                  "command": "hyprctl dispatch togglespecialworkspace bitwarden",
+                  "command": "$HOME/.config/niri/scripts/select-window-by-appid.sh Bitwarden",
                   "detached": true,
                   "isolated": false,
                   "delayed": false
@@ -43,14 +43,14 @@
               {
                 "type": "command",
                 "data": {
-                  "command": "hyprctl dispatch togglespecialworkspace distify",
+                  "command": "$HOME/.config/niri/scripts/select-window-by-appid.sh vesktop",
                   "detached": true,
                   "isolated": false,
                   "delayed": false
                 },
-                "name": "Distify workspace",
-                "icon": "comic_bubble",
-                "iconTheme": "material-symbols-rounded"
+                "name": "Discord",
+                "icon": "discord",
+                "iconTheme": "simple-icons"
               },
               {
                 "type": "command",
@@ -66,6 +66,18 @@
               {
                 "type": "command",
                 "data": {
+                  "command": "$HOME/.config/niri/scripts/select-window-by-appid.sh Spotify",
+                  "detached": true,
+                  "isolated": false,
+                  "delayed": false
+                },
+                "name": "Spotify",
+                "icon": "spotify",
+                "iconTheme": "simple-icons"
+              },
+              {
+                "type": "command",
+                "data": {
                   "command": "pkill -SIGUSR1 waybar",
                   "detached": true,
                   "isolated": false,
@@ -73,18 +85,6 @@
                 },
                 "name": "Toggle Waybar",
                 "icon": "toolbar",
-                "iconTheme": "material-symbols-rounded"
-              },
-              {
-                "type": "command",
-                "data": {
-                  "command": "pkill rofi || rofi -show drun -i",
-                  "detached": true,
-                  "isolated": false,
-                  "delayed": false
-                },
-                "name": "Open rofi",
-                "icon": "menu",
                 "iconTheme": "material-symbols-rounded"
               }
             ]
@@ -99,38 +99,52 @@
               {
                 "type": "command",
                 "data": {
-                  "command": "hyprctl dispatch lockactivegroup toggle",
+                  "command": "niri msg action consume-or-expel-window-right",
                   "detached": true,
                   "isolated": false,
                   "delayed": true
                 },
-                "name": "Lock Active",
-                "icon": "lock",
-                "iconTheme": "material-symbols-rounded"
+                "name": "to eat or not to eat",
+                "icon": "arrow_right_alt",
+                "iconTheme": "material-symbols-rounded",
+                "quickSelectKey": "3"
               },
               {
                 "type": "command",
                 "data": {
-                  "command": "hyprctl dispatch togglegroup",
+                  "command": "niri msg action toggle-column-tabbed-display",
                   "detached": true,
                   "isolated": false,
                   "delayed": true
                 },
-                "name": "Toggle",
+                "name": "toggle tabbed display",
                 "icon": "ad_group",
                 "iconTheme": "material-symbols-rounded"
               },
               {
                 "type": "command",
                 "data": {
-                  "command": "hyprctl dispatch moveoutofgroup active",
+                  "command": "niri msg action consume-or-expel-window-left",
                   "detached": true,
                   "isolated": false,
                   "delayed": true
                 },
-                "name": "Detach Active",
-                "icon": "ungroup",
-                "iconTheme": "material-symbols-rounded"
+                "name": "to eat or not to eat",
+                "icon": "arrow_left_alt",
+                "iconTheme": "material-symbols-rounded",
+                "quickSelectKey": "1"
+              },
+              {
+                "type": "command",
+                "name": "fullscreen",
+                "icon": "fullscreen",
+                "iconTheme": "material-symbols-rounded",
+                "data": {
+                  "command": "niri msg action toggle-windowed-fullscreen",
+                  "detached": true,
+                  "isolated": false,
+                  "delayed": false
+                }
               }
             ],
             "angle": 225
@@ -144,7 +158,7 @@
               {
                 "type": "command",
                 "data": {
-                  "command": "ghostty"
+                  "command": "ghostty1"
                 },
                 "name": "Terminal",
                 "icon": "terminal",
@@ -259,9 +273,101 @@
             "children": [
               {
                 "type": "submenu",
+                "data": {},
+                "name": "Keyboard",
+                "icon": "keyboard",
+                "iconTheme": "material-symbols-rounded",
+                "quickSelectKey": "2",
+                "children": [
+                  {
+                    "type": "submenu",
+                    "data": {},
+                    "name": "Keyboard Language",
+                    "icon": "language",
+                    "iconTheme": "material-symbols-rounded",
+                    "children": [
+                      {
+                        "type": "command",
+                        "data": {
+                          "command": "niri msg action switch-layout 0",
+                          "detached": true,
+                          "isolated": false,
+                          "delayed": false
+                        },
+                        "name": "Kbd: English",
+                        "icon": "🇬🇧",
+                        "iconTheme": "emoji"
+                      },
+                      {
+                        "type": "command",
+                        "data": {
+                          "command": "niri msg action switch-layout 1",
+                          "detached": true,
+                          "isolated": false,
+                          "delayed": false
+                        },
+                        "name": "Kbd: Russian",
+                        "icon": "🇷🇺",
+                        "iconTheme": "emoji"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "submenu",
+                    "data": {},
+                    "name": "Laptop Backlight Control",
+                    "icon": "light_mode",
+                    "iconTheme": "material-symbols-rounded",
+                    "children": [
+                      {
+                        "type": "command",
+                        "data": {
+                          "command": "brightnessctl -d *:kbd_backlight s 1",
+                          "detached": true,
+                          "isolated": false,
+                          "delayed": false
+                        },
+                        "name": "Backlight Low",
+                        "icon": "backlight_low",
+                        "iconTheme": "material-symbols-rounded",
+                        "quickSelectKey": "2"
+                      },
+                      {
+                        "type": "command",
+                        "data": {
+                          "command": "brightnessctl -d *:kbd_backlight s 2",
+                          "detached": true,
+                          "isolated": false,
+                          "delayed": false
+                        },
+                        "name": "Backlight High",
+                        "icon": "backlight_high",
+                        "iconTheme": "material-symbols-rounded",
+                        "quickSelectKey": "3"
+                      },
+                      {
+                        "type": "command",
+                        "data": {
+                          "command": "brightnessctl -d *:kbd_backlight s 0",
+                          "detached": true,
+                          "isolated": false,
+                          "delayed": false
+                        },
+                        "name": "Backlight Off",
+                        "icon": "backlight_high_off",
+                        "iconTheme": "material-symbols-rounded",
+                        "quickSelectKey": "1"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "submenu",
                 "name": "Audio",
                 "icon": "play_circle",
                 "iconTheme": "material-symbols-rounded",
+                "quickSelectKey": "3",
                 "children": [
                   {
                     "type": "hotkey",
@@ -281,7 +387,8 @@
                     },
                     "name": "Mute",
                     "icon": "music_off",
-                    "iconTheme": "material-symbols-rounded"
+                    "iconTheme": "material-symbols-rounded",
+                    "quickSelectKey": "4"
                   },
                   {
                     "type": "hotkey",
@@ -291,7 +398,8 @@
                     },
                     "name": "Next Track",
                     "icon": "skip_next",
-                    "iconTheme": "material-symbols-rounded"
+                    "iconTheme": "material-symbols-rounded",
+                    "quickSelectKey": "3"
                   },
                   {
                     "type": "hotkey",
@@ -302,157 +410,95 @@
                     "name": "Play / Pause",
                     "icon": "play_pause",
                     "iconTheme": "material-symbols-rounded",
-                    "angle": 135
-                  }
-                ],
-                "angle": 135
-              },
-              {
-                "type": "submenu",
-                "data": {},
-                "name": "Manual Wifi Connections",
-                "icon": "android_wifi_3_bar_plus",
-                "iconTheme": "material-symbols-rounded",
-                "children": [
-                  {
-                    "type": "command",
-                    "data": {
-                      "command": "nmcli connection up Bruh337\\ 2.4GHz --ask &> /dev/null <<< $(cat ~/wifi-password)",
-                      "detached": true,
-                      "isolated": false,
-                      "delayed": false
-                    },
-                    "name": "Bruh337 2.4GHz",
-                    "icon": "android_wifi_3_bar",
-                    "iconTheme": "material-symbols-rounded"
-                  },
-                  {
-                    "type": "command",
-                    "data": {
-                      "command": "nmcli connection up Bruh337\\ 5GHz --ask &> /dev/null <<< $(cat ~/wifi-password)",
-                      "detached": true,
-                      "isolated": false,
-                      "delayed": false
-                    },
-                    "name": "Bruh337 5GHz",
-                    "icon": "android_wifi_3_bar",
-                    "iconTheme": "material-symbols-rounded"
-                  },
-                  {
-                    "type": "command",
-                    "data": {
-                      "command": "nmcli connection up Slav\\ WiFi --ask &> /dev/null <<< weslav.com",
-                      "detached": true,
-                      "isolated": false,
-                      "delayed": false
-                    },
-                    "name": "Slav WiFi",
-                    "icon": "android_wifi_3_bar",
-                    "iconTheme": "material-symbols-rounded"
+                    "quickSelectKey": "2",
+                    "angle": 150
                   }
                 ]
               },
               {
                 "type": "submenu",
                 "data": {},
-                "name": "Keyboard",
-                "icon": "keyboard",
+                "name": "Submenu",
+                "icon": "computer",
                 "iconTheme": "material-symbols-rounded",
+                "quickSelectKey": "1",
                 "children": [
+                  {
+                    "type": "command",
+                    "data": {
+                      "command": "systemd-inhibit --what=handle-lid-switch zenity --info --text='Lid switch suspend blocked while open' --ok-label=Close",
+                      "detached": true,
+                      "isolated": false,
+                      "delayed": false
+                    },
+                    "name": "Inhibit Lid Switch",
+                    "icon": "data:image/png;base64,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\ncgb+H7eUvavcbX1/AAAAAElFTkSuQmCC\n",
+                    "iconTheme": "base64",
+                    "quickSelectKey": "2"
+                  },
                   {
                     "type": "submenu",
                     "data": {},
-                    "name": "Laptop Backlight Control",
-                    "icon": "light_mode",
+                    "name": "Manual Wifi Connections",
+                    "icon": "android_wifi_3_bar_plus",
                     "iconTheme": "material-symbols-rounded",
+                    "quickSelectKey": "3",
                     "children": [
                       {
                         "type": "command",
                         "data": {
-                          "command": "brightnessctl -d *:kbd_backlight s 0",
+                          "command": "nmcli connection up Bruh337\\ 2.4GHz --ask &> /dev/null <<< $(cat ~/wifi-password)",
                           "detached": true,
                           "isolated": false,
                           "delayed": false
                         },
-                        "name": "Backlight Off",
-                        "icon": "backlight_high_off",
+                        "name": "Bruh337 2.4GHz",
+                        "icon": "android_wifi_3_bar",
                         "iconTheme": "material-symbols-rounded"
                       },
                       {
                         "type": "command",
                         "data": {
-                          "command": "brightnessctl -d *:kbd_backlight s 2",
+                          "command": "nmcli connection up Bruh337\\ 5GHz --ask &> /dev/null <<< $(cat ~/wifi-password)",
                           "detached": true,
                           "isolated": false,
                           "delayed": false
                         },
-                        "name": "Backlight High",
-                        "icon": "backlight_high",
+                        "name": "Bruh337 5GHz",
+                        "icon": "android_wifi_3_bar",
                         "iconTheme": "material-symbols-rounded"
                       },
                       {
                         "type": "command",
                         "data": {
-                          "command": "brightnessctl -d *:kbd_backlight s 1",
+                          "command": "nmcli connection up Slav\\ WiFi --ask &> /dev/null <<< weslav.com",
                           "detached": true,
                           "isolated": false,
                           "delayed": false
                         },
-                        "name": "Backlight Low",
-                        "icon": "backlight_low",
+                        "name": "Slav WiFi",
+                        "icon": "android_wifi_3_bar",
                         "iconTheme": "material-symbols-rounded"
                       }
                     ]
                   },
                   {
-                    "type": "submenu",
-                    "data": {},
-                    "name": "Keyboard Language",
-                    "icon": "language",
+                    "type": "command",
+                    "data": {
+                      "command": "hyprctl hyprsunset gamma 60; \nhyprctl hyprsunset temperature 2000;",
+                      "detached": true,
+                      "isolated": false,
+                      "delayed": false
+                    },
+                    "name": "eepy ahh mode",
+                    "icon": "brightness_3",
                     "iconTheme": "material-symbols-rounded",
-                    "children": [
-                      {
-                        "type": "command",
-                        "data": {
-                          "command": "hyprctl switchxkblayout at-translated-set-2-keyboard 2",
-                          "detached": true,
-                          "isolated": false,
-                          "delayed": false
-                        },
-                        "name": "Kbd: Japanese",
-                        "icon": "🇯🇵",
-                        "iconTheme": "emoji"
-                      },
-                      {
-                        "type": "command",
-                        "data": {
-                          "command": "hyprctl switchxkblayout at-translated-set-2-keyboard 1",
-                          "detached": true,
-                          "isolated": false,
-                          "delayed": false
-                        },
-                        "name": "Kbd: Russian",
-                        "icon": "🇷🇺",
-                        "iconTheme": "emoji"
-                      },
-                      {
-                        "type": "command",
-                        "data": {
-                          "command": "hyprctl switchxkblayout at-translated-set-2-keyboard 0",
-                          "detached": true,
-                          "isolated": false,
-                          "delayed": false
-                        },
-                        "name": "Kbd: English",
-                        "icon": "🇬🇧",
-                        "iconTheme": "emoji"
-                      }
-                    ]
+                    "quickSelectKey": "1"
                   }
                 ]
               }
             ],
-            "angle": 405
+            "angle": 420
           }
         ]
       },
@@ -482,16 +528,8 @@
             },
             "name": "Open Memes Folder",
             "icon": "folder_open",
-            "iconTheme": "material-symbols-rounded"
-          },
-          {
-            "type": "file",
-            "data": {
-              "path": ""
-            },
-            "name": "Open File",
-            "icon": "file-item.svg",
-            "iconTheme": "kando"
+            "iconTheme": "material-symbols-rounded",
+            "quickSelectKey": "5"
           },
           {
             "type": "submenu",
@@ -526,82 +564,22 @@
                     },
                     {
                       "type": "keyDown",
-                      "key": "KeyC",
+                      "key": "KeyH",
                       "delay": 50
                     },
                     {
                       "type": "keyDown",
-                      "key": "KeyA",
+                      "key": "KeyI",
                       "delay": 50
                     },
                     {
                       "type": "keyUp",
-                      "key": "KeyC",
+                      "key": "KeyH",
                       "delay": 50
                     },
                     {
                       "type": "keyUp",
-                      "key": "KeyA",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyL",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyL",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyV",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyV",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyA",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyA",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyT",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyT",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyR",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyR",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyO",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyO",
+                      "key": "KeyI",
                       "delay": 50
                     },
                     {
@@ -616,302 +594,81 @@
                     },
                     {
                       "type": "keyDown",
-                      "key": "Enter",
+                      "key": "KeyD",
                       "delay": 50
                     },
                     {
                       "type": "keyUp",
-                      "key": "Enter",
+                      "key": "KeyD",
                       "delay": 50
-                    }
-                  ],
-                  "delayed": true
-                },
-                "name": "Message Calvie",
-                "icon": "calvie.webp",
-                "iconTheme": "my-friends"
-              },
-              {
-                "type": "macro",
-                "data": {
-                  "macro": [
-                    {
-                      "type": "keyDown",
-                      "key": "ControlLeft",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyK",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyK",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "ControlLeft",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyZ",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyI",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyZ",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyI",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyF",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyF",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyF",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyF",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyY",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyY",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyS",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyS",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyP",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyP",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyI",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyI",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyF",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyF",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyF",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyF",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyY",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyY",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "Enter",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "Enter",
-                      "delay": 50
-                    }
-                  ],
-                  "delayed": true
-                },
-                "name": "Message Ziffy",
-                "icon": "ziffy.webp",
-                "iconTheme": "my-friends"
-              },
-              {
-                "type": "macro",
-                "data": {
-                  "macro": [
-                    {
-                      "type": "keyDown",
-                      "key": "ControlLeft",
-                      "delay": 10
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyK",
-                      "delay": 10
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyK",
-                      "delay": 10
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "ControlLeft",
-                      "delay": 10
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyV",
-                      "delay": 10
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyA",
-                      "delay": 10
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyV",
-                      "delay": 10
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyA",
-                      "delay": 10
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyR",
-                      "delay": 10
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyR",
-                      "delay": 10
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "ShiftLeft",
-                      "delay": 10
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "Minus",
-                      "delay": 10
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "Minus",
-                      "delay": 10
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "ShiftLeft",
-                      "delay": 10
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyT",
-                      "delay": 10
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyT",
-                      "delay": 10
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyR",
-                      "delay": 10
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyR",
-                      "delay": 10
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyU",
-                      "delay": 10
                     },
                     {
                       "type": "keyDown",
                       "key": "KeyE",
-                      "delay": 10
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyU",
-                      "delay": 10
+                      "delay": 50
                     },
                     {
                       "type": "keyUp",
                       "key": "KeyE",
-                      "delay": 10
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyM",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyI",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyM",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyI",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyT",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyT",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyH",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyH",
+                      "delay": 50
                     },
                     {
                       "type": "keyDown",
                       "key": "Enter",
-                      "delay": 10
+                      "delay": 50
                     },
                     {
                       "type": "keyUp",
                       "key": "Enter",
-                      "delay": 10
+                      "delay": 50
                     }
                   ],
                   "delayed": true
                 },
-                "name": "Message True",
-                "icon": "true.webp",
-                "iconTheme": "my-friends"
+                "name": "Message Hindi",
+                "icon": "hindi.webp",
+                "iconTheme": "my-friends",
+                "quickSelectKey": "9"
               },
               {
                 "type": "macro",
@@ -935,269 +692,7 @@
                     {
                       "type": "keyUp",
                       "key": "ControlLeft",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyI",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyI",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyK",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyU",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyK",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyU",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyT",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyT",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyA",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyA",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyR",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyR",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyU",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyU",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "Enter",
                       "delay": 300
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "Enter",
-                      "delay": 50
-                    }
-                  ],
-                  "delayed": true
-                },
-                "name": "Message Iku",
-                "icon": "iku.webp",
-                "iconTheme": "my-friends"
-              },
-              {
-                "type": "macro",
-                "data": {
-                  "macro": [
-                    {
-                      "type": "keyDown",
-                      "key": "ControlLeft",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyK",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyK",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "ControlLeft",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyS",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyS",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyP",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyP",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyI",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyI",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyT",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyT",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "ShiftLeft",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "Minus",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "Minus",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "ShiftLeft",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyF",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyY",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyF",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyY",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyR",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyE",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyR",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyE",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "Digit7",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "Digit7",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "Enter",
-                      "delay": 300
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "Enter",
-                      "delay": 50
-                    }
-                  ],
-                  "delayed": true
-                },
-                "name": "Message Spit_Fyre",
-                "icon": "spit_fyre.webp",
-                "iconTheme": "my-friends"
-              },
-              {
-                "type": "macro",
-                "data": {
-                  "macro": [
-                    {
-                      "type": "keyDown",
-                      "key": "ControlLeft",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyK",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyK",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "ControlLeft",
-                      "delay": 50
                     },
                     {
                       "type": "keyDown",
@@ -1322,7 +817,7 @@
                     {
                       "type": "keyDown",
                       "key": "Enter",
-                      "delay": 300
+                      "delay": 50
                     },
                     {
                       "type": "keyUp",
@@ -1334,7 +829,180 @@
                 },
                 "name": "Message Potatoduck",
                 "icon": "potatoduck.webp",
-                "iconTheme": "my-friends"
+                "iconTheme": "my-friends",
+                "quickSelectKey": "8"
+              },
+              {
+                "type": "macro",
+                "data": {
+                  "macro": [
+                    {
+                      "type": "keyDown",
+                      "key": "ControlLeft",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyK",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyK",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "ControlLeft",
+                      "delay": 300
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyT",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyT",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyH",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyH",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyE",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyE",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyN",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyN",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyE",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyE",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyX",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyX",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyT",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyT",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyG",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyG",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyU",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyU",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyY",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyY",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "Digit1",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "Digit1",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "Digit0",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "Digit0",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "Digit0",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "Digit0",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "Enter",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "Enter",
+                      "delay": 50
+                    }
+                  ],
+                  "delayed": true
+                },
+                "name": "Message Dan",
+                "icon": "thenextguy100.webp",
+                "iconTheme": "my-friends",
+                "quickSelectKey": "7"
               },
               {
                 "type": "macro",
@@ -1495,7 +1163,9 @@
                 },
                 "name": "Personal Notepad",
                 "icon": "commiealt.webp",
-                "iconTheme": "my-friends"
+                "iconTheme": "my-friends",
+                "quickSelectKey": "6",
+                "angle": 240
               },
               {
                 "type": "macro",
@@ -1519,6 +1189,56 @@
                     {
                       "type": "keyUp",
                       "key": "ControlLeft",
+                      "delay": 300
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyC",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyA",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyC",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyA",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyL",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyL",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyV",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyV",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyA",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyA",
                       "delay": 50
                     },
                     {
@@ -1533,22 +1253,22 @@
                     },
                     {
                       "type": "keyDown",
-                      "key": "KeyH",
+                      "key": "KeyR",
                       "delay": 50
                     },
                     {
                       "type": "keyUp",
-                      "key": "KeyH",
+                      "key": "KeyR",
                       "delay": 50
                     },
                     {
                       "type": "keyDown",
-                      "key": "KeyE",
+                      "key": "KeyO",
                       "delay": 50
                     },
                     {
                       "type": "keyUp",
-                      "key": "KeyE",
+                      "key": "KeyO",
                       "delay": 50
                     },
                     {
@@ -1559,96 +1279,6 @@
                     {
                       "type": "keyUp",
                       "key": "KeyN",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyE",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyE",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyX",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyX",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyT",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyT",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyG",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyG",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyU",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyU",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyY",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyY",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "Digit1",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "Digit1",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "Digit0",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "Digit0",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "Digit0",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "Digit0",
                       "delay": 50
                     },
                     {
@@ -1664,9 +1294,10 @@
                   ],
                   "delayed": true
                 },
-                "name": "Message Dan",
-                "icon": "thenextguy100.webp",
-                "iconTheme": "my-friends"
+                "name": "Message Calvie",
+                "icon": "calvie.webp",
+                "iconTheme": "my-friends",
+                "quickSelectKey": "5"
               },
               {
                 "type": "macro",
@@ -1690,7 +1321,556 @@
                     {
                       "type": "keyUp",
                       "key": "ControlLeft",
+                      "delay": 300
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyZ",
                       "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyI",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyZ",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyI",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyF",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyF",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyF",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyF",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyY",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyY",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyS",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyS",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyP",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyP",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyI",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyI",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyF",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyF",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyF",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyF",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyY",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyY",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "Enter",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "Enter",
+                      "delay": 50
+                    }
+                  ],
+                  "delayed": true
+                },
+                "name": "Message Ziffy",
+                "icon": "ziffy.webp",
+                "iconTheme": "my-friends",
+                "quickSelectKey": "4"
+              },
+              {
+                "type": "macro",
+                "data": {
+                  "macro": [
+                    {
+                      "type": "keyDown",
+                      "key": "ControlLeft",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyK",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyK",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "ControlLeft",
+                      "delay": 300
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyV",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyA",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyV",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyA",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyR",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyR",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "ShiftLeft",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "Minus",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "Minus",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "ShiftLeft",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyT",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyT",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyR",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyR",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyU",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyE",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyU",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyE",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "Enter",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "Enter",
+                      "delay": 50
+                    }
+                  ],
+                  "delayed": true
+                },
+                "name": "Message True",
+                "icon": "true.webp",
+                "iconTheme": "my-friends",
+                "quickSelectKey": "3"
+              },
+              {
+                "type": "macro",
+                "data": {
+                  "macro": [
+                    {
+                      "type": "keyDown",
+                      "key": "ControlLeft",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyK",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyK",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "ControlLeft",
+                      "delay": 300
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyI",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyI",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyK",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyU",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyK",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyU",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyT",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyT",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyA",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyA",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyR",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyR",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyU",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyU",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "Enter",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "Enter",
+                      "delay": 50
+                    }
+                  ],
+                  "delayed": true,
+                  "inhibitShortcuts": false
+                },
+                "name": "Message Iku",
+                "icon": "iku.webp",
+                "iconTheme": "my-friends",
+                "quickSelectKey": "2"
+              },
+              {
+                "type": "macro",
+                "data": {
+                  "macro": [
+                    {
+                      "type": "keyDown",
+                      "key": "ControlLeft",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyK",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyK",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "ControlLeft",
+                      "delay": 300
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyS",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyS",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyP",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyP",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyI",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyI",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyT",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyT",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "ShiftLeft",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "Minus",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "Minus",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "ShiftLeft",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyF",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyY",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyF",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyY",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyR",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyE",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyR",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyE",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "Digit7",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "Digit7",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "Enter",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "Enter",
+                      "delay": 50
+                    }
+                  ],
+                  "delayed": true
+                },
+                "name": "Message Spit_Fyre",
+                "icon": "spit_fyre.webp",
+                "iconTheme": "my-friends",
+                "quickSelectKey": "1"
+              },
+              {
+                "type": "macro",
+                "data": {
+                  "macro": [
+                    {
+                      "type": "keyDown",
+                      "key": "ControlLeft",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyDown",
+                      "key": "KeyK",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "KeyK",
+                      "delay": 50
+                    },
+                    {
+                      "type": "keyUp",
+                      "key": "ControlLeft",
+                      "delay": 300
                     },
                     {
                       "type": "keyDown",
@@ -1867,140 +2047,11 @@
                 },
                 "name": "Message Mat",
                 "icon": "knightly.webp",
-                "iconTheme": "my-friends"
-              },
-              {
-                "type": "macro",
-                "data": {
-                  "macro": [
-                    {
-                      "type": "keyDown",
-                      "key": "ControlLeft",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyK",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyK",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "ControlLeft",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyH",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyI",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyH",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyI",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyN",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyN",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyD",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyD",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyE",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyE",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyM",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyI",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyM",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyI",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyT",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyT",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "KeyH",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "KeyH",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyDown",
-                      "key": "Enter",
-                      "delay": 50
-                    },
-                    {
-                      "type": "keyUp",
-                      "key": "Enter",
-                      "delay": 50
-                    }
-                  ],
-                  "delayed": true
-                },
-                "name": "Message Hindi",
-                "icon": "hindi.webp",
-                "iconTheme": "my-friends"
+                "iconTheme": "my-friends",
+                "quickSelectKey": "4"
               }
-            ]
+            ],
+            "quickSelectKey": "6"
           },
           {
             "type": "hotkey",
@@ -2011,16 +2062,18 @@
             "name": "Forwards",
             "icon": "arrow_forward",
             "iconTheme": "material-symbols-rounded",
-            "angle": 90
+            "angle": 90,
+            "quickSelectKey": "4"
           },
           {
             "type": "redirect",
             "data": {
-              "menu": "Hyprland Menu :3"
+              "menu": "Niri Menu :3"
             },
-            "name": "Hyprland Menu :3",
+            "name": "Niri Menu :3",
             "icon": "redo",
-            "iconTheme": "material-symbols-rounded"
+            "iconTheme": "material-symbols-rounded",
+            "quickSelectKey": "1"
           },
           {
             "type": "submenu",
@@ -2278,7 +2331,8 @@
                 },
                 "name": "youtu.be/<link>",
                 "icon": "keyboard_keys",
-                "iconTheme": "material-symbols-rounded"
+                "iconTheme": "material-symbols-rounded",
+                "quickSelectKey": "3"
               },
               {
                 "type": "macro",
@@ -2489,7 +2543,8 @@
                 },
                 "name": ".be/shorts",
                 "icon": "keyboard_keys",
-                "iconTheme": "material-symbols-rounded"
+                "iconTheme": "material-symbols-rounded",
+                "quickSelectKey": "2"
               },
               {
                 "type": "macro",
@@ -2666,13 +2721,16 @@
                       "delay": 10
                     }
                   ],
-                  "delayed": true
+                  "delayed": true,
+                  "inhibitShortcuts": false
                 },
                 "name": "i need a portal",
                 "icon": "tag",
-                "iconTheme": "material-symbols-rounded"
+                "iconTheme": "material-symbols-rounded",
+                "quickSelectKey": "1"
               }
-            ]
+            ],
+            "quickSelectKey": "3"
           },
           {
             "type": "hotkey",
@@ -2683,7 +2741,8 @@
             "name": "Backwards",
             "icon": "arrow_back",
             "iconTheme": "material-symbols-rounded",
-            "angle": 270
+            "angle": 270,
+            "quickSelectKey": "2"
           }
         ]
       },
@@ -2707,13 +2766,25 @@
         "iconTheme": "simple-icons",
         "children": [
           {
+            "type": "redirect",
+            "data": {
+              "menu": "Niri Menu :3"
+            },
+            "name": "Niri Menu :3",
+            "icon": "redo",
+            "iconTheme": "material-symbols-rounded",
+            "quickSelectKey": "1",
+            "angle": 180
+          },
+          {
             "type": "uri",
             "data": {
               "uri": "https://www.youtube.com/@TheRussianBadger"
             },
             "name": "The Russian Badger",
             "icon": "youtube",
-            "iconTheme": "simple-icons"
+            "iconTheme": "simple-icons",
+            "quickSelectKey": "6"
           },
           {
             "type": "submenu",
@@ -2740,7 +2811,8 @@
                 "icon": "thenextguy100.webp",
                 "iconTheme": "my-friends"
               }
-            ]
+            ],
+            "quickSelectKey": "5"
           },
           {
             "type": "submenu",
@@ -2794,7 +2866,8 @@
                 "iconTheme": "simple-icons"
               }
             ],
-            "angle": 0
+            "angle": 0,
+            "quickSelectKey": "4"
           },
           {
             "type": "macro",
@@ -2846,7 +2919,8 @@
             "name": "Open Copied Link",
             "icon": "search",
             "iconTheme": "material-symbols-rounded",
-            "angle": 60
+            "angle": 60,
+            "quickSelectKey": "3"
           },
           {
             "type": "command",
@@ -2858,17 +2932,8 @@
             },
             "name": "Rofi Calculator",
             "icon": "calculate",
-            "iconTheme": "material-symbols-rounded"
-          },
-          {
-            "type": "redirect",
-            "data": {
-              "menu": "Hyprland Menu :3"
-            },
-            "name": "Hyprland Menu :3",
-            "icon": "redo",
             "iconTheme": "material-symbols-rounded",
-            "angle": 180
+            "quickSelectKey": "2"
           }
         ]
       },
@@ -2894,11 +2959,12 @@
           {
             "type": "redirect",
             "data": {
-              "menu": "Hyprland Menu :3"
+              "menu": "Niri Menu :3"
             },
-            "name": "Hyprland Menu :3",
+            "name": "Niri Menu :3",
             "icon": "redo",
             "iconTheme": "material-symbols-rounded",
+            "quickSelectKey": "1",
             "angle": 180
           }
         ]
@@ -3326,7 +3392,8 @@
                 },
                 "name": "Linkin Park",
                 "icon": "linkin-park.jpg",
-                "iconTheme": "music-artists"
+                "iconTheme": "music-artists",
+                "quickSelectKey": "4"
               },
               {
                 "type": "macro",
@@ -3587,7 +3654,8 @@
                 },
                 "name": "Bring Me The Horizon",
                 "icon": "bring-me-the-horizon.jpeg",
-                "iconTheme": "music-artists"
+                "iconTheme": "music-artists",
+                "quickSelectKey": "5"
               },
               {
                 "type": "macro",
@@ -3748,7 +3816,8 @@
                 },
                 "name": "Bad Wolves",
                 "icon": "bad-wolves.jpg",
-                "iconTheme": "music-artists"
+                "iconTheme": "music-artists",
+                "quickSelectKey": "6"
               },
               {
                 "type": "macro",
@@ -3959,7 +4028,8 @@
                 },
                 "name": "Chikoi The Maid",
                 "icon": "chikoi-the-maid.jpg",
-                "iconTheme": "music-artists"
+                "iconTheme": "music-artists",
+                "quickSelectKey": "1"
               },
               {
                 "type": "macro",
@@ -4100,7 +4170,8 @@
                 },
                 "name": "Babymetal",
                 "icon": "babymetal.png",
-                "iconTheme": "music-artists"
+                "iconTheme": "music-artists",
+                "quickSelectKey": "2"
               },
               {
                 "type": "macro",
@@ -4271,10 +4342,12 @@
                 },
                 "name": "Sleep Token",
                 "icon": "sleep-token.png",
-                "iconTheme": "music-artists"
+                "iconTheme": "music-artists",
+                "quickSelectKey": "3"
               }
             ],
-            "angle": 0
+            "angle": 0,
+            "quickSelectKey": "4"
           },
           {
             "type": "submenu",
@@ -4334,16 +4407,18 @@
             "name": "Forwards",
             "icon": "arrow_forward",
             "iconTheme": "material-symbols-rounded",
-            "angle": 90
+            "angle": 90,
+            "quickSelectKey": "3"
           },
           {
             "type": "redirect",
             "data": {
-              "menu": "Hyprland Menu :3"
+              "menu": "Niri Menu :3"
             },
-            "name": "Hyprland Menu :3",
+            "name": "Niri Menu :3",
             "icon": "redo",
             "iconTheme": "material-symbols-rounded",
+            "quickSelectKey": "1",
             "angle": 180
           },
           {
@@ -4355,7 +4430,8 @@
             "name": "Backwards",
             "icon": "arrow_left_alt",
             "iconTheme": "material-symbols-rounded",
-            "angle": 270
+            "angle": 270,
+            "quickSelectKey": "2"
           }
         ]
       },
@@ -4426,16 +4502,18 @@
                 "icon": "add_box",
                 "iconTheme": "material-symbols-rounded"
               }
-            ]
+            ],
+            "quickSelectKey": "2"
           },
           {
             "type": "redirect",
             "data": {
-              "menu": "Hyprland Menu :3"
+              "menu": "Niri Menu :3"
             },
-            "name": "Hyprland Menu :3",
+            "name": "Niri Menu :3",
             "icon": "redo",
             "iconTheme": "material-symbols-rounded",
+            "quickSelectKey": "1",
             "angle": 180
           }
         ]

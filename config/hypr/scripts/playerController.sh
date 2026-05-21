@@ -9,12 +9,6 @@ OPTION="${1,,}"
 PLAYER="spotify"
 NOTIFCOLOUR="ffb4ff"
 
-#   local title="$(playerctl -p $PLAYER metadata title)"
-#   local album="$(playerctl -p $PLAYER metadata album)"
-#   local artist="$(playerctl -p $PLAYER metadata artist)"
-#   awk -v title="$title" -v artist="$artist" '{printf "%s by %s",title,artist}'
-#   return 0
-#
 function getSongInfo() {
   playerctl -p $PLAYER metadata --format '{{ title }}<==>{{ artist }}' | awk '
     BEGIN {

@@ -47,7 +47,7 @@ font-size = 13
 # background = #1e1e1e
 background = #191724
 background-blur = 1
-background-opacity = 0.6
+background-opacity = 1
 window-decoration = none
 
 # === keybinds ===

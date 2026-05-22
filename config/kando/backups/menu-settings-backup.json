@@ -92,9 +92,9 @@
           {
             "type": "submenu",
             "data": {},
-            "name": "Groups",
-            "icon": "tab_group",
-            "iconTheme": "material-symbols-rounded",
+            "name": "Window Management",
+            "icon": "niri",
+            "iconTheme": "simple-icons",
             "children": [
               {
                 "type": "command",
@@ -107,7 +107,8 @@
                 "name": "to eat or not to eat",
                 "icon": "arrow_right_alt",
                 "iconTheme": "material-symbols-rounded",
-                "quickSelectKey": "3"
+                "quickSelectKey": "3",
+                "angle": 117
               },
               {
                 "type": "command",
@@ -132,7 +133,8 @@
                 "name": "to eat or not to eat",
                 "icon": "arrow_left_alt",
                 "iconTheme": "material-symbols-rounded",
-                "quickSelectKey": "1"
+                "quickSelectKey": "1",
+                "angle": 240
               },
               {
                 "type": "command",
@@ -156,74 +158,23 @@
             "iconTheme": "material-symbols-rounded",
             "children": [
               {
+                "type": "redirect",
+                "name": "Infinate loopback glitch",
+                "icon": "logo-large.svg",
+                "iconTheme": "kando",
+                "data": {
+                  "menu": "Niri Menu :3"
+                }
+              },
+              {
                 "type": "command",
                 "data": {
-                  "command": "ghostty1"
+                  "command": "ghostty"
                 },
                 "name": "Terminal",
                 "icon": "terminal",
                 "iconTheme": "material-symbols-rounded",
                 "angle": 0
-              },
-              {
-                "type": "submenu",
-                "data": {},
-                "name": "D&D",
-                "icon": "dungeonsanddragons",
-                "iconTheme": "simple-icons",
-                "children": [
-                  {
-                    "type": "command",
-                    "data": {
-                      "command": "chromium --kiosk ",
-                      "detached": true,
-                      "isolated": false,
-                      "delayed": false
-                    },
-                    "name": "Nezzie's Owlbear",
-                    "icon": "owlbear.svg",
-                    "iconTheme": "custom-icons",
-                    "angle": 0
-                  },
-                  {
-                    "type": "command",
-                    "data": {
-                      "command": "chromium --kiosk ",
-                      "detached": true,
-                      "isolated": false,
-                      "delayed": false
-                    },
-                    "name": "Dan's Foundry",
-                    "icon": "foundryvirtualtabletop",
-                    "iconTheme": "simple-icons-colored",
-                    "angle": 90
-                  },
-                  {
-                    "type": "command",
-                    "data": {
-                      "command": "chromium --kiosk ",
-                      "detached": true,
-                      "isolated": false,
-                      "delayed": false
-                    },
-                    "name": "Finnji's Owlbear",
-                    "icon": "owlbear.svg",
-                    "iconTheme": "custom-icons",
-                    "angle": 180
-                  },
-                  {
-                    "type": "command",
-                    "data": {
-                      "command": "/usr/bin/obsidian",
-                      "detached": true,
-                      "isolated": false,
-                      "delayed": false
-                    },
-                    "name": "Obsidian",
-                    "icon": "obsidian",
-                    "iconTheme": "simple-icons-colored"
-                  }
-                ]
               },
               {
                 "type": "submenu",
@@ -239,15 +190,6 @@
                     },
                     "name": "Krita",
                     "icon": "krita",
-                    "iconTheme": "simple-icons"
-                  },
-                  {
-                    "type": "command",
-                    "data": {
-                      "command": "gimp"
-                    },
-                    "name": "GIMP",
-                    "icon": "gimp",
                     "iconTheme": "simple-icons"
                   },
                   {
@@ -471,12 +413,12 @@
                       {
                         "type": "command",
                         "data": {
-                          "command": "nmcli connection up Slav\\ WiFi --ask &> /dev/null <<< weslav.com",
+                          "command": "nmcli connection up Slav\\ WiFi --ask <<< weslav.com",
                           "detached": true,
                           "isolated": false,
                           "delayed": false
                         },
-                        "name": "Slav WiFi",
+                        "name": "Slav Wifi",
                         "icon": "android_wifi_3_bar",
                         "iconTheme": "material-symbols-rounded"
                       }
@@ -504,7 +446,7 @@
       },
       "shortcut": "",
       "shortcutID": "default-menu",
-      "centered": false,
+      "centered": true,
       "anchored": false,
       "hoverMode": false,
       "tags": [
@@ -2748,7 +2690,7 @@
       },
       "shortcut": "",
       "shortcutID": "default-menu",
-      "centered": false,
+      "centered": true,
       "anchored": false,
       "hoverMode": false,
       "conditions": {
@@ -2939,7 +2881,7 @@
       },
       "shortcut": "",
       "shortcutID": "default-menu",
-      "centered": false,
+      "centered": true,
       "anchored": false,
       "hoverMode": false,
       "conditions": {
@@ -2971,7 +2913,7 @@
       },
       "shortcut": "",
       "shortcutID": "default-menu",
-      "centered": false,
+      "centered": true,
       "anchored": false,
       "hoverMode": false,
       "conditions": {
@@ -4437,7 +4379,7 @@
       },
       "shortcut": "",
       "shortcutID": "default-menu",
-      "centered": false,
+      "centered": true,
       "anchored": false,
       "hoverMode": false,
       "conditions": {
@@ -4520,7 +4462,7 @@
       },
       "shortcut": "",
       "shortcutID": "default-menu",
-      "centered": false,
+      "centered": true,
       "anchored": false,
       "hoverMode": false,
       "conditions": {

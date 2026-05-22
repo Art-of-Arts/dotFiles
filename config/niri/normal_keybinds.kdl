@@ -204,8 +204,8 @@ binds {
     Mod+Shift+L { set-column-width "+10%"; }
 
     // Finer height adjustments when in column with other windows.
-    Mod+Shift+J { set-window-height "-10%"; }
-    Mod+Shift+K { set-window-height "+10%"; }
+    Mod+Shift+K { set-window-height "-10%"; }
+    Mod+Shift+J { set-window-height "+10%"; }
 
     // Move the focused window between the floating and the tiling layout.
     Mod+F       { toggle-window-floating; }

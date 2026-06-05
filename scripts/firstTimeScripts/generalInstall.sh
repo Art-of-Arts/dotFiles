@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo /bin/pacman -Sy --needed --noconfirm cliphist wl-clipboard cmake gcc 7zip ark bitwarden blender btop curl git wget libqalculate ddcutil discover flatpak yazi fakeroot ffmpeg fastfetch ghostty gzip brightnessctl less man-db obs-studio obsidian ttf-cascadia-code openssh playerctl steam spotify-launcher telegram-desktop tmux v4l2loopback-dkms v4l2loopback-utils vlc vlc-plugin-ffmpeg vlc-cli zoxide fzf lsd trash-cli imagemagick wiremix nftables nvim mullvad-vpn ncdu zip unzip jq
+sudo /bin/pacman -Sy --needed --noconfirm cliphist wl-clipboard cmake gcc 7zip ark bitwarden blender btop curl git wget libqalculate ddcutil discover flatpak yazi fakeroot ffmpeg fastfetch ghostty gzip brightnessctl less man-db obs-studio obsidian ttf-cascadia-code openssh playerctl steam spotify-launcher telegram-desktop tmux v4l2loopback-dkms v4l2loopback-utils vlc vlc-plugin-ffmpeg vlc-cli zoxide fzf lsd trash-cli imagemagick wiremix nftables nvim mullvad-vpn ncdu zip unzip jq docker docker-compose rclone
 
 if [[ "$(hostnamectl hostname)" == "holo-machine" ]]; then
   sudo /bin/pacman -Sy --needed --noconfirm fprintd tlp

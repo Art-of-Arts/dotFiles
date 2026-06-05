@@ -7,8 +7,9 @@ binds {
     Mod+NumberSign hotkey-overlay-title="Mouse overlay" { spawn-sh "wl-kbptr"; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    // Mod+Return hotkey-overlay-title="Open Terminal (ghostty)" { spawn-sh "ghostty -e bash"; }
+    Mod+Return hotkey-overlay-title="Open Terminal (ghostty)" { spawn-sh "ghostty -e bash"; }
     Mod+Alt+Home hotkey-overlay-title="Application Launcher (ROFI)" { spawn-sh "pkill rofi || rofi -show drun -i"; }
+    Mod+V hotkey-overlay-title="Clipboard History" { spawn-sh "pkill rofi || selection=\"$(cliphist list | rofi -dmenu -i -p \"Clipboard\")\" && printf %sn \"$selection\" | cliphist decode | wl-copy & unset selection"; }
     Mod+Shift+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
     Mod+Shift+Alt+P allow-when-locked=true  hotkey-overlay-title="Turn off monitors" { spawn-sh "niri msg action power-off-monitors"; }
 

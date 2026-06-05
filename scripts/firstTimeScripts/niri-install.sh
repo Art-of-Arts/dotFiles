@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-sudo pacman -S --noconfirm --needed niri xdg-desktop-portal xdg-desktop-portal-gnome xwayland-satellite swaylock waybar rofi nwg-displays swaync polkit polkit-gnome jq ydotool
+sudo pacman -S --noconfirm --needed niri xdg-desktop-portal xdg-desktop-portal-gnome xwayland-satellite swaylock waybar rofi nwg-displays nwg-look swaync polkit polkit-gnome jq ydotool
 
 if [[-z "/bin/yay" ]]; then
   if ! [[ "$(cat /etc/hostname)" = "holo-machine" ]]; then

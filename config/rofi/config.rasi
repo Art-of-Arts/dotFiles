@@ -20,17 +20,18 @@
 /* You can manually change here or you can use rofi theme selector SUPER SHIFT E */
 
 
-//@theme "~/.config/rofi/themes/KooL_style-2-Dark.rasi"
-//@theme "~/.config/rofi/themes/KooL_style-1.rasi"
-//@theme "~/.config/rofi/themes/KooL_LonerOrZ.rasi"
-//@theme "~/.config/rofi/themes/KooL_style-14.rasi"
-//@theme "~/.config/rofi/themes/KooL_LonerOrZ.rasi"
-//@theme "~/.config/rofi/themes/KooL_style-1.rasi"
-//@theme "~/.config/rofi/themes/KooL_style-13-Vertical.rasi"
-//@theme "~/.config/rofi/themes/KooL_style-12-TOP-Docu.rasi"
-//@theme "~/.config/rofi/themes/KooL_style-11-Win11-list-light.rasi"
-//@theme "~/.config/rofi/themes/KooL_style-14.rasi"
-@theme "~/.config/rofi/themes/rose_pine.rasi"
+// @theme "~/.config/rofi/themes/KooL_style-2-Dark.rasi"
+// @theme "~/.config/rofi/themes/KooL_style-1.rasi"
+// @theme "~/.config/rofi/themes/KooL_LonerOrZ.rasi"
+// @theme "~/.config/rofi/themes/KooL_style-14.rasi"
+// @theme "~/.config/rofi/themes/KooL_LonerOrZ.rasi"
+// @theme "~/.config/rofi/themes/KooL_style-1.rasi"
+// @theme "~/.config/rofi/themes/KooL_style-13-Vertical.rasi"
+// @theme "~/.config/rofi/themes/KooL_style-12-TOP-Docu.rasi"
+// @theme "~/.config/rofi/themes/KooL_style-11-Win11-list-light.rasi"
+// @theme "~/.config/rofi/themes/KooL_style-14.rasi"
+// @theme "~/.config/rofi/themes/rose_pine.rasi"
+@theme "~/.config/rofi/noctalia.rasi"
 
 configuration {
   modi: "drun,calc,run,ssh";

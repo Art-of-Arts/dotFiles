@@ -3,6 +3,8 @@
 // Find the full list of options on the wiki:
 // https://niri-wm.github.io/niri/Configuration:-Input
 
+prefer-no-csd
+
 input {
     keyboard {
         xkb {
@@ -16,8 +18,8 @@ input {
     touchpad {
         // off
         tap
-        // dwt
-        // dwtp
+        dwt
+        dwtp
         // drag false
         // drag-lock
         natural-scroll
@@ -46,12 +48,16 @@ input {
         // middle-emulation
     }
 
-    // Uncomment this to make the mouse warp to the center of newly focused windows.
-    warp-mouse-to-focus
-
     // Focus windows and outputs automatically when moving the mouse into them.
     // Setting max-scroll-amount="0%" makes it work only on windows already fully on screen.
     focus-follows-mouse max-scroll-amount="10%"
+    warp-mouse-to-focus
+}
+
+switch-events {
+  lid-close {
+    spawn "bash" "-c" "noctalia msg session lock; playerctl --all-players pause; systemctl sleep"
+  }
 }
 
 // INFO: MONITORS!
@@ -68,11 +74,9 @@ blur {
   // off
   passes 3
   offset 3.0
-  noise 0.02
+  noise 0.25
   saturation 1.5
 }
-
-prefer-no-csd
 
 layout {
   // Set gaps around windows in logical pixels.
@@ -97,31 +101,22 @@ layout {
   // You can change the default width of the new windows.
   default-column-width { proportion 0.5; }
 
-  // By default focus ring and border are rendered as a solid background rectangle
-  // behind windows. That is, they will show up through semitransparent windows.
-  // This is because windows using client-side decorations can have an arbitrary shape.
-  //
-  // If you don't like that, you should uncomment `prefer-no-csd` below.
-  // Niri will draw focus ring and border *around* windows that agree to omit their
-  // client-side decorations.
-  //
-  // Alternatively, you can override it with a window rule called
-  // `draw-border-with-background`.
-
-  // You can change how the focus ring looks.
   focus-ring {
     off
+    // active-color "#ffb4ff"
+    // inactive-color "#1e1e1e"
+    //
+    // urgent-color "#c4a7e7"
   }
 
-  // You can also add a border. It's similar to the focus ring, but always visible.
   border {
     // off
 
     width 2
-    active-color "#ffb4ff"
-    inactive-color "#1e1e1e"
-
-    urgent-color "#c4a7e7"
+    // active-color "#ffb4ff"
+    // inactive-color "#1e1e1e"
+    //
+    // urgent-color "#c4a7e7"
 
   }
 
@@ -162,7 +157,7 @@ cursor {
 // https://niri-wm.github.io/niri/Configuration%3A-Miscellaneous.html#overview
 overview {
   backdrop-color "#1e1e1e"
-  zoom 0.75
+  zoom 0.50
 }
 
 // INFO: Environment Variables
@@ -191,8 +186,7 @@ environment {
 // See the binds section below for more spawn examples.
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
-spawn-sh-at-startup "waybar"
-spawn-sh-at-startup "wl-paste --watch cilphist store"
+spawn-sh-at-startup "noctalia"
 
 hotkey-overlay {
     // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
@@ -216,22 +210,13 @@ animations {}
 // https://niri-wm.github.io/niri/Configuration:-Window-Rules
 
 window-rule {
-    match app-id=r#"ghostty$"# title="^*float-me-please!*$"
-    open-floating true
+  draw-border-with-background false
+  geometry-corner-radius 12
+  clip-to-geometry true
+  background-effect { blur true; xray false; }
 }
 
-// Open the Firefox picture-in-picture player as floating by default.
-window-rule {
-    // This app-id regular expression will work for both:
-    // - host Firefox (app-id is "firefox")
-    // - Flatpak Firefox (app-id is "org.mozilla.firefox")
-    match app-id=r#"zen$"# title="^Picture-in-Picture$"
-    open-floating true
-}
-
-// Example: block out two password managers from screen capture.
-// (This example rule is commented out with a "/-" in front.)
-window-rule {
+window-rule { // blcok from screencapture add a "/-" in front to disable
     match app-id=r#"^Bitwarden$"#
     match app-id=r#"^org\.gnome\.World\.Secrets$"#
     match app-id=r#"^zen$"# title="- Gmail "
@@ -249,11 +234,32 @@ window-rule {
     // block-out-from "screencast"
 }
 
-// Example: enable rounded corners for all windows.
-// (This example rule is commented out with a "/-" in front.)
-/-window-rule {
-    geometry-corner-radius 12
-    clip-to-geometry true
+window-rule { // make the silly pointer thinggy work
+  match app-id=r#"^org.kde.kdeconnect.daemon$"#
+
+  border { off; }
+  shadow { off; }
+  default-column-width { proportion 1.0; }
+  default-window-height { proportion 1.0; }
+  // default-floating-position x=0 y=0
+  background-effect { blur false; xray false; }
+  open-floating true
+  open-focused false
+  // open-maximized-to-edges true
+  open-fullscreen false
+}
+
+window-rule { // open these to float please!
+  match app-id=r#"ghostty$"# title="^*float-me-please!*$"
+  match app-id=r#"zen$"# title="^Picture-in-Picture$"
+  open-floating true
+}
+
+window-rule { // specifically for noctalia
+  match app-id="dev.noctalia.Noctalia.Settings"
+  default-column-width { fixed 1080; }
+  default-window-height { fixed 920; }
+  open-floating true
 }
 
 window-rule {
@@ -266,15 +272,18 @@ window-rule {
   background-effect { blur false; }
 }
 
-/-window-rule {
+/-window-rule { // silly rule i just keep around
   match is-floating=true
   baba-is-float true
 }
 
 // INFO: layer-rules!
 // which are not window-rules but are layer-rules, they're not to be confused with window-rules
-// the effect i really want, blur, is still currently not supported as of 2026/28/26
-// https://niri-wm.github.io/niri/Configuration%3A-Layer-Rules.html
+
+layer-rule {
+  match namespace="^noctalia-backdrop*"
+  place-within-backdrop true
+}
 
 /-layer-rule {
   match layer="top"
@@ -286,3 +295,7 @@ window-rule {
 // INFO: Keybinds
 
 include "keybinds.kdl"
+
+// INFO: noctalia theming
+
+include "noctalia.kdl"

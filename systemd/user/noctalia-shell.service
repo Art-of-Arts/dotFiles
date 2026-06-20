@@ -1,0 +1,11 @@
+[Unit]
+Description=Custom service to start noctalia-shell
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/bin/noctalia
+Restart=on-failure
+
+[Install]
+WantedBy=graphical-session.target

@@ -1,19 +1,32 @@
 #!/bin/bash
 
-sudo /bin/pacman -Sy --needed --noconfirm cliphist wl-clipboard cmake gcc 7zip ark bitwarden blender btop curl git wget libqalculate ddcutil discover flatpak yazi fakeroot ffmpeg fastfetch ghostty gzip brightnessctl less man-db obs-studio obsidian ttf-cascadia-code openssh playerctl steam spotify-launcher telegram-desktop tmux v4l2loopback-dkms v4l2loopback-utils vlc vlc-plugin-ffmpeg vlc-cli zoxide fzf lsd trash-cli imagemagick wiremix nftables nvim mullvad-vpn ncdu zip unzip jq docker docker-compose rclone
+case "$1" in
+help)
+  echo "Add --noconfirm to pass it to yay / pacman"
+  exit 0
+  ;;
+--noconfrim)
+  echo "no confirmation"
+  ncflag="$1"
+  ;;
+*)
+  echo "manual confirmation"
+  ;;
+esac
+
+sudo /bin/pacman -Sy --needed $ncflag cliphist wl-clipboard cmake gcc 7zip ark bitwarden blender btop curl git wget libqalculate ddcutil discover flatpak yazi fakeroot ffmpeg fastfetch ghostty gzip brightnessctl less man-db obs-studio obsidian ttf-cascadia-code openssh playerctl steam spotify-launcher telegram-desktop tmux v4l2loopback-dkms v4l2loopback-utils vlc vlc-plugin-ffmpeg vlc-cli zoxide fzf lsd trash-cli imagemagick wiremix nftables nvim mullvad-vpn ncdu zip unzip jq docker docker-compose rclone
 
 if [[ "$(hostnamectl hostname)" == "holo-machine" ]]; then
   sudo /bin/pacman -Sy --needed --noconfirm fprintd tlp
 fi
 
 if [[ -f "/bin/yay" ]]; then
-  /bin/yay -Sy --needed --noconfirm rose-pine-gtk-theme xwaylandvideobridge rangoli kando-bin arronax dbus_filemanager linux-wallpaperengine-git simple-linux-wallpaperengine-gui-git
-  # removed packages: gcalcli
+  /bin/yay -Sy --needed $ncflag dbus_filemanager
 
   if [[ "$(hostnamectl hostname)" == "holo-machine" ]]; then
-    /bin/yay -Sy --needed --noconfirm tlpui
+    /bin/yay -Sy --needed $ncflag tlpui
   else
-    /bin/yay -Sy --needed --noconfirm new-lg4ff-dkms-git
+    /bin/yay -Sy --needed $ncflag new-lg4ff-dkms-git
   fi
 else
   echo "yay not installed, install yay and re-run the script to install packages from the aur"

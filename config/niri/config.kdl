@@ -74,8 +74,8 @@ blur {
   // off
   passes 3
   offset 3.0
-  noise 0.25
-  saturation 1.5
+  noise 0.05
+  saturation 2.0
 }
 
 layout {
@@ -186,7 +186,7 @@ environment {
 // See the binds section below for more spawn examples.
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
-spawn-sh-at-startup "noctalia"
+spawn-sh-at-startup "kdeconnectd"
 
 hotkey-overlay {
     // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.

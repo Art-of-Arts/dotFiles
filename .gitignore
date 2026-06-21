@@ -31,3 +31,5 @@
 /config/niri/noctalia.kdl
 /config/rofi/noctalia.rasi
 /config/yazi/flavors/noctalia.yazi
+/config/qt5ct/colors/noctalia.conf
+/config/nvim/lua/matugen.lua

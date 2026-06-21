@@ -8,4 +8,4 @@ ExecStart=/bin/noctalia
 Restart=on-failure
 
 [Install]
-WantedBy=graphical-session.target
+WantedBy=niri.service

@@ -222,6 +222,7 @@ window-rule { // blcok from screencapture add a "/-" in front to disable
     match app-id=r#"^zen$"# title="- Gmail "
     match app-id=r#"^zen$"# title="Bitwarden"
     match app-id=r#"^zen$"# title="Art's Sotorenator 9001"
+    match app-id=r#"^com\.rtosta\.zapzap$"#
 
     block-out-from "screen-capture"
     // block-out-from "screen"

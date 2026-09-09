@@ -28,6 +28,7 @@ echo
 # sources
 . ~/.git-prompt.sh
 . ~/.aliases
+. ~/.ENV__ &>/dev/null
 
 # adding ssh keys to ssh-agent and setting SSH_AUTH_SOCK
 if [ -z "$SSH_AUTH_SOCK" ]; then

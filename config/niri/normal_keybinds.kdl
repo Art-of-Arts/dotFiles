@@ -1,7 +1,7 @@
 binds {
     // INFO: shows a list of important hotkeys.
     // hotkeys can be added to the list with the hotkey-overlay-title="title" option
-    Mod+Shift+Slash hotkey-overlay-title=null { show-hotkey-overlay; }
+    Mod+Shift+Slash repeat=false  hotkey-overlay-title=null { show-hotkey-overlay; }
 
     // Controlling the mouse from the keyboard
     Mod+NumberSign hotkey-overlay-title="Mouse overlay" { spawn-sh "wl-kbptr"; }

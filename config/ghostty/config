@@ -46,7 +46,7 @@ font-family = "Cascadia Code NF"
 font-size = 13
 # background = #1e1e1e
 background = #191724
-background-blur = 1
+background-blur = true
 background-opacity = 0.8
 window-decoration = none
 

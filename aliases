@@ -27,6 +27,7 @@ alias egrep="grep --colour=auto -E "
 alias xterm="ghostty"
 alias vim="nvim"
 alias vi="nvim"
+alias dd="dd status=progress"
 
 if [[ "$(cat /etc/hostname)" != "holo-overlord" ]]; then
   alias COMPCON="ssh holo-overlord && clear"

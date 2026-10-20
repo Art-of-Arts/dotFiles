@@ -1,20 +1,23 @@
-define EXCLUDED_PORTS = {
-  22,
-  666,
-  1302,
-  30000
-}
+define HOST_PORTS = { 22, 9 }
+define DOCKER_PORTS = { 1302, 30000 }
 
 table inet excludeTraffic {
-
   chain allowIncoming {
     type filter hook input priority -100; policy accept;
-    tcp dport $EXCLUDED_PORTS ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
-    
+    iifname "enp9s0" tcp dport $HOST_PORTS ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
   }
 
   chain allowOutgoing {
     type route hook output priority -100; policy accept;
-    tcp sport $EXCLUDED_PORTS ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
+    tcp sport $HOST_PORTS ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
+  }
+
+  chain excludeDockerTraffic {
+    type filter hook prerouting priority -150; policy accept;
+
+    iifname "docker0" tcp dport $DOCKER_PORTS ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
+    iifname "docker0" udp dport $DOCKER_PORTS ct mark set 0x00000f41 meta mark set 0x6d6f6c65;
+
+    ct mark 0x00000f41 meta mark set 0x6d6f6c65;
   }
 }

@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-alias bashsrc="nvim ~/.{bashrc,aliases} && source ~/.bashrc"
+alias bashsrc="nvim ~/.{aliases,bashrc} && source ~/.bashrc"
 alias clear="/bin/clear && fetch && echo"
 alias ls="lsd --color always" # --icon never"
 alias cat="bat"
@@ -9,6 +9,7 @@ alias initenv="source ./.venv/bin/activate || python -m venv .venv && source ./.
 alias virtMon="krfb-virtualmonitor --resolution 1920x1080 --name VirtualMonitor --password password --port 3355"
 alias SDB="monitorBrightness"
 alias GHK="ssh-add ~/.ssh/artsGHK"
+alias man="MANWIDTH=80 man"
 
 #sudoify those guys
 
@@ -83,6 +84,7 @@ function gamma() {
     BRIGHTNESS=100
   fi
   hyprctl hyprsunset gamma $BRIGHTNESS
+  unset BRIGHTNESS
 }
 
 function temperature() {
@@ -101,4 +103,59 @@ function mntcparty() {
     rclone mount --vfs-cache-mode writes --dir-cache-time 5s local-Storanator-9001: /mnt/Storenator9001/ --no-check-certificate --allow-non-empty &>/dev/null &
     echo "$!" >~/.rclone.pid
   fi
+}
+
+function inhibit() {
+  FDATAinhibits=""
+  if [[ "$#" == 0 ]]; then
+    FDATAinhibits="idle:sleep:shutdown:"
+    finhibits="idle, sleep, shutdown, "
+  else
+    for opt in "$@"; do
+      case "$opt" in
+      i)
+        FDATAinhibits+="idle:"
+        ;;
+      s)
+        FDATAinhibits+="sleep:"
+        ;;
+      p)
+        FDATAinhibits+="shutdown:"
+        ;;
+      ? | help | h)
+        printf 'options are:\ni -> idle\ns -> sleep\np -> poweroff\nh -> help\nyou can chain options like so:\ninhibit p s\n'
+        unset FDATAinhibits opt opts
+        return 0
+        ;;
+      *)
+        printf 'unknown option: %s\n' "$opt" >&2
+        unset FDATAinhibits opt opts
+        return 1
+        ;;
+      esac
+    done
+  fi
+  FDATAinhibits=${FDATAinhibits%:}
+  systemd-inhibit --what="$FDATAinhibits" --who="$TERM" --why="manually invoked" \
+    sh -c "echo inhibiting ${FDATAinhibits//:/, }; echo in terminal $TERM; while read -n1 -s; do echo exiting; break; done"
+  unset FDATAinhibits opt opts
+}
+
+function holoport() {
+  cmd='ssh -N '
+  for U_PORT in $@; do
+    if [[ $U_PORT =~ ^[0-9]+$ ]]; then
+      cmd+="-L $U_PORT:172.0.0.1:$U_PORT "
+    else
+      printf '`%s` is not a number, cannot port forward a `%s`\n' "$U_PORT" "$U_PORT" >&2
+      return 1
+    fi
+  done
+  if [[ "$(uname -n)" == "holo-overlord" ]]; then
+    printf "this is overlord, port forward from another computer!\n" >&2
+    return 1
+    unset cmd U_PORT
+  fi
+  eval "$cmd holo-overlord"
+  unset cmd U_PORT
 }
